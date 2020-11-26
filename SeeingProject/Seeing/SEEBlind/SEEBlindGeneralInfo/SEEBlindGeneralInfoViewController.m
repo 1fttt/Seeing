@@ -1,35 +1,24 @@
 //
-//  SEEChooseViewController.m
+//  SEEBlindGeneralInfoViewController.m
 //  Seeing
 //
-//  Created by 房彤 on 2020/11/22.
+//  Created by 房彤 on 2020/11/26.
 //  Copyright © 2020 房彤. All rights reserved.
 //
 
-#import "SEEChooseViewController.h"
-#import "SEEChooseView.h"
+#import "SEEBlindGeneralInfoViewController.h"
 
-@interface SEEChooseViewController ()
+@interface SEEBlindGeneralInfoViewController ()
 
 @end
 
-@implementation SEEChooseViewController
+@implementation SEEBlindGeneralInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
-    
-    _chooseView = [[SEEChooseView alloc] initWithFrame:self.view.frame];
-    [self.view addSubview:_chooseView];
-    [_chooseView viewInit];
-    
-    
-    
+    self.view.backgroundColor = [UIColor grayColor];
 }
-
-
-
 
 /*
 #pragma mark - Navigation

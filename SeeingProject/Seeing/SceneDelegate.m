@@ -8,6 +8,7 @@
 
 #import "SceneDelegate.h"
 #import "SEEChooseViewController.h"
+#import "SEELoginViewController.h"
 
 @interface SceneDelegate ()
 
@@ -20,9 +21,11 @@
     
     _window = [[UIWindow alloc] initWithWindowScene:scene];
     [_window makeKeyAndVisible];
-    SEEChooseViewController *chooseView = [[SEEChooseViewController alloc] init];
-    _window.rootViewController = chooseView;
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
+
+    SEELoginViewController *loginView = [[SEELoginViewController alloc] init];
+    _window.rootViewController = loginView;
+    
+    // Use this metho·d to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 }

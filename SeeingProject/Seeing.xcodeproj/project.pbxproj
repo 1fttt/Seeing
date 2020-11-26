@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4600D59967E1F039BA154FD4 /* libPods-Seeing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF29CD3422220A2C4697B47 /* libPods-Seeing.a */; };
+		6C1C8388256FC62A001BB151 /* SEELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C8387256FC62A001BB151 /* SEELoginView.m */; };
+		6C1C838C256FE45B001BB151 /* SEERegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C838B256FE45B001BB151 /* SEERegisterViewController.m */; };
+		6C1C8392256FE683001BB151 /* SEERegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C8391256FE683001BB151 /* SEERegisterView.m */; };
+		6C1C8399256FEDA1001BB151 /* SEEBlindVideoCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C8398256FEDA1001BB151 /* SEEBlindVideoCallViewController.m */; };
+		6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C839B256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m */; };
+		6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */; };
+		6C1C83A5256FF988001BB151 /* SEEBlindVideoCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */; };
 		6C43D18C256A47390039D232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D18B256A47390039D232 /* AppDelegate.m */; };
 		6C43D18F256A47390039D232 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D18E256A47390039D232 /* SceneDelegate.m */; };
 		6C43D195256A47390039D232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C43D193256A47390039D232 /* Main.storyboard */; };
@@ -18,6 +25,7 @@
 		6C43D1B2256A473D0039D232 /* SeeingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D1B1256A473D0039D232 /* SeeingUITests.m */; };
 		6C43D1C1256A485B0039D232 /* SEEChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D1C0256A485B0039D232 /* SEEChooseViewController.m */; };
 		6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D1C8256A499B0039D232 /* SEEChooseView.m */; };
+		6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C53A242256FBABB00E7E78D /* SEELoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +48,20 @@
 /* Begin PBXFileReference section */
 		1F7B729F8F80AF4FD01236D2 /* Pods-Seeing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seeing.debug.xcconfig"; path = "Target Support Files/Pods-Seeing/Pods-Seeing.debug.xcconfig"; sourceTree = "<group>"; };
 		3EF29CD3422220A2C4697B47 /* libPods-Seeing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seeing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C1C8386256FC62A001BB151 /* SEELoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEELoginView.h; sourceTree = "<group>"; };
+		6C1C8387256FC62A001BB151 /* SEELoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEELoginView.m; sourceTree = "<group>"; };
+		6C1C838A256FE45B001BB151 /* SEERegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEERegisterViewController.h; sourceTree = "<group>"; };
+		6C1C838B256FE45B001BB151 /* SEERegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEERegisterViewController.m; sourceTree = "<group>"; };
+		6C1C8390256FE683001BB151 /* SEERegisterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEERegisterView.h; sourceTree = "<group>"; };
+		6C1C8391256FE683001BB151 /* SEERegisterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEERegisterView.m; sourceTree = "<group>"; };
+		6C1C8397256FEDA1001BB151 /* SEEBlindVideoCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindVideoCallViewController.h; sourceTree = "<group>"; };
+		6C1C8398256FEDA1001BB151 /* SEEBlindVideoCallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindVideoCallViewController.m; sourceTree = "<group>"; };
+		6C1C839A256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindGeneralInfoViewController.h; sourceTree = "<group>"; };
+		6C1C839B256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindGeneralInfoViewController.m; sourceTree = "<group>"; };
+		6C1C839D256FEDE6001BB151 /* SEEBlindPersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindPersonalViewController.h; sourceTree = "<group>"; };
+		6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindPersonalViewController.m; sourceTree = "<group>"; };
+		6C1C83A3256FF988001BB151 /* SEEBlindVideoCallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindVideoCallView.h; sourceTree = "<group>"; };
+		6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindVideoCallView.m; sourceTree = "<group>"; };
 		6C43D187256A47390039D232 /* Seeing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seeing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C43D18A256A47390039D232 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C43D18B256A47390039D232 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,6 +82,8 @@
 		6C43D1C0256A485B0039D232 /* SEEChooseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEChooseViewController.m; sourceTree = "<group>"; };
 		6C43D1C7256A499B0039D232 /* SEEChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEChooseView.h; sourceTree = "<group>"; };
 		6C43D1C8256A499B0039D232 /* SEEChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEChooseView.m; sourceTree = "<group>"; };
+		6C53A241256FBABB00E7E78D /* SEELoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEELoginViewController.h; sourceTree = "<group>"; };
+		6C53A242256FBABB00E7E78D /* SEELoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEELoginViewController.m; sourceTree = "<group>"; };
 		E1ECAE199EC0EF9405EFD559 /* Pods-Seeing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seeing.release.xcconfig"; path = "Target Support Files/Pods-Seeing/Pods-Seeing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,8 +127,140 @@
 				1F7B729F8F80AF4FD01236D2 /* Pods-Seeing.debug.xcconfig */,
 				E1ECAE199EC0EF9405EFD559 /* Pods-Seeing.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6C1C8382256FC3FA001BB151 /* SEELogin */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C8385256FC452001BB151 /* SEELoginModel */,
+				6C1C8384256FC443001BB151 /* SEELoginView */,
+				6C1C8383256FC431001BB151 /* SEELoginController */,
+			);
+			path = SEELogin;
+			sourceTree = "<group>";
+		};
+		6C1C8383256FC431001BB151 /* SEELoginController */ = {
+			isa = PBXGroup;
+			children = (
+				6C53A241256FBABB00E7E78D /* SEELoginViewController.h */,
+				6C53A242256FBABB00E7E78D /* SEELoginViewController.m */,
+			);
+			path = SEELoginController;
+			sourceTree = "<group>";
+		};
+		6C1C8384256FC443001BB151 /* SEELoginView */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C8386256FC62A001BB151 /* SEELoginView.h */,
+				6C1C8387256FC62A001BB151 /* SEELoginView.m */,
+			);
+			path = SEELoginView;
+			sourceTree = "<group>";
+		};
+		6C1C8385256FC452001BB151 /* SEELoginModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SEELoginModel;
+			sourceTree = "<group>";
+		};
+		6C1C8389256FE405001BB151 /* SEERegister */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C838F256FE49F001BB151 /* SEERegisterModel */,
+				6C1C838E256FE492001BB151 /* SEERegisterView */,
+				6C1C838D256FE468001BB151 /* SEERegisterController */,
+			);
+			path = SEERegister;
+			sourceTree = "<group>";
+		};
+		6C1C838D256FE468001BB151 /* SEERegisterController */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C838A256FE45B001BB151 /* SEERegisterViewController.h */,
+				6C1C838B256FE45B001BB151 /* SEERegisterViewController.m */,
+			);
+			path = SEERegisterController;
+			sourceTree = "<group>";
+		};
+		6C1C838E256FE492001BB151 /* SEERegisterView */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C8390256FE683001BB151 /* SEERegisterView.h */,
+				6C1C8391256FE683001BB151 /* SEERegisterView.m */,
+			);
+			path = SEERegisterView;
+			sourceTree = "<group>";
+		};
+		6C1C838F256FE49F001BB151 /* SEERegisterModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SEERegisterModel;
+			sourceTree = "<group>";
+		};
+		6C1C8393256FEC36001BB151 /* SEEBlindVideoCall */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C83A2256FF951001BB151 /* SEEBlindVideoCallModel */,
+				6C1C83A1256FF93E001BB151 /* SEEBlindVideoCallView */,
+				6C1C83A0256FF921001BB151 /* SEEBlindVideoCallController */,
+			);
+			path = SEEBlindVideoCall;
+			sourceTree = "<group>";
+		};
+		6C1C8394256FEC62001BB151 /* SEEBlindGeneralInfo */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C839A256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.h */,
+				6C1C839B256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m */,
+			);
+			path = SEEBlindGeneralInfo;
+			sourceTree = "<group>";
+		};
+		6C1C8395256FECC8001BB151 /* SEEBlindPersonal */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C839D256FEDE6001BB151 /* SEEBlindPersonalViewController.h */,
+				6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */,
+			);
+			path = SEEBlindPersonal;
+			sourceTree = "<group>";
+		};
+		6C1C8396256FED2B001BB151 /* SEELoginAndRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C8382256FC3FA001BB151 /* SEELogin */,
+				6C43D1C2256A48630039D232 /* SEEChoose */,
+				6C1C8389256FE405001BB151 /* SEERegister */,
+			);
+			path = SEELoginAndRegister;
+			sourceTree = "<group>";
+		};
+		6C1C83A0256FF921001BB151 /* SEEBlindVideoCallController */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C8397256FEDA1001BB151 /* SEEBlindVideoCallViewController.h */,
+				6C1C8398256FEDA1001BB151 /* SEEBlindVideoCallViewController.m */,
+			);
+			path = SEEBlindVideoCallController;
+			sourceTree = "<group>";
+		};
+		6C1C83A1256FF93E001BB151 /* SEEBlindVideoCallView */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C83A3256FF988001BB151 /* SEEBlindVideoCallView.h */,
+				6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */,
+			);
+			path = SEEBlindVideoCallView;
+			sourceTree = "<group>";
+		};
+		6C1C83A2256FF951001BB151 /* SEEBlindVideoCallModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SEEBlindVideoCallModel;
 			sourceTree = "<group>";
 		};
 		6C43D17E256A47390039D232 = {
@@ -136,7 +292,9 @@
 				6C43D18B256A47390039D232 /* AppDelegate.m */,
 				6C43D18D256A47390039D232 /* SceneDelegate.h */,
 				6C43D18E256A47390039D232 /* SceneDelegate.m */,
-				6C43D1C2256A48630039D232 /* SEEChoose */,
+				6C1C8396256FED2B001BB151 /* SEELoginAndRegister */,
+				6C8DBF97256E977600625C9D /* SEEBlind */,
+				6C8DBF98256E99EC00625C9D /* SEEVolunteer */,
 				6C43D193256A47390039D232 /* Main.storyboard */,
 				6C43D196256A473D0039D232 /* Assets.xcassets */,
 				6C43D198256A473D0039D232 /* LaunchScreen.storyboard */,
@@ -167,7 +325,6 @@
 		6C43D1C2256A48630039D232 /* SEEChoose */ = {
 			isa = PBXGroup;
 			children = (
-				6C43D1C6256A48AE0039D232 /* SEECHooseModel */,
 				6C43D1C4256A48850039D232 /* SEEChooseView */,
 				6C43D1C5256A489D0039D232 /* SEEChooseController */,
 			);
@@ -192,11 +349,21 @@
 			path = SEEChooseController;
 			sourceTree = "<group>";
 		};
-		6C43D1C6256A48AE0039D232 /* SEECHooseModel */ = {
+		6C8DBF97256E977600625C9D /* SEEBlind */ = {
+			isa = PBXGroup;
+			children = (
+				6C1C8393256FEC36001BB151 /* SEEBlindVideoCall */,
+				6C1C8394256FEC62001BB151 /* SEEBlindGeneralInfo */,
+				6C1C8395256FECC8001BB151 /* SEEBlindPersonal */,
+			);
+			path = SEEBlind;
+			sourceTree = "<group>";
+		};
+		6C8DBF98256E99EC00625C9D /* SEEVolunteer */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = SEECHooseModel;
+			path = SEEVolunteer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,11 +522,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */,
+				6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */,
+				6C1C8388256FC62A001BB151 /* SEELoginView.m in Sources */,
 				6C43D18C256A47390039D232 /* AppDelegate.m in Sources */,
 				6C43D1C1256A485B0039D232 /* SEEChooseViewController.m in Sources */,
+				6C1C8399256FEDA1001BB151 /* SEEBlindVideoCallViewController.m in Sources */,
 				6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */,
 				6C43D19D256A473D0039D232 /* main.m in Sources */,
+				6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */,
 				6C43D18F256A47390039D232 /* SceneDelegate.m in Sources */,
+				6C1C8392256FE683001BB151 /* SEERegisterView.m in Sources */,
+				6C1C838C256FE45B001BB151 /* SEERegisterViewController.m in Sources */,
+				6C1C83A5256FF988001BB151 /* SEEBlindVideoCallView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
