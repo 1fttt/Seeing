@@ -28,10 +28,13 @@
     [_loginView.registerButton addTarget:self action:@selector(pressRegister) forControlEvents:UIControlEventTouchUpInside];
     [_loginView.loginButton addTarget:self action:@selector(pressLogin) forControlEvents:UIControlEventTouchUpInside];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerSuccess:) name:@"nameAndPass" object:nil];
+    
 }
     
 - (void)pressLogin {
     
+    //登录成功
     [self loginSuccess];
 }
 
@@ -41,7 +44,20 @@
     [self presentViewController:chooseView animated:YES completion:nil];
 }
 
+
+
+//登录成功
 - (void)loginSuccess {
+    
+    //存储账号密码
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:_loginView.userNameTextField.text forKey:@"userName"];
+    [userDefaults setObject:_loginView.userPassTextField.text forKey:@"userPass"];
+    
+    
+    NSString *name = [userDefaults objectForKey:@"userName"];
+    NSLog(@"%@", name);
+    
     
     SEEBlindVideoCallViewController *videoCallView = [[SEEBlindVideoCallViewController alloc] init];
     
@@ -67,5 +83,10 @@
     
 }
 
+
+- (void)registerSuccess:(NSNotification *)noti {
+    _loginView.userNameTextField.text = [noti.userInfo valueForKey:@"name"];
+    _loginView.userPassTextField.text = [noti.userInfo valueForKey:@"pass"];
+}
 
 @end

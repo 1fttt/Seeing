@@ -33,6 +33,7 @@
 
 - (void)pressBlind {
     SEERegisterViewController *registerView = [[SEERegisterViewController alloc] init];
+    
     registerView.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:registerView animated:YES completion:nil];
     

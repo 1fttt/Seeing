@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *str;
 @property (nonatomic, strong) SEERegisterView *registerView;
 
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -35,17 +35,19 @@
 }
 
 - (void)pressSure {
+    
+    //注册成功
+    [self sureSuccess];
+    
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)sureSuccess {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"nameAndPass" object:self userInfo:@{@"name":_registerView.userNameTextField.text, @"pass":_registerView.userPassTextField.text}];
 }
-*/
+
+
 
 @end

@@ -18,6 +18,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+//    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+//    NSLog(@"%@", [user objectForKey:@"userName"]);
+    
 }
 
 /*
