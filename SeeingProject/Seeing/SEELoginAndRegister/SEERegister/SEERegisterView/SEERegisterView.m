@@ -56,7 +56,21 @@
     
     [_userNameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
-        make.top.equalTo(self.mas_top).offset(305);
+        make.top.equalTo(self.mas_centerY).offset(-135);
+        make.width.mas_equalTo(textfieldWidth);
+        make.height.mas_equalTo(textfieldHeight);
+        
+    }];
+    
+    _userNumberTextField = [[UITextField alloc] init];
+    [self addSubview:_userNumberTextField];
+    _userNumberTextField.borderStyle = UITextBorderStyleRoundedRect;
+    _userNumberTextField.placeholder = @"请输入手机号";
+    _userNumberTextField.keyboardType = UIKeyboardTypeDefault;
+    
+    [_userNumberTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.mas_centerX);
+        make.top.equalTo(self.mas_centerY).offset(-80);
         make.width.mas_equalTo(textfieldWidth);
         make.height.mas_equalTo(textfieldHeight);
         
@@ -70,7 +84,7 @@
     
     [_userPassTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
-        make.top.equalTo(self.mas_top).offset(370);
+        make.top.equalTo(self.mas_centerY).offset(-25);
         make.width.mas_equalTo(textfieldWidth);
         make.height.mas_equalTo(textfieldHeight);
         

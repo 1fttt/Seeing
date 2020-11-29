@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIButton *cancelButton;
 @property (nonatomic, strong) UITextField *userNameTextField;
 @property (nonatomic, strong) UITextField *userPassTextField;
+@property (nonatomic, strong) UITextField *userNumberTextField;
 
 
 - (void)initView;

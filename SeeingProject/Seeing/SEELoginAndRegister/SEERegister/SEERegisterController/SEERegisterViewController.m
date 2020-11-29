@@ -7,6 +7,7 @@
 //
 
 #import "SEERegisterViewController.h"
+#import "Manager.h"
 
 @interface SEERegisterViewController ()
 
@@ -25,6 +26,7 @@
     [_registerView.sureButton addTarget:self action:@selector(pressSure) forControlEvents:UIControlEventTouchUpInside];
 }
 
+
 - (void)pressCancel {
     UIViewController *controller = self;
     while(controller.presentingViewController != nil){
@@ -34,9 +36,18 @@
     //[self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
+
+
 - (void)pressSure {
     
     //注册成功
+    
+    Manager *manager = [Manager shareManager];
+    [manager registerName:_registerView.userNameTextField.text andNumber:_registerView.userNumberTextField.text andPass:_registerView.userPassTextField.text getBackModel:^(SEERegisterModel * _Nonnull registerBackModel) {
+        NSLog(@"成功！！");
+    }];
+    
+    
     [self sureSuccess];
     
     [self.presentingViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];

@@ -26,6 +26,8 @@
 		6C43D1C1256A485B0039D232 /* SEEChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D1C0256A485B0039D232 /* SEEChooseViewController.m */; };
 		6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D1C8256A499B0039D232 /* SEEChooseView.m */; };
 		6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C53A242256FBABB00E7E78D /* SEELoginViewController.m */; };
+		6C6390D42573C33D008A5BEE /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D32573C33D008A5BEE /* Manager.m */; };
+		6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D62573D702008A5BEE /* SEERegisterModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,10 @@
 		6C43D1C8256A499B0039D232 /* SEEChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEChooseView.m; sourceTree = "<group>"; };
 		6C53A241256FBABB00E7E78D /* SEELoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEELoginViewController.h; sourceTree = "<group>"; };
 		6C53A242256FBABB00E7E78D /* SEELoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEELoginViewController.m; sourceTree = "<group>"; };
+		6C6390D22573C33D008A5BEE /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
+		6C6390D32573C33D008A5BEE /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
+		6C6390D52573D702008A5BEE /* SEERegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEERegisterModel.h; sourceTree = "<group>"; };
+		6C6390D62573D702008A5BEE /* SEERegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEERegisterModel.m; sourceTree = "<group>"; };
 		E1ECAE199EC0EF9405EFD559 /* Pods-Seeing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seeing.release.xcconfig"; path = "Target Support Files/Pods-Seeing/Pods-Seeing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +202,8 @@
 		6C1C838F256FE49F001BB151 /* SEERegisterModel */ = {
 			isa = PBXGroup;
 			children = (
+				6C6390D52573D702008A5BEE /* SEERegisterModel.h */,
+				6C6390D62573D702008A5BEE /* SEERegisterModel.m */,
 			);
 			path = SEERegisterModel;
 			sourceTree = "<group>";
@@ -292,6 +300,8 @@
 				6C43D18B256A47390039D232 /* AppDelegate.m */,
 				6C43D18D256A47390039D232 /* SceneDelegate.h */,
 				6C43D18E256A47390039D232 /* SceneDelegate.m */,
+				6C6390D22573C33D008A5BEE /* Manager.h */,
+				6C6390D32573C33D008A5BEE /* Manager.m */,
 				6C1C8396256FED2B001BB151 /* SEELoginAndRegister */,
 				6C8DBF97256E977600625C9D /* SEEBlind */,
 				6C8DBF98256E99EC00625C9D /* SEEVolunteer */,
@@ -523,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */,
+				6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */,
 				6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */,
 				6C1C8388256FC62A001BB151 /* SEELoginView.m in Sources */,
 				6C43D18C256A47390039D232 /* AppDelegate.m in Sources */,
@@ -535,6 +546,7 @@
 				6C1C8392256FE683001BB151 /* SEERegisterView.m in Sources */,
 				6C1C838C256FE45B001BB151 /* SEERegisterViewController.m in Sources */,
 				6C1C83A5256FF988001BB151 /* SEEBlindVideoCallView.m in Sources */,
+				6C6390D42573C33D008A5BEE /* Manager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
