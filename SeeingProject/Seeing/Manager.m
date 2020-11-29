@@ -24,28 +24,28 @@ static Manager *manager = nil;
     return manager;
 }
 
-- (void)registerName:(NSString *)nameStr andNumber:(NSString *)numberStr andPass:(NSString *)passStr getBackModel:(RegisterBackBlock)succeedBlock {
+- (void)registerPersonStr:(NSString *)personStr andName:(NSString *)nameStr andNumber:(NSString *)numberStr andPass:(NSString *)passStr getBackModel:(RegisterBackBlock)succeedBlock error:(ErrorBlock)errorBlock {
     
     AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
-    AFmanager.requestSerializer = [AFJSONRequestSerializer serializer]; // 请求JSON格式
-    AFmanager.responseSerializer = [AFJSONResponseSerializer serializer]; // 响应JSON格式
-    
+
     [AFmanager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    
-    NSString *url = @"http://47.100.138.22:8082/volunteer/register";
+    NSString *url = [NSString stringWithFormat:@"http://47.100.138.22:8082/%@/register", personStr];
+    //NSString *url = @"http://47.100.138.22:8082/blind/register";
     NSDictionary *parameters = @{@"name":nameStr, @"phone":numberStr, @"password":passStr};
     
-
+//, @"Content-Type":@"application/x-www-form-urlencoded"
     [AFmanager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"注册成功");
+        
         SEERegisterModel *registerModel = [[SEERegisterModel alloc]initWithDictionary:responseObject error:nil];
+        NSLog(@"%@", registerModel.msg);
         
         succeedBlock(registerModel);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"注册失败");
+        NSLog(@"请求失败");
+        errorBlock(error);
     }];
     
 

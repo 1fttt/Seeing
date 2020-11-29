@@ -11,13 +11,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^RegisterBackBlock)(SEERegisterModel *registerBackModel);
-
+typedef void (^ErrorBlock)(NSError *error);
 
 @interface Manager : NSObject
 
 + (instancetype)shareManager;
 
-- (void)registerName:(NSString *)nameStr andNumber:(NSString *)numberStr andPass:(NSString *)pass getBackModel:(RegisterBackBlock)succeedBlock;
+- (void)registerPersonStr:(NSString *)personStr andName:(NSString *)nameStr andNumber:(NSString *)numberStr andPass:(NSString *)passStr getBackModel:(RegisterBackBlock)succeedBlock error:(ErrorBlock)errorBlock;
 
 
 @end
