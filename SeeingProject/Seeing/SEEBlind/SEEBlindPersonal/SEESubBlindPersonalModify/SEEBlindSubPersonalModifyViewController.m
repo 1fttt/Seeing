@@ -1,22 +1,23 @@
 //
-//  SEEBlindPersonalViewController.m
+//  SEEBlindSubPersonalModifyViewController.m
 //  Seeing
 //
-//  Created by 房彤 on 2020/11/26.
+//  Created by 房彤 on 2020/11/30.
 //  Copyright © 2020 房彤. All rights reserved.
 //
 
-#import "SEEBlindPersonalViewController.h"
+#import "SEEBlindSubPersonalModifyViewController.h"
 
-@interface SEEBlindPersonalViewController ()
+@interface SEEBlindSubPersonalModifyViewController ()
 
 @end
 
-@implementation SEEBlindPersonalViewController
+@implementation SEEBlindSubPersonalModifyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor yellowColor];
 }
 
 /*

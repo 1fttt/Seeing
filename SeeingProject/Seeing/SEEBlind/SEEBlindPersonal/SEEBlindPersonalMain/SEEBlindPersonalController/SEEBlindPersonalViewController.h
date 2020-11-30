@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SEEBlindPersonalView;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindPersonalViewController : UIViewController
+
+@property SEEBlindPersonalView *personalView;
 
 @end
 

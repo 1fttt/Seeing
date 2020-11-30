@@ -24,6 +24,7 @@ static Manager *manager = nil;
     return manager;
 }
 
+
 - (void)registerPersonStr:(NSString *)personStr andName:(NSString *)nameStr andNumber:(NSString *)numberStr andPass:(NSString *)passStr getBackModel:(RegisterBackBlock)succeedBlock error:(ErrorBlock)errorBlock {
     
     AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
@@ -47,10 +48,7 @@ static Manager *manager = nil;
         NSLog(@"请求失败");
         errorBlock(error);
     }];
-    
-
-    
+        
 }
-
 
 @end

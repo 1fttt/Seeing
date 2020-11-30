@@ -51,11 +51,11 @@
     
     //存储账号密码
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:_loginView.userNameTextField.text forKey:@"userName"];
+    [userDefaults setObject:_loginView.userNameTextField.text forKey:@"userAccount"];
     [userDefaults setObject:_loginView.userPassTextField.text forKey:@"userPass"];
     
     
-    NSString *name = [userDefaults objectForKey:@"userName"];
+    NSString *name = [userDefaults objectForKey:@"userAccount"];
     NSLog(@"%@", name);
     
     
