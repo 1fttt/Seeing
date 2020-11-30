@@ -45,7 +45,7 @@
 - (void)pressSure {
     
     Manager *manager = [Manager shareManager];
-    [manager registerPersonStr:_str andName:_registerView.userNameTextField.text andNumber:_registerView.userNumberTextField.text andPass:_registerView.userPassTextField.text getBackModel:^(SEERegisterModel * _Nonnull registerBackModel) {
+    [manager registerTypeStr:_str andName:_registerView.userNameTextField.text andNumber:_registerView.userNumberTextField.text andPass:_registerView.userPassTextField.text getBackModel:^(SEERegisterModel * _Nonnull registerBackModel) {
         
         if ([registerBackModel.msg isEqualToString:@"注册成功"]) {
             NSLog(@"注册成功！！！");
@@ -68,7 +68,9 @@
 
 - (void)sureSuccess {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"nameAndPass" object:self userInfo:@{@"name":_registerView.userNameTextField.text, @"pass":_registerView.userPassTextField.text}];
-    [self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+    //[self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+    
+    [self pressCancel];
 }
 
 

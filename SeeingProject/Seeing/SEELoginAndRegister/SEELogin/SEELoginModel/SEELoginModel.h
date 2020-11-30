@@ -19,9 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *ID;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *email;
 @property (nonatomic, copy) NSString *picture;
-@property (nonatomic, copy) NSString *msg;
 @property (nonatomic, copy) NSString *gender;
+@property (nonatomic, copy) NSString *msg;
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, copy) NSString *number;
 
@@ -31,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SEELoginModel : JSONModel
 
 @property (nonatomic, assign) int status;
+@property (nonatomic, copy) NSString *msg;
 @property (nonatomic, strong) DataModel *data;
 
 @end

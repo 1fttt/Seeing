@@ -33,7 +33,7 @@
 
 - (void)pressBlind {
     SEERegisterViewController *registerView = [[SEERegisterViewController alloc] init];
-    registerView.str = @"blind";
+    registerView.str = @"1";
     registerView.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:registerView animated:YES completion:nil];
     
@@ -41,7 +41,7 @@
 
 - (void)pressVolunteer {
     SEERegisterViewController *registerView = [[SEERegisterViewController alloc] init];
-    registerView.str = @"volunteer";
+    registerView.str = @"0";
     registerView.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:registerView animated:YES completion:nil];
     

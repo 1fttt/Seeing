@@ -9,6 +9,7 @@
 #import "Manager.h"
 #import "AFNetworking.h"
 #import "SEERegisterModel.h"
+#import "SEELoginModel.h"
 
 @implementation Manager
 
@@ -25,16 +26,15 @@ static Manager *manager = nil;
 }
 
 
-- (void)registerPersonStr:(NSString *)personStr andName:(NSString *)nameStr andNumber:(NSString *)numberStr andPass:(NSString *)passStr getBackModel:(RegisterBackBlock)succeedBlock error:(ErrorBlock)errorBlock {
+- (void)registerTypeStr:(NSString *)typeStr andName:(NSString *)nameStr andNumber:(NSString *)numberStr andPass:(NSString *)passStr getBackModel:(RegisterBackBlock)succeedBlock error:(ErrorBlock)errorBlock {
     
     AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
 
     [AFmanager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    NSString *url = [NSString stringWithFormat:@"http://47.100.138.22:8082/%@/register", personStr];
+    NSString *url = @"http://47.100.138.22:8082/user/register";
     //NSString *url = @"http://47.100.138.22:8082/blind/register";
-    NSDictionary *parameters = @{@"name":nameStr, @"phone":numberStr, @"password":passStr};
+    NSDictionary *parameters = @{@"name":nameStr, @"phone":numberStr, @"password":passStr, @"type":typeStr};
     
-//, @"Content-Type":@"application/x-www-form-urlencoded"
     [AFmanager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -49,6 +49,28 @@ static Manager *manager = nil;
         errorBlock(error);
     }];
         
+}
+
+- (void)loginPhoneNumber:(NSString *)numberStr andPasswordStr:(NSString *)passwordStr getBackModel:(LoginBackBlock)succeedBlock error:(ErrorBlock)errorBlock {
+ 
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    [AFmanager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    
+    NSString *url = @"http://47.100.138.22:8082/user/login";
+    
+    NSDictionary *parameters = @{@"phone":numberStr, @"password":passwordStr};
+    
+    [AFmanager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        SEELoginModel *model = [[SEELoginModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"%@", model.msg);
+        succeedBlock(model);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败");
+    }];
+    
+    
+
 }
 
 @end

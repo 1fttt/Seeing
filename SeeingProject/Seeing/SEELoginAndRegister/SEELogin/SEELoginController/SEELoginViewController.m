@@ -11,6 +11,7 @@
 #import "SEEBlindVideoCallViewController.h"
 #import "SEEBlindGeneralInfoViewController.h"
 #import "SEEBlindPersonalViewController.h"
+#import "Manager.h"
 
 @interface SEELoginViewController ()
 
@@ -33,9 +34,15 @@
 }
     
 - (void)pressLogin {
+    Manager *manager = [Manager shareManager];
+    [manager loginPhoneNumber:_loginView.userNameTextField.text andPasswordStr:_loginView.userPassTextField.text getBackModel:^(SEELoginModel * _Nonnull loginBackModel) {
+        //登录成功
+        [self loginSuccess];
+    } error:^(NSError * _Nonnull error) {
+        
+    }];
     
-    //登录成功
-    [self loginSuccess];
+    
 }
 
 - (void)pressRegister {
