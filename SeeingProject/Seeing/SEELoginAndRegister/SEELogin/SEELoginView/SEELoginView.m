@@ -67,7 +67,7 @@
     _userPassTextField.borderStyle = UITextBorderStyleRoundedRect;
     _userPassTextField.placeholder = @"请输入密码";
     _userPassTextField.keyboardType = UIKeyboardTypeDefault;
-    
+    _userPassTextField.secureTextEntry = YES;
     [_userPassTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
         make.top.equalTo(self.mas_centerY).offset(-25);

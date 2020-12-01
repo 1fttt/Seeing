@@ -67,6 +67,7 @@ static Manager *manager = nil;
         succeedBlock(model);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败");
+        errorBlock(error);
     }];
     
     
