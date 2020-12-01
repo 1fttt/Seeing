@@ -58,9 +58,7 @@
                 [userDefaults setObject:[loginBackModel.data address] forKey:@"address"];
                 [userDefaults setObject:[loginBackModel.data number] forKey:@"number"];
                 
-                
-                
-                
+            
                 [self loginSuccess];
             } else {
                 [self showAlertStr:loginBackModel.msg actionStr:@"确定"];
@@ -74,10 +72,6 @@
         [self showAlertStr:@"输入不完整" actionStr:@"确定"];
     
     }
-    
-    
-    
-    
     
 }
 

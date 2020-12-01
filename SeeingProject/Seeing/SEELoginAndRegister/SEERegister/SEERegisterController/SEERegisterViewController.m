@@ -56,9 +56,7 @@
             
             if ([registerBackModel.msg isEqualToString:@"注册成功"]) {
                 [self showAlertStr:registerBackModel.msg actionStr:@"继续登录"];
-//                [self showAlertStr:registerBackModel.msg actionStr:@"继续登录" press:^{
-//                    [self sureSuccess];
-//                }];
+                
                 
             } else if ([registerBackModel.msg isEqualToString:@"电话号码已存在"]) {
                 [self showAlertStr:registerBackModel.msg actionStr:@"重新输入"];
@@ -73,10 +71,11 @@
                 
                 [self showAlertStr:registerBackModel.msg actionStr:@"确定"];
                 
-            } else {
-
-                [self showAlertStr:registerBackModel.msg actionStr:@"继续登录"];
             }
+//            else {
+//
+//                [self showAlertStr:registerBackModel.msg actionStr:@"继续登录"];
+//            }
             
             
         } error:^(NSError * _Nonnull error) {

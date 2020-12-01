@@ -138,8 +138,24 @@
             filePath = "Seeing/SEELoginAndRegister/SEERegister/SEERegisterController/SEERegisterViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-pressSure"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23EB782F-9CC6-4BE5-A42C-05EEB43DB6B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEELoginAndRegister/SEERegister/SEERegisterController/SEERegisterViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "-pressSure"
             landmarkType = "7">
          </BreakpointContent>
