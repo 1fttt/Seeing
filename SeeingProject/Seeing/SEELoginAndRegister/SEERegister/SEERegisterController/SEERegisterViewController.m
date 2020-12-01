@@ -44,22 +44,57 @@
 //点击确定注册
 - (void)pressSure {
     
-    Manager *manager = [Manager shareManager];
-    [manager registerTypeStr:_str andName:_registerView.userNameTextField.text andNumber:_registerView.userNumberTextField.text andPass:_registerView.userPassTextField.text getBackModel:^(SEERegisterModel * _Nonnull registerBackModel) {
+    //手机号码不合法
+    if (![self isPureNumber:_registerView.userNumberTextField.text] || _registerView.userNumberTextField.text.length != 11) {
         
-        if ([registerBackModel.msg isEqualToString:@"注册成功"]) {
-            NSLog(@"注册成功！！！");
-            [self sureSuccess];
-        } else if ([registerBackModel.msg isEqualToString:@"手机号码已存在"]) {
-            NSLog(@"手机号已存在");
-        } else if ([registerBackModel.msg isEqualToString:@"信息不完全"]) {
-            NSLog(@"信息不完全");
-        } else if ([registerBackModel.msg isEqualToString:@"注册失败"]) {
-            NSLog(@"注册失败");
-        }
-    } error:^(NSError * _Nonnull error) {
-        NSLog(@"请求失败");
-    }];
+        [self showAlertStr:@"请输入合法手机号" actionStr:@"重新输入" press:^{
+            
+        }];
+        
+    } else {
+        
+        Manager *manager = [Manager shareManager];
+        [manager registerTypeStr:_str andName:_registerView.userNameTextField.text andNumber:_registerView.userNumberTextField.text andPass:_registerView.userPassTextField.text getBackModel:^(SEERegisterModel * _Nonnull registerBackModel) {
+            
+            if ([registerBackModel.msg isEqualToString:@"注册成功"]) {
+                
+                [self showAlertStr:registerBackModel.msg actionStr:@"继续登录" press:^{
+                    [self sureSuccess];
+                }];
+                
+            } else if ([registerBackModel.msg isEqualToString:@"电话号码已存在"]) {
+                [self showAlertStr:registerBackModel.msg actionStr:@"重新输入" press:^{
+                    
+                }];
+                
+            } else if ([registerBackModel.msg isEqualToString:@"信息不完全"]) {
+                NSLog(@"信息不完全");
+                
+                [self showAlertStr:registerBackModel.msg actionStr:@"重新输入" press:^{
+                    
+                }];
+                
+            } else if ([registerBackModel.msg isEqualToString:@"注册失败"]) {
+                NSLog(@"注册失败");
+                
+                [self showAlertStr:registerBackModel.msg actionStr:@"确定" press:^{
+                    
+                }];
+                
+            } else {
+
+                [self showAlertStr:registerBackModel.msg actionStr:@"继续登录" press:^{
+                    //[self sureSuccess];
+                }];
+            }
+            
+            
+        } error:^(NSError * _Nonnull error) {
+            NSLog(@"请求失败");
+        }];
+    }
+    
+    
     
     
 
@@ -71,6 +106,26 @@
     //[self.presentingViewController.presentingViewController dismissViewControllerAnimated:NO completion:nil];
     
     [self pressCancel];
+}
+
+
+//判断是否是纯数字
+- (BOOL)isPureNumber:(NSString *)str {
+    str = [str stringByTrimmingCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]];
+    if (str.length > 0) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+//点击注册显示的警告框
+- (void)showAlertStr:(NSString *)alertStr actionStr:(NSString *)actionStr press:(void (^) (void))block {
+    UIAlertAction *action = [UIAlertAction actionWithTitle:actionStr style:UIAlertActionStyleDefault handler:nil];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:alertStr message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:action];
+    [self presentViewController:alert animated:YES completion:nil];
+    block();
 }
 
 
