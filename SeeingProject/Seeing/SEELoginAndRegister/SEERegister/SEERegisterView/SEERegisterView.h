@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
     
 @interface SEERegisterView : UIView
 
+@property (nonatomic, strong) UILabel *registerLabel;
+
 @property (nonatomic, strong) UIButton *sureButton;
 @property (nonatomic, strong) UIButton *cancelButton;
 @property (nonatomic, strong) UITextField *userNameTextField;

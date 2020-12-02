@@ -67,7 +67,7 @@
     _userNameTextField.borderStyle = UITextBorderStyleNone;
     _userNameTextField.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.5];
     _userNameTextField.layer.cornerRadius = 25;
-    _userNameTextField.placeholder = @"请输入用户名";
+    _userNameTextField.placeholder = @"请输入电话号码";
     _userNameTextField.keyboardType = UIKeyboardTypeDefault;
     
     //设置leftView 让text不紧贴左边边框
@@ -108,13 +108,23 @@
    
     _forgetButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [self addSubview:_forgetButton];
-    _forgetButton.frame = CGRectMake(200, 690, 100, 30);
-    [_forgetButton setTitle:@"忘记密码" forState:UIControlStateNormal];
+    //_forgetButton.frame = CGRectMake(200, 690, 100, 30);
+    [_forgetButton setTitle:@"忘记密码?" forState:UIControlStateNormal];
     _forgetButton.titleLabel.font = [UIFont systemFontOfSize:16];
     _forgetButton.tintColor = [UIColor colorWithWhite:0.2 alpha:1];
     
+    NSMutableAttributedString *content = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithString:_forgetButton.titleLabel.text]];
+    NSRange contentRange = {0,[content length]};
+    [content addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:contentRange];
+    _forgetButton.titleLabel.attributedText = content;
     
-    
+    [_forgetButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.mas_centerX);
+        make.top.equalTo(_registerButton.mas_bottom).offset(75);
+        make.width.mas_equalTo(80);
+        make.height.mas_equalTo(30);
+    }];
+
 }
 
 
