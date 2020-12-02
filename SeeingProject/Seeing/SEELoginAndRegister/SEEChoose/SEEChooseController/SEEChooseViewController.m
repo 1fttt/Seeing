@@ -27,6 +27,8 @@
     
     [_chooseView.blindButton addTarget:self action:@selector(pressBlind) forControlEvents:UIControlEventTouchUpInside];
     [_chooseView.volunteerButton addTarget:self action:@selector(pressVolunteer) forControlEvents:UIControlEventTouchUpInside];
+   
+    [_chooseView.backButton addTarget:self action:@selector(pressBack) forControlEvents:UIControlEventTouchUpInside];
     
    
 }
@@ -45,6 +47,10 @@
     registerView.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:registerView animated:YES completion:nil];
     
+}
+
+- (void)pressBack {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

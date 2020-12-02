@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEChooseView : UIView
 
+@property (nonatomic, strong) UILabel *chooseLabel;
+@property (nonatomic, strong) UIButton *backButton;
 @property UIButton *blindButton;
 @property UIButton *volunteerButton;
 

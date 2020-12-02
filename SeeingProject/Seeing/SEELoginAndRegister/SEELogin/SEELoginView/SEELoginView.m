@@ -22,11 +22,11 @@
     _seeingLabel = [[UILabel alloc] init];
     [self addSubview:_seeingLabel];
     _seeingLabel.text = @"Welcome To Seeing";
-    _seeingLabel.font = [UIFont boldSystemFontOfSize:28];
+    _seeingLabel.font = [UIFont boldSystemFontOfSize:30];
     _seeingLabel.textColor = [UIColor blackColor];
     [_seeingLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).offset(30);
-        make.top.equalTo(self.mas_top).offset(170);
+        make.top.equalTo(self.mas_top).offset(145);
         make.width.equalTo(@300);
         make.height.mas_equalTo(100);
     }];

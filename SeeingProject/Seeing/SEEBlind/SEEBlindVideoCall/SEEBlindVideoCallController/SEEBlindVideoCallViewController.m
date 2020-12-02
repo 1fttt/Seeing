@@ -18,8 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
+    //self.tabBarItem.title = @"视频通话";
+    //self.title = @"视频通话";
 //    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
 //    NSLog(@"%@", [user objectForKey:@"userName"]);
     

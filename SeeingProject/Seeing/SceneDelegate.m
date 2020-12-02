@@ -22,8 +22,18 @@
     _window = [[UIWindow alloc] initWithWindowScene:scene];
     [_window makeKeyAndVisible];
 
+    
     SEELoginViewController *loginView = [[SEELoginViewController alloc] init];
+    
+    NSUserDefaults *userDafaults = [NSUserDefaults standardUserDefaults];
+    if ([userDafaults objectForKey:@"userAccount"]) {
+        NSLog(@"%@", [userDafaults objectForKey:@"userAccount"]);
+        loginView.avoidLogin = YES;
+    }
+    
     _window.rootViewController = loginView;
+    
+
     
     // Use this metho·d to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.

@@ -22,8 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+
+    
     self.view.backgroundColor = [UIColor whiteColor];
     _loginView = [[SEELoginView alloc] initWithFrame:self.view.frame];
+    
+    
+    
     [self.view addSubview:_loginView];
     [_loginView initView];
     
@@ -31,10 +37,23 @@
     [_loginView.loginButton addTarget:self action:@selector(pressLogin) forControlEvents:UIControlEventTouchUpInside];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerSuccess:) name:@"nameAndPass" object:nil];
-    
+
 }
     
+- (void)viewDidAppear:(BOOL)animated {
+    if (_avoidLogin == YES) {
+        [self loginSuccess];
+        
+//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//        NSLog(@"%@", userDefaults);
+        
+    }
+}
+
+
 - (void)pressLogin {
+    
+    
     
     if (_loginView.userNameTextField.text.length > 0 && _loginView.userPassTextField.text.length > 0) {
         Manager *manager = [Manager shareManager];
@@ -94,15 +113,27 @@
     NSLog(@"%@", [userDefaults objectForKey:@"id"]);
     NSLog(@"%@", [userDefaults objectForKey:@"phone"]);
     
+    //视频通话
     SEEBlindVideoCallViewController *videoCallView = [[SEEBlindVideoCallViewController alloc] init];
     
     UINavigationController *videoCallNav = [[UINavigationController alloc] initWithRootViewController:videoCallView];
+    videoCallNav.tabBarItem.title = @"视频通话";
+    videoCallNav.tabBarItem.image = [UIImage imageNamed:@"shipintonghua"];
+    videoCallNav.tabBarItem.selectedImage = [UIImage imageNamed:@"shipintonghua-2"];
     
+    //常用信息
     SEEBlindGeneralInfoViewController *generalInfoView = [[SEEBlindGeneralInfoViewController alloc] init];
     UINavigationController *generalInfoNav = [[UINavigationController alloc] initWithRootViewController:generalInfoView];
+    generalInfoNav.tabBarItem.title = @"常用信息";
+    generalInfoNav.tabBarItem.image = [UIImage imageNamed:@"changyongxinxi"];
+    generalInfoNav.tabBarItem.selectedImage = [UIImage imageNamed:@"changyongxinxi-2"];
     
+    //我的
     SEEBlindPersonalViewController *personalView = [[SEEBlindPersonalViewController alloc] init];
     UINavigationController *personalNav = [[UINavigationController alloc] initWithRootViewController:personalView];
+    personalNav.tabBarItem.title = @"个人中心";
+    personalNav.tabBarItem.image = [UIImage imageNamed:@"wode-3"];
+    personalNav.tabBarItem.selectedImage = [UIImage imageNamed:@"wode-2"];
     
     NSArray *array = [NSArray arrayWithObjects:videoCallNav, generalInfoNav, personalNav, nil];
     
@@ -111,7 +142,7 @@
     tabbarController.viewControllers = array;
     
     //设置选中状态的颜色
-    tabbarController.tabBar.tintColor = [UIColor redColor];
+    tabbarController.tabBar.tintColor = [UIColor colorWithRed:0/255 green:143.0/255 blue:211.0/255 alpha:1];
     
     tabbarController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:tabbarController animated:YES completion:nil];

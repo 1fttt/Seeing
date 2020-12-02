@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SEELoginViewController : UIViewController 
 
 @property (nonatomic, strong) SEELoginView *loginView;
-
+@property (nonatomic, assign) BOOL avoidLogin;
 @end
 
 NS_ASSUME_NONNULL_END
