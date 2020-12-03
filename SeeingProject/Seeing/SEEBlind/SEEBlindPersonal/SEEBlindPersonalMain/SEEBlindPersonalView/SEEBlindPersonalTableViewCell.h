@@ -12,7 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindPersonalTableViewCell : UITableViewCell
 
-@property UILabel *label;
+@property (nonatomic, strong) UILabel *subTitlelabel;
+@property (nonatomic, strong) UILabel *nameLabel;
+
+@property (nonatomic, strong) UIButton *headButton;
 
 @end
 

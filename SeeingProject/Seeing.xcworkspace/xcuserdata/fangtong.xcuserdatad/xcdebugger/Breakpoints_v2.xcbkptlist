@@ -180,7 +180,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "582F1BCE-A987-4195-9B39-AE64680021F5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEELoginViewController.m"

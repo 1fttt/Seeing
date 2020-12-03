@@ -19,6 +19,7 @@
     _tableView.dataSource = self;
     
     [_tableView registerClass:[SEESubBlindPersonCentreTableViewCell class] forCellReuseIdentifier:@"cell"];
+    [_tableView registerClass:[SEESubBlindPersonCentreTableViewCell class] forCellReuseIdentifier:@"0row"];
     
     
 }
@@ -28,16 +29,32 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    if (indexPath.row == 0) {
+        return 110;
+    } else {
+        return 70;
+    }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SEESubBlindPersonCentreTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    NSArray *array = [NSArray arrayWithObjects:@"姓名", @"性别", @"电话", @"家庭住址", nil];
-    cell.label.text = array[indexPath.row];
+    if (indexPath.row == 0) {
+        SEESubBlindPersonCentreTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"0row" forIndexPath:indexPath];
+        [cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
+        return cell;
+        
+    } else {
+        
+        SEESubBlindPersonCentreTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        
+        NSArray *array = [NSArray arrayWithObjects:@"姓名", @"性别", @"电话", @"家庭住址", nil];
+        cell.label.text = array[indexPath.row];
+        
+        return cell;
+    }
     
-    return cell;
+    return [[UITableViewCell alloc] init];
 }
 
 @end

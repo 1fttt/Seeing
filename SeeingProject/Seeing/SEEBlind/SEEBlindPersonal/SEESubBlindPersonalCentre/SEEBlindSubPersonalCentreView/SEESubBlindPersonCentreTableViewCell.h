@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SEESubBlindPersonCentreTableViewCell : UITableViewCell
 
+@property (nonatomic, strong) UIButton *headButton;
+
+@property (nonatomic, strong) UIView *leftView;
+@property (nonatomic, strong) UIView *lineView;
+
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UITextField *textField;
 

@@ -8,27 +8,66 @@
 
 #import "SEEBlindPersonalTableViewCell.h"
 #import "Masonry.h"
+#define headButtonSize 110
+#define nameLabelWidth 150
+#define nameLabelHeight 40
 
 @implementation SEEBlindPersonalTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    _label = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
-    [self.contentView addSubview:_label];
-    _label.font = [UIFont systemFontOfSize:18];
-    _label.textColor = [UIColor blackColor];
+    if ([self.reuseIdentifier isEqualToString:@"cell"]) {
+
+        _subTitlelabel = [[UILabel alloc] init];
+        [self.contentView addSubview:_subTitlelabel];
+        _subTitlelabel.font = [UIFont systemFontOfSize:18];
+        _subTitlelabel.textColor = [UIColor blackColor];
+        
+    } else if ([self.reuseIdentifier isEqualToString:@"0row"]) {
+        
+        _headButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.contentView addSubview:_headButton];
+        _headButton.layer.cornerRadius = headButtonSize / 2;
+        _headButton.layer.masksToBounds = YES;
+        
+        _nameLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:_nameLabel];
+        
+    }
     
     return self;
 }
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [_label mas_makeConstraints:^(MASConstraintMaker *make) {
+    
+    [_subTitlelabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
         make.left.equalTo(self.contentView.mas_left).offset(15);
         make.height.equalTo(@30);
         make.width.equalTo(@100);
     }];
+    
+    [_headButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView.mas_centerX);
+        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.width.mas_equalTo(headButtonSize);
+        make.height.mas_equalTo(headButtonSize);
+    }];
+    
+    
+    [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_headButton.mas_bottom).offset(15);
+        make.centerX.equalTo(self.contentView.mas_centerX);
+        make.width.mas_equalTo(nameLabelWidth);
+        make.height.mas_equalTo(nameLabelHeight);
+    }];
+    
+    _nameLabel.font = [UIFont boldSystemFontOfSize:22];
+    _nameLabel.textColor = [UIColor blackColor];
+    _nameLabel.textAlignment = NSTextAlignmentCenter;
+    
+    
 }
 
 @end

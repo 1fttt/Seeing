@@ -21,23 +21,49 @@
     _tableView.dataSource = self;
     
     [_tableView registerClass:[SEEBlindPersonalTableViewCell class] forCellReuseIdentifier:@"cell"];
+    [_tableView registerClass:[SEEBlindPersonalTableViewCell class] forCellReuseIdentifier:@"0row"];
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    
+    if (indexPath.row == 0) {
+        return 260;
+    } else {
+        return 60;
+    }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSArray *array = [NSArray arrayWithObjects:@"个人信息", @"修改密码", @"紧急联系人", nil];
-    cell.label.text = array[indexPath.row];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    return cell;
+    
+    if (indexPath.row == 0) {
+        
+        SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"0row" forIndexPath:indexPath];
+        [cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
+        //[cell.headButton addTarget:self action:@selector(pressHead) forControlEvents:UIControlEventTouchUpInside];
+        
+        cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bj.jpg"]];
+        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        
+        cell.nameLabel.text = [userDefaults objectForKey:@"name"];
+        
+        
+    } else {
+        
+        SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        NSArray *array = [NSArray arrayWithObjects:@"详细资料", @"修改密码", @"紧急联系人", nil];
+        cell.subTitlelabel.text = array[indexPath.row - 1];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        return cell;
+    }
+    return [[UITableViewCell alloc] init];
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,5 +71,11 @@
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"push" object:nil];
 }
+
+
+
+
+
+
 
 @end

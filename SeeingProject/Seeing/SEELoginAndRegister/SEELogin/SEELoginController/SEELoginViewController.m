@@ -43,9 +43,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     if (_avoidLogin == YES) {
         [self loginSuccess];
-        
-//        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-//        NSLog(@"%@", userDefaults);
+
         
     }
 }
