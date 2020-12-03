@@ -41,10 +41,18 @@
 }
     
 - (void)viewDidAppear:(BOOL)animated {
+    
+    NSUserDefaults *userDafaults = [NSUserDefaults standardUserDefaults];
+    if ([userDafaults objectForKey:@"userAccount"]) {
+        NSLog(@"%@", [userDafaults objectForKey:@"userAccount"]);
+        _avoidLogin = YES;
+    }
+    
     if (_avoidLogin == YES) {
-        [self loginSuccess];
-
         
+        _loginView.userNameTextField.text = [userDafaults objectForKey:@"userAccount"];
+        _loginView.userPassTextField.text = [userDafaults objectForKey:@"userPass"];
+        [self pressLogin];
     }
 }
 

@@ -25,11 +25,7 @@
     
     SEELoginViewController *loginView = [[SEELoginViewController alloc] init];
     
-    NSUserDefaults *userDafaults = [NSUserDefaults standardUserDefaults];
-    if ([userDafaults objectForKey:@"userAccount"]) {
-        NSLog(@"%@", [userDafaults objectForKey:@"userAccount"]);
-        loginView.avoidLogin = YES;
-    }
+    
     
     _window.rootViewController = loginView;
     
