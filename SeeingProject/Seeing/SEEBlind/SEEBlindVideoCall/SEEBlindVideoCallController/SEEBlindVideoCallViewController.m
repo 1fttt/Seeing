@@ -16,23 +16,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = [UIColor whiteColor];
-    //self.tabBarItem.title = @"视频通话";
-    //self.title = @"视频通话";
-//    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
-//    NSLog(@"%@", [user objectForKey:@"userName"]);
+    
+    self.navigationItem.title = @"视频通话";
+    
+    _callView = [[SEEBlindVideoCallView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:_callView];
+    
+    [_callView initView];
+    
+    self.navigationItem.rightBarButtonItem = _callView.scanButton;
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

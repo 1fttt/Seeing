@@ -7,12 +7,15 @@
 //
 
 #import "SEEBlindVideoCallView.h"
+#import "Masonry.h"
 
 @implementation SEEBlindVideoCallView
 
 - (void)initView {
-    _scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self addSubview:_scanButton];
+//    _scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self addSubview:_scanButton];
+    _scanButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"saoyisao"] style:UIBarButtonItemStyleDone target:self action:@selector(pressScan)];
+ 
     
     _videoCallButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:_videoCallButton];
@@ -21,5 +24,16 @@
     [self addSubview:_personView];
     
 }
+
+//点击扫一扫
+- (void)pressScan {
+    
+}
+
+//点击视频通话
+- (void)pressCall {
+    
+}
+
 
 @end
