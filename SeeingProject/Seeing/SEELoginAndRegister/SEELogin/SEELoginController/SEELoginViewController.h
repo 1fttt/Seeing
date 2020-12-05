@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) SEELoginView *loginView;
 @property (nonatomic, assign) BOOL avoidLogin;
+@property (nonatomic, assign) BOOL isRegister;
 @end
 
 NS_ASSUME_NONNULL_END

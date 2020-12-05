@@ -47,6 +47,9 @@
 		6C56A9152577DB4C0072AA1A /* wode-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C56A90D2577DB4C0072AA1A /* wode-2.png */; };
 		6C6390D42573C33D008A5BEE /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D32573C33D008A5BEE /* Manager.m */; };
 		6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D62573D702008A5BEE /* SEERegisterModel.m */; };
+		6CBFD1D6257B8C5B0076A562 /* SEEVolunteerMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */; };
+		6CBFD1D9257B8C710076A562 /* SEEVolunteerUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1D8257B8C710076A562 /* SEEVolunteerUploadViewController.m */; };
+		6CBFD1DC257B8C840076A562 /* SEEVolunteerPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1DB257B8C840076A562 /* SEEVolunteerPersonalViewController.m */; };
 		6CC55E56257956D700FF1E97 /* saoyisao.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CC55E55257956D700FF1E97 /* saoyisao.png */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +140,12 @@
 		6C6390D32573C33D008A5BEE /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		6C6390D52573D702008A5BEE /* SEERegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEERegisterModel.h; sourceTree = "<group>"; };
 		6C6390D62573D702008A5BEE /* SEERegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEERegisterModel.m; sourceTree = "<group>"; };
+		6CBFD1D4257B8C5B0076A562 /* SEEVolunteerMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerMainViewController.h; sourceTree = "<group>"; };
+		6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEVolunteerMainViewController.m; sourceTree = "<group>"; };
+		6CBFD1D7257B8C710076A562 /* SEEVolunteerUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerUploadViewController.h; sourceTree = "<group>"; };
+		6CBFD1D8257B8C710076A562 /* SEEVolunteerUploadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEVolunteerUploadViewController.m; sourceTree = "<group>"; };
+		6CBFD1DA257B8C840076A562 /* SEEVolunteerPersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerPersonalViewController.h; sourceTree = "<group>"; };
+		6CBFD1DB257B8C840076A562 /* SEEVolunteerPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEVolunteerPersonalViewController.m; sourceTree = "<group>"; };
 		6CC55E55257956D700FF1E97 /* saoyisao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saoyisao.png; sourceTree = "<group>"; };
 		E1ECAE199EC0EF9405EFD559 /* Pods-Seeing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seeing.release.xcconfig"; path = "Target Support Files/Pods-Seeing/Pods-Seeing.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -536,8 +545,38 @@
 		6C8DBF98256E99EC00625C9D /* SEEVolunteer */ = {
 			isa = PBXGroup;
 			children = (
+				6CBFD1D1257B8B880076A562 /* SEEVolunteerMain */,
+				6CBFD1D2257B8BA50076A562 /* SEEVolunteerUpload */,
+				6CBFD1D3257B8C2B0076A562 /* SEEVolunteerPersonal */,
 			);
 			path = SEEVolunteer;
+			sourceTree = "<group>";
+		};
+		6CBFD1D1257B8B880076A562 /* SEEVolunteerMain */ = {
+			isa = PBXGroup;
+			children = (
+				6CBFD1D4257B8C5B0076A562 /* SEEVolunteerMainViewController.h */,
+				6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */,
+			);
+			path = SEEVolunteerMain;
+			sourceTree = "<group>";
+		};
+		6CBFD1D2257B8BA50076A562 /* SEEVolunteerUpload */ = {
+			isa = PBXGroup;
+			children = (
+				6CBFD1D7257B8C710076A562 /* SEEVolunteerUploadViewController.h */,
+				6CBFD1D8257B8C710076A562 /* SEEVolunteerUploadViewController.m */,
+			);
+			path = SEEVolunteerUpload;
+			sourceTree = "<group>";
+		};
+		6CBFD1D3257B8C2B0076A562 /* SEEVolunteerPersonal */ = {
+			isa = PBXGroup;
+			children = (
+				6CBFD1DA257B8C840076A562 /* SEEVolunteerPersonalViewController.h */,
+				6CBFD1DB257B8C840076A562 /* SEEVolunteerPersonalViewController.m */,
+			);
+			path = SEEVolunteerPersonal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -708,12 +747,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CBFD1D6257B8C5B0076A562 /* SEEVolunteerMainViewController.m in Sources */,
 				6C4C6FD625750F2800BC3C2C /* SEESubBlindPersonCentreTableViewCell.m in Sources */,
 				6C4C6FD0257509D200BC3C2C /* SEEBlindSubPersonalModifyViewController.m in Sources */,
 				6C4C6FD3257509F500BC3C2C /* SEEBlindPersonalContactViewController.m in Sources */,
 				6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */,
 				6C4C6FB72574E4A300BC3C2C /* SEELoginModel.m in Sources */,
 				6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */,
+				6CBFD1DC257B8C840076A562 /* SEEVolunteerPersonalViewController.m in Sources */,
 				6C4C6FBD2574ED6700BC3C2C /* SEEBlindPersonalView.m in Sources */,
 				6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */,
 				6C1C8388256FC62A001BB151 /* SEELoginView.m in Sources */,
@@ -722,6 +763,7 @@
 				6C43D1C1256A485B0039D232 /* SEEChooseViewController.m in Sources */,
 				6C1C8399256FEDA1001BB151 /* SEEBlindVideoCallViewController.m in Sources */,
 				6C4C6FCD2575096D00BC3C2C /* SEESubBlindPersonalCentreView.m in Sources */,
+				6CBFD1D9257B8C710076A562 /* SEEVolunteerUploadViewController.m in Sources */,
 				6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */,
 				6C43D19D256A473D0039D232 /* main.m in Sources */,
 				6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */,

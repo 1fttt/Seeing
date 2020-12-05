@@ -11,6 +11,9 @@
 #import "SEEBlindVideoCallViewController.h"
 #import "SEEBlindGeneralInfoViewController.h"
 #import "SEEBlindPersonalViewController.h"
+#import "SEEVolunteerMainViewController.h"
+#import "SEEVolunteerUploadViewController.h"
+#import "SEEVolunteerPersonalViewController.h"
 #import "Manager.h"
 #import "SEELoginModel.h"
 
@@ -48,11 +51,12 @@
         _avoidLogin = YES;
     }
     
-    if (_avoidLogin == YES) {
+    if (_avoidLogin == YES && !_isRegister) {
         
         _loginView.userNameTextField.text = [userDafaults objectForKey:@"userAccount"];
         _loginView.userPassTextField.text = [userDafaults objectForKey:@"userPass"];
-        [self pressLogin];
+        //[self pressLogin];
+        _isRegister = NO;
     }
 }
 
@@ -104,6 +108,7 @@
     SEEChooseViewController *chooseView = [[SEEChooseViewController alloc] init];
     chooseView.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:chooseView animated:YES completion:nil];
+    _isRegister = YES;
 }
 
 
@@ -118,7 +123,20 @@
     NSLog(@"%@", name);
     NSLog(@"%@", [userDefaults objectForKey:@"id"]);
     NSLog(@"%@", [userDefaults objectForKey:@"phone"]);
+    NSLog(@"%@", [userDefaults objectForKey:@"type"]);
     
+    if ([[userDefaults objectForKey:@"type"] isEqualToString:@"1"]) {
+        [self blindLogin];
+    } else if ([[userDefaults objectForKey:@"type"] isEqualToString:@"0"]) {
+        [self volunteerLogin];
+    }
+    
+    
+    
+    
+}
+
+- (void)blindLogin {
     //视频通话
     SEEBlindVideoCallViewController *videoCallView = [[SEEBlindVideoCallViewController alloc] init];
     
@@ -152,9 +170,45 @@
     
     tabbarController.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:tabbarController animated:YES completion:nil];
-    
 }
 
+- (void)volunteerLogin {
+    
+    //视频
+    SEEVolunteerMainViewController *mainView = [[SEEVolunteerMainViewController alloc] init];
+    UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainView];
+    
+    mainNav.tabBarItem.title = @"接听视频";
+    mainNav.tabBarItem.image = [UIImage imageNamed:@""];
+    mainNav.tabBarItem.selectedImage = [UIImage imageNamed:@""];
+    
+    //盲道上传
+    SEEVolunteerUploadViewController *upLoadView = [[SEEVolunteerUploadViewController alloc] init];
+    UINavigationController *upLoadNav = [[UINavigationController alloc] initWithRootViewController:upLoadView];
+    
+    upLoadNav.tabBarItem.title = @"盲道上传";
+    upLoadNav.tabBarItem.image = [UIImage imageNamed:@""];
+    upLoadNav.tabBarItem.selectedImage = [UIImage imageNamed:@""];
+    
+    //个人中心
+    SEEVolunteerPersonalViewController *personView= [[SEEVolunteerPersonalViewController alloc] init];
+    UINavigationController *personNav = [[UINavigationController alloc] initWithRootViewController:personView];
+    
+    personNav.tabBarItem.title = @"个人中心";
+    personNav.tabBarItem.image = [UIImage imageNamed:@""];
+    personNav.tabBarItem.selectedImage = [UIImage imageNamed:@""];
+    
+    NSArray *array = [NSArray arrayWithObjects:mainNav, upLoadNav, personNav, nil];
+    
+    UITabBarController *tb = [[UITabBarController alloc] init];
+    tb.viewControllers = array;
+    
+    //设置选中状态的颜色
+    tb.tabBar.tintColor = [UIColor colorWithRed:0/255 green:143.0/255 blue:211.0/255 alpha:1];
+    tb.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:tb animated:YES completion:nil];
+    
+}
 
 - (void)registerSuccess:(NSNotification *)noti {
     _loginView.userNameTextField.text = [noti.userInfo valueForKey:@"name"];
