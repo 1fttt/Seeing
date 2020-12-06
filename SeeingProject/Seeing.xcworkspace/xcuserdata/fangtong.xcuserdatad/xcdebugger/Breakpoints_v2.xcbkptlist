@@ -35,22 +35,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "05048E98-4B01-485A-8BFF-D68E9BD889E3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "-loginPhoneNumber:andPasswordStr:getBackModel:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "5B90EC4E-8C43-4DDD-B52F-7BFC141514DA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -141,22 +125,6 @@
             startingLineNumber = "58"
             endingLineNumber = "58"
             landmarkName = "-pressSure"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C8659E09-D5F3-4C61-B416-DA9D1D7725AE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEEBlind/SEEBlindVideoCall/SEEBlindVideoCallView/SEEBlindVideoCallView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "-pressScan"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
