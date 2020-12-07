@@ -33,6 +33,8 @@
 		6C4C6FD0257509D200BC3C2C /* SEEBlindSubPersonalModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C6FCF257509D200BC3C2C /* SEEBlindSubPersonalModifyViewController.m */; };
 		6C4C6FD3257509F500BC3C2C /* SEEBlindPersonalContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C6FD2257509F500BC3C2C /* SEEBlindPersonalContactViewController.m */; };
 		6C4C6FD625750F2800BC3C2C /* SEESubBlindPersonCentreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C6FD525750F2800BC3C2C /* SEESubBlindPersonCentreTableViewCell.m */; };
+		6C51EE72257E42D6006D746B /* SEEVolunteerMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C51EE71257E42D6006D746B /* SEEVolunteerMainView.m */; };
+		6C51EE74257E45D6006D746B /* tonghuajilu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C51EE73257E45D6006D746B /* tonghuajilu.png */; };
 		6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C53A242256FBABB00E7E78D /* SEELoginViewController.m */; };
 		6C5641262578D8D4006428DD /* tj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C5641252578D8D4006428DD /* tj.jpg */; };
 		6C5641282578DC6C006428DD /* bj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6C5641272578DC6C006428DD /* bj.jpg */; };
@@ -123,6 +125,9 @@
 		6C4C6FD2257509F500BC3C2C /* SEEBlindPersonalContactViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindPersonalContactViewController.m; sourceTree = "<group>"; };
 		6C4C6FD425750F2800BC3C2C /* SEESubBlindPersonCentreTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEESubBlindPersonCentreTableViewCell.h; sourceTree = "<group>"; };
 		6C4C6FD525750F2800BC3C2C /* SEESubBlindPersonCentreTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEESubBlindPersonCentreTableViewCell.m; sourceTree = "<group>"; };
+		6C51EE70257E42D6006D746B /* SEEVolunteerMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerMainView.h; sourceTree = "<group>"; };
+		6C51EE71257E42D6006D746B /* SEEVolunteerMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEVolunteerMainView.m; sourceTree = "<group>"; };
+		6C51EE73257E45D6006D746B /* tonghuajilu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tonghuajilu.png; sourceTree = "<group>"; };
 		6C53A241256FBABB00E7E78D /* SEELoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEELoginViewController.h; sourceTree = "<group>"; };
 		6C53A242256FBABB00E7E78D /* SEELoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEELoginViewController.m; sourceTree = "<group>"; };
 		6C5641252578D8D4006428DD /* tj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tj.jpg; sourceTree = "<group>"; };
@@ -528,6 +533,7 @@
 				6C5641272578DC6C006428DD /* bj.jpg */,
 				6C5641252578D8D4006428DD /* tj.jpg */,
 				6CC55E55257956D700FF1E97 /* saoyisao.png */,
+				6C51EE73257E45D6006D746B /* tonghuajilu.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -557,6 +563,8 @@
 			children = (
 				6CBFD1D4257B8C5B0076A562 /* SEEVolunteerMainViewController.h */,
 				6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */,
+				6C51EE70257E42D6006D746B /* SEEVolunteerMainView.h */,
+				6C51EE71257E42D6006D746B /* SEEVolunteerMainView.m */,
 			);
 			path = SEEVolunteerMain;
 			sourceTree = "<group>";
@@ -695,6 +703,7 @@
 				6C5641282578DC6C006428DD /* bj.jpg in Resources */,
 				6C43D19A256A473D0039D232 /* LaunchScreen.storyboard in Resources */,
 				6CC55E56257956D700FF1E97 /* saoyisao.png in Resources */,
+				6C51EE74257E45D6006D746B /* tonghuajilu.png in Resources */,
 				6C43D197256A473D0039D232 /* Assets.xcassets in Resources */,
 				6C43D195256A47390039D232 /* Main.storyboard in Resources */,
 				6C56A9152577DB4C0072AA1A /* wode-2.png in Resources */,
@@ -762,6 +771,7 @@
 				6C4C6FC7257508B400BC3C2C /* SEESubBlindPersonalCentreViewController.m in Sources */,
 				6C43D1C1256A485B0039D232 /* SEEChooseViewController.m in Sources */,
 				6C1C8399256FEDA1001BB151 /* SEEBlindVideoCallViewController.m in Sources */,
+				6C51EE72257E42D6006D746B /* SEEVolunteerMainView.m in Sources */,
 				6C4C6FCD2575096D00BC3C2C /* SEESubBlindPersonalCentreView.m in Sources */,
 				6CBFD1D9257B8C710076A562 /* SEEVolunteerUploadViewController.m in Sources */,
 				6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */,

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SEEVolunteerMainView;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEVolunteerMainViewController : UIViewController
+
+@property (nonatomic, strong) SEEVolunteerMainView *mainView;
+
 
 @end
 

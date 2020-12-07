@@ -7,6 +7,7 @@
 //
 
 #import "SEEVolunteerMainViewController.h"
+#import "SEEVolunteerMainView.h"
 
 @interface SEEVolunteerMainViewController ()
 
@@ -18,7 +19,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    _mainView = [[SEEVolunteerMainView alloc] init];
+    [self.view addSubview:_mainView];
     
+    [_mainView initView];
+    
+    self.navigationItem.rightBarButtonItem = _mainView.recordItem;
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 }
 
 /*
