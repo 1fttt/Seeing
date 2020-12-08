@@ -216,7 +216,7 @@
 }
 
 - (void)showAlertStr:(NSString *)alertStr actionStr:(NSString *)actionStr {
-//- (void)showAlertStr:(NSString *)alertStr actionStr:(NSString *)actionStr press:(void (^) (void))block {
+
     UIAlertAction *action = [UIAlertAction actionWithTitle:actionStr style:UIAlertActionStyleDefault handler:nil];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:alertStr message:@"" preferredStyle:UIAlertControllerStyleAlert];
     [alert addAction:action];
