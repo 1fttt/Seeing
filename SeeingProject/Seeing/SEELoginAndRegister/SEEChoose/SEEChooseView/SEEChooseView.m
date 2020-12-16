@@ -33,9 +33,9 @@
     [_backButton setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
     [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(60);
-        make.left.equalTo(self.mas_left).offset(10);
-        make.width.mas_equalTo(30);
-        make.height.mas_equalTo(30);
+        make.left.equalTo(self.mas_left).offset(15);
+        make.width.mas_equalTo(25);
+        make.height.mas_equalTo(25);
     }];
     
     _blindButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];

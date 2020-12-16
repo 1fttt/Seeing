@@ -11,7 +11,7 @@
 #import "Manager.h"
 
 @interface SEERegisterViewController ()
-
+ 
 @end
 
 @implementation SEERegisterViewController

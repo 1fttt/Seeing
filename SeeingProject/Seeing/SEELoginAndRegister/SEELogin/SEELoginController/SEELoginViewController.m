@@ -14,8 +14,10 @@
 #import "SEEVolunteerMainViewController.h"
 #import "SEEVolunteerUploadViewController.h"
 #import "SEEVolunteerPersonalViewController.h"
+#import "SEEForgetViewController.h"
 #import "Manager.h"
 #import "SEELoginModel.h"
+
 
 @interface SEELoginViewController ()
 
@@ -38,6 +40,8 @@
     
     [_loginView.registerButton addTarget:self action:@selector(pressRegister) forControlEvents:UIControlEventTouchUpInside];
     [_loginView.loginButton addTarget:self action:@selector(pressLogin) forControlEvents:UIControlEventTouchUpInside];
+    
+    [_loginView.forgetButton addTarget:self action:@selector(pressForget) forControlEvents:UIControlEventTouchUpInside];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerSuccess:) name:@"nameAndPass" object:nil];
 
@@ -222,6 +226,15 @@
     [alert addAction:action];
     [self presentViewController:alert animated:YES completion:nil];
     //block();
+}
+
+
+- (void)pressForget {
+    SEEForgetViewController *forgetView = [[SEEForgetViewController alloc] init];
+    forgetView.numberStr = [NSString stringWithFormat:@"%@", _loginView.userNameTextField.text];
+    forgetView.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:forgetView animated:YES completion:nil];
+    
 }
 
 @end

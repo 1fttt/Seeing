@@ -10,6 +10,7 @@
 #import "AFNetworking.h"
 #import "SEERegisterModel.h"
 #import "SEELoginModel.h"
+#import "SEEForgetModel.h"
 
 @implementation Manager
 
@@ -74,5 +75,40 @@ static Manager *manager = nil;
     
 
 }
+
+
+//发送验证码
+- (void)forgetPhoneNumber:(NSString *)numberStr getForgetModel:(VerifyBlock)succeedBlock error:(ErrorBlock)errorBlock {
+    
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    [AFmanager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    NSString *url = @"http://47.100.138.22:8082/user/forget";
+    NSDictionary *parameters = @{@"phone":numberStr};
+    [AFmanager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        SEEForgetModel *forgetModel = [[SEEForgetModel alloc] initWithDictionary:responseObject error:nil];
+        succeedBlock(forgetModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败");
+    }];
+    
+}
+
+//验证验证码
+- (void)getVerifyPhoneNumber:(NSString *)numberStr andCode:(NSString *)codeStr getBacVerifyModel:(VerifyBackBlock)succeedBlock error:(ErrorBlock)errorBlock {
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    [AFmanager.requestSerializer setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    NSString *url = @"http://47.100.138.22:8082/user/reset_password";
+    NSDictionary *parameters = @{@"phone":numberStr, @"code":codeStr};
+    
+    [AFmanager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        SEEVerifyModel *verifyModel = [[SEEVerifyModel alloc] initWithDictionary:responseObject error:nil];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+}
+
+
 
 @end

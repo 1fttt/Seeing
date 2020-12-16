@@ -49,6 +49,10 @@
 		6C56A9152577DB4C0072AA1A /* wode-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C56A90D2577DB4C0072AA1A /* wode-2.png */; };
 		6C6390D42573C33D008A5BEE /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D32573C33D008A5BEE /* Manager.m */; };
 		6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D62573D702008A5BEE /* SEERegisterModel.m */; };
+		6C998DE6258A41FE00526ECC /* SEEForgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DE5258A41FE00526ECC /* SEEForgetView.m */; };
+		6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DEB258A426300526ECC /* SEEForgetViewController.m */; };
+		6C998DEE258A52F200526ECC /* fengexian.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C998DED258A52F200526ECC /* fengexian.png */; };
+		6C998DF1258A63B500526ECC /* SEEForgetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DF0258A63B500526ECC /* SEEForgetModel.m */; };
 		6CBFD1D6257B8C5B0076A562 /* SEEVolunteerMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */; };
 		6CBFD1D9257B8C710076A562 /* SEEVolunteerUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1D8257B8C710076A562 /* SEEVolunteerUploadViewController.m */; };
 		6CBFD1DC257B8C840076A562 /* SEEVolunteerPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1DB257B8C840076A562 /* SEEVolunteerPersonalViewController.m */; };
@@ -145,6 +149,13 @@
 		6C6390D32573C33D008A5BEE /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		6C6390D52573D702008A5BEE /* SEERegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEERegisterModel.h; sourceTree = "<group>"; };
 		6C6390D62573D702008A5BEE /* SEERegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEERegisterModel.m; sourceTree = "<group>"; };
+		6C998DE4258A41FE00526ECC /* SEEForgetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetView.h; sourceTree = "<group>"; };
+		6C998DE5258A41FE00526ECC /* SEEForgetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEForgetView.m; sourceTree = "<group>"; };
+		6C998DEA258A426300526ECC /* SEEForgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetViewController.h; sourceTree = "<group>"; };
+		6C998DEB258A426300526ECC /* SEEForgetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEForgetViewController.m; sourceTree = "<group>"; };
+		6C998DED258A52F200526ECC /* fengexian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fengexian.png; sourceTree = "<group>"; };
+		6C998DEF258A63B500526ECC /* SEEForgetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetModel.h; sourceTree = "<group>"; };
+		6C998DF0258A63B500526ECC /* SEEForgetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEForgetModel.m; sourceTree = "<group>"; };
 		6CBFD1D4257B8C5B0076A562 /* SEEVolunteerMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerMainViewController.h; sourceTree = "<group>"; };
 		6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEVolunteerMainViewController.m; sourceTree = "<group>"; };
 		6CBFD1D7257B8C710076A562 /* SEEVolunteerUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerUploadViewController.h; sourceTree = "<group>"; };
@@ -213,6 +224,8 @@
 			children = (
 				6C53A241256FBABB00E7E78D /* SEELoginViewController.h */,
 				6C53A242256FBABB00E7E78D /* SEELoginViewController.m */,
+				6C998DEA258A426300526ECC /* SEEForgetViewController.h */,
+				6C998DEB258A426300526ECC /* SEEForgetViewController.m */,
 			);
 			path = SEELoginController;
 			sourceTree = "<group>";
@@ -222,6 +235,8 @@
 			children = (
 				6C1C8386256FC62A001BB151 /* SEELoginView.h */,
 				6C1C8387256FC62A001BB151 /* SEELoginView.m */,
+				6C998DE4258A41FE00526ECC /* SEEForgetView.h */,
+				6C998DE5258A41FE00526ECC /* SEEForgetView.m */,
 			);
 			path = SEELoginView;
 			sourceTree = "<group>";
@@ -231,6 +246,8 @@
 			children = (
 				6C4C6FB52574E4A300BC3C2C /* SEELoginModel.h */,
 				6C4C6FB62574E4A300BC3C2C /* SEELoginModel.m */,
+				6C998DEF258A63B500526ECC /* SEEForgetModel.h */,
+				6C998DF0258A63B500526ECC /* SEEForgetModel.m */,
 			);
 			path = SEELoginModel;
 			sourceTree = "<group>";
@@ -534,6 +551,7 @@
 				6C5641252578D8D4006428DD /* tj.jpg */,
 				6CC55E55257956D700FF1E97 /* saoyisao.png */,
 				6C51EE73257E45D6006D746B /* tonghuajilu.png */,
+				6C998DED258A52F200526ECC /* fengexian.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -702,6 +720,7 @@
 				6C56A90F2577DB4C0072AA1A /* wode.png in Resources */,
 				6C5641282578DC6C006428DD /* bj.jpg in Resources */,
 				6C43D19A256A473D0039D232 /* LaunchScreen.storyboard in Resources */,
+				6C998DEE258A52F200526ECC /* fengexian.png in Resources */,
 				6CC55E56257956D700FF1E97 /* saoyisao.png in Resources */,
 				6C51EE74257E45D6006D746B /* tonghuajilu.png in Resources */,
 				6C43D197256A473D0039D232 /* Assets.xcassets in Resources */,
@@ -768,14 +787,17 @@
 				6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */,
 				6C1C8388256FC62A001BB151 /* SEELoginView.m in Sources */,
 				6C43D18C256A47390039D232 /* AppDelegate.m in Sources */,
+				6C998DF1258A63B500526ECC /* SEEForgetModel.m in Sources */,
 				6C4C6FC7257508B400BC3C2C /* SEESubBlindPersonalCentreViewController.m in Sources */,
 				6C43D1C1256A485B0039D232 /* SEEChooseViewController.m in Sources */,
 				6C1C8399256FEDA1001BB151 /* SEEBlindVideoCallViewController.m in Sources */,
 				6C51EE72257E42D6006D746B /* SEEVolunteerMainView.m in Sources */,
 				6C4C6FCD2575096D00BC3C2C /* SEESubBlindPersonalCentreView.m in Sources */,
+				6C998DE6258A41FE00526ECC /* SEEForgetView.m in Sources */,
 				6CBFD1D9257B8C710076A562 /* SEEVolunteerUploadViewController.m in Sources */,
 				6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */,
 				6C43D19D256A473D0039D232 /* main.m in Sources */,
+				6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */,
 				6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */,
 				6C43D18F256A47390039D232 /* SceneDelegate.m in Sources */,
 				6C1C8392256FE683001BB151 /* SEERegisterView.m in Sources */,
