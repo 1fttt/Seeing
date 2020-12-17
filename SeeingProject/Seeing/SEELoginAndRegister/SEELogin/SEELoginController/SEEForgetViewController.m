@@ -7,6 +7,7 @@
 //
 
 #import "SEEForgetViewController.h"
+#import "SEEResetPasswordViewController.h"
 #import "SEEForgetModel.h"
 #import "Manager.h"
 
@@ -28,16 +29,9 @@
   
     [_forgetView.backButton addTarget:self action:@selector(pressBack) forControlEvents:UIControlEventTouchUpInside];
     
-    Manager *manager = [[Manager alloc] init];
-    [manager forgetPhoneNumber:_numberStr getForgetModel:^(SEEForgetModel * _Nonnull forgetModel) {
-        if ([forgetModel.status isEqualToString:@"0"]) {
-            NSLog(@"短信验证码发送成功");
-        } else {
-            NSLog(@"失败");
-        }
-    } error:^(NSError * _Nonnull error) {
-        
-    }];
+    
+    [_forgetView.nextButton addTarget:self action:@selector(pressNext) forControlEvents:UIControlEventTouchUpInside];
+    
     
 }
 
@@ -45,14 +39,42 @@
 - (void)pressBack {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (void)pressNext {
+    
+    Manager *manager = [Manager shareManager];
+       [manager getVerifyPhoneNumber:_numberStr andCode:_forgetView.textfield.text getBackVerifyModel:^(SEEVerifyModel * _Nonnull verifyModel) {
+
+           if ([verifyModel.status isEqualToString:@"0"]) {
+               NSLog(@"验证成功");
+               
+               SEEResetPasswordViewController *resetView = [[SEEResetPasswordViewController alloc] init];
+                resetView.modalPresentationStyle = UIModalPresentationFullScreen;
+               resetView.phoneStr = [NSString stringWithString:self->_numberStr];
+                [self presentViewController:resetView animated:YES completion:nil];
+
+           } else {
+               [self failVerify];
+               [self dismissFailAlert];
+           }
+
+       } error:^(NSError * _Nonnull error) {
+           [self failVerify];
+           [self dismissFailAlert];
+       }];
+       
 }
-*/
 
+- (void)failVerify{
+    
+    UIAlertController *failAlert = [UIAlertController alertControllerWithTitle:@"验证失败" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:failAlert animated:YES completion:nil];
+    [self performSelector:@selector(dismissFailAlert) withObject:nil afterDelay:1.4];
+    
+}
+
+- (void)dismissFailAlert {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

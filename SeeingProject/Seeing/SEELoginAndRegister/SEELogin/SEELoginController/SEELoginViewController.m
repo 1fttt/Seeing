@@ -17,7 +17,7 @@
 #import "SEEForgetViewController.h"
 #import "Manager.h"
 #import "SEELoginModel.h"
-
+#import "SEEForgetModel.h"
 
 @interface SEELoginViewController ()
 
@@ -44,6 +44,8 @@
     [_loginView.forgetButton addTarget:self action:@selector(pressForget) forControlEvents:UIControlEventTouchUpInside];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerSuccess:) name:@"nameAndPass" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetPassword:) name:@"resetPassword" object:nil];
 
 }
     
@@ -219,6 +221,10 @@
     _loginView.userPassTextField.text = [noti.userInfo valueForKey:@"pass"];
 }
 
+- (void)resetPassword:(NSNotification *)noti {
+    _loginView.userPassTextField.text = [noti.userInfo valueForKey:@"password"];
+}
+
 - (void)showAlertStr:(NSString *)alertStr actionStr:(NSString *)actionStr {
 
     UIAlertAction *action = [UIAlertAction actionWithTitle:actionStr style:UIAlertActionStyleDefault handler:nil];
@@ -230,11 +236,57 @@
 
 
 - (void)pressForget {
-    SEEForgetViewController *forgetView = [[SEEForgetViewController alloc] init];
-    forgetView.numberStr = [NSString stringWithFormat:@"%@", _loginView.userNameTextField.text];
-    forgetView.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self presentViewController:forgetView animated:YES completion:nil];
     
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"" message:[NSString stringWithFormat:@"当前帐号为手机号，可以通过短信验证码重置密码，是否发送验证码到%@", _loginView.userNameTextField.text] preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        
+        Manager *manager = [[Manager alloc] init];
+        [manager forgetPhoneNumber:self->_loginView.userNameTextField.text getForgetModel:^(SEEForgetModel * _Nonnull forgetModel) {
+            if ([forgetModel.status isEqualToString:@"0"]) {
+                
+                NSLog(@"短信验证码发送成功");
+                
+                SEEForgetViewController *forgetView = [[SEEForgetViewController alloc] init];
+                
+                forgetView.numberStr = [NSString stringWithFormat:@"%@", self->_loginView.userNameTextField.text];
+                
+                forgetView.modalPresentationStyle = UIModalPresentationFullScreen;
+                [self presentViewController:forgetView animated:YES completion:nil];
+                
+            } else {
+                
+                [self failSendVerify];
+            }
+        } error:^(NSError * _Nonnull error) {
+            
+            [self failSendVerify];
+        }];
+        
+        
+        
+    }];
+    
+    [alert addAction:cancelAction];
+    [alert addAction:sureAction];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+
+}
+
+- (void)failSendVerify{
+    
+    UIAlertController *failAlert = [UIAlertController alertControllerWithTitle:@"发送失败" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    [self presentViewController:failAlert animated:YES completion:nil];
+    [self performSelector:@selector(dismissFailAlert) withObject:nil afterDelay:1.4];
+    
+}
+
+- (void)dismissFailAlert {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -11,6 +11,7 @@
 @class SEELoginModel;
 @class SEEForgetModel;
 @class SEEVerifyModel;
+@class SEEResetPasswordModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,6 +20,9 @@ typedef void (^LoginBackBlock)(SEELoginModel *loginBackModel);
 
 typedef void (^VerifyBlock)(SEEForgetModel *forgetModel);
 typedef void (^VerifyBackBlock)(SEEVerifyModel *verifyModel);
+
+typedef void (^ResetPasswordBlock)(SEEResetPasswordModel *resetModel);
+
 typedef void (^ErrorBlock)(NSError *error);
 
 
@@ -36,7 +40,10 @@ typedef void (^ErrorBlock)(NSError *error);
 - (void)forgetPhoneNumber:(NSString *)numberStr getForgetModel:(VerifyBlock)succeedBlock error:(ErrorBlock)errorBlock;
 
 //验证验证码
-- (void)getVerifyPhoneNumber:(NSString *)numberStr andCode:(NSString *)codeStr getBacVerifyModel:(VerifyBackBlock)succeedBlock error:(ErrorBlock)errorBlock;
+- (void)getVerifyPhoneNumber:(NSString *)numberStr andCode:(NSString *)codeStr getBackVerifyModel:(VerifyBackBlock)succeedBlock error:(ErrorBlock)errorBlock;
+
+//重置密码
+- (void)getPhoneNumber:(NSString *)numberStr andNewPassword:(NSString *)password getBackresetModel:(ResetPasswordBlock)succeedBlock error:(ErrorBlock)errorBlock;
 
 @end
 

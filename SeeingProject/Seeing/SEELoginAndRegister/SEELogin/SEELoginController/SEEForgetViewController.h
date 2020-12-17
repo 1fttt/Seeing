@@ -13,8 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEForgetViewController : UIViewController
 
-@property SEEForgetView *forgetView;
-@property (nonatomic, copy)NSString *numberStr;
+@property (nonatomic, strong) SEEForgetView *forgetView;
+
+@property (nonatomic, copy) NSString *veriftStr;
+
+@property (nonatomic, copy) NSString *numberStr;
 @end
 
 NS_ASSUME_NONNULL_END

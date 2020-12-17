@@ -49,6 +49,9 @@
 		6C56A9152577DB4C0072AA1A /* wode-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C56A90D2577DB4C0072AA1A /* wode-2.png */; };
 		6C6390D42573C33D008A5BEE /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D32573C33D008A5BEE /* Manager.m */; };
 		6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D62573D702008A5BEE /* SEERegisterModel.m */; };
+		6C70918B258B601300EB5C94 /* SEEResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C70918A258B601300EB5C94 /* SEEResetPasswordViewController.m */; };
+		6C70918E258B602B00EB5C94 /* SEEResetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C70918D258B602B00EB5C94 /* SEEResetPasswordView.m */; };
+		6C709190258B7B2000EB5C94 /* fengexian-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C70918F258B7B2000EB5C94 /* fengexian-2.png */; };
 		6C998DE6258A41FE00526ECC /* SEEForgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DE5258A41FE00526ECC /* SEEForgetView.m */; };
 		6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DEB258A426300526ECC /* SEEForgetViewController.m */; };
 		6C998DEE258A52F200526ECC /* fengexian.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C998DED258A52F200526ECC /* fengexian.png */; };
@@ -149,6 +152,11 @@
 		6C6390D32573C33D008A5BEE /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
 		6C6390D52573D702008A5BEE /* SEERegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEERegisterModel.h; sourceTree = "<group>"; };
 		6C6390D62573D702008A5BEE /* SEERegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEERegisterModel.m; sourceTree = "<group>"; };
+		6C709189258B601300EB5C94 /* SEEResetPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEResetPasswordViewController.h; sourceTree = "<group>"; };
+		6C70918A258B601300EB5C94 /* SEEResetPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEResetPasswordViewController.m; sourceTree = "<group>"; };
+		6C70918C258B602B00EB5C94 /* SEEResetPasswordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEResetPasswordView.h; sourceTree = "<group>"; };
+		6C70918D258B602B00EB5C94 /* SEEResetPasswordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEResetPasswordView.m; sourceTree = "<group>"; };
+		6C70918F258B7B2000EB5C94 /* fengexian-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fengexian-2.png"; sourceTree = "<group>"; };
 		6C998DE4258A41FE00526ECC /* SEEForgetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetView.h; sourceTree = "<group>"; };
 		6C998DE5258A41FE00526ECC /* SEEForgetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEForgetView.m; sourceTree = "<group>"; };
 		6C998DEA258A426300526ECC /* SEEForgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetViewController.h; sourceTree = "<group>"; };
@@ -226,6 +234,8 @@
 				6C53A242256FBABB00E7E78D /* SEELoginViewController.m */,
 				6C998DEA258A426300526ECC /* SEEForgetViewController.h */,
 				6C998DEB258A426300526ECC /* SEEForgetViewController.m */,
+				6C709189258B601300EB5C94 /* SEEResetPasswordViewController.h */,
+				6C70918A258B601300EB5C94 /* SEEResetPasswordViewController.m */,
 			);
 			path = SEELoginController;
 			sourceTree = "<group>";
@@ -237,6 +247,8 @@
 				6C1C8387256FC62A001BB151 /* SEELoginView.m */,
 				6C998DE4258A41FE00526ECC /* SEEForgetView.h */,
 				6C998DE5258A41FE00526ECC /* SEEForgetView.m */,
+				6C70918C258B602B00EB5C94 /* SEEResetPasswordView.h */,
+				6C70918D258B602B00EB5C94 /* SEEResetPasswordView.m */,
 			);
 			path = SEELoginView;
 			sourceTree = "<group>";
@@ -552,6 +564,7 @@
 				6CC55E55257956D700FF1E97 /* saoyisao.png */,
 				6C51EE73257E45D6006D746B /* tonghuajilu.png */,
 				6C998DED258A52F200526ECC /* fengexian.png */,
+				6C70918F258B7B2000EB5C94 /* fengexian-2.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -711,6 +724,7 @@
 			files = (
 				6C5641262578D8D4006428DD /* tj.jpg in Resources */,
 				6C56A90E2577DB4C0072AA1A /* wode-3.png in Resources */,
+				6C709190258B7B2000EB5C94 /* fengexian-2.png in Resources */,
 				6C56A9042577BA650072AA1A /* fanhui.png in Resources */,
 				6C56A9102577DB4C0072AA1A /* wode-4.png in Resources */,
 				6C56A9132577DB4C0072AA1A /* shipintonghua.png in Resources */,
@@ -795,6 +809,7 @@
 				6C4C6FCD2575096D00BC3C2C /* SEESubBlindPersonalCentreView.m in Sources */,
 				6C998DE6258A41FE00526ECC /* SEEForgetView.m in Sources */,
 				6CBFD1D9257B8C710076A562 /* SEEVolunteerUploadViewController.m in Sources */,
+				6C70918B258B601300EB5C94 /* SEEResetPasswordViewController.m in Sources */,
 				6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */,
 				6C43D19D256A473D0039D232 /* main.m in Sources */,
 				6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */,
@@ -805,6 +820,7 @@
 				6C1C83A5256FF988001BB151 /* SEEBlindVideoCallView.m in Sources */,
 				6C6390D42573C33D008A5BEE /* Manager.m in Sources */,
 				6C4C6FC02574EFCF00BC3C2C /* SEEBlindPersonalTableViewCell.m in Sources */,
+				6C70918E258B602B00EB5C94 /* SEEResetPasswordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

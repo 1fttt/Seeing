@@ -24,3 +24,12 @@
 }
 
 @end
+
+
+@implementation SEEResetPasswordModel
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
+@end
