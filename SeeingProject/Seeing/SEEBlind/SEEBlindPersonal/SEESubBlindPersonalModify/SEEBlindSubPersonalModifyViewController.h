@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEEBlindSubPersonalModifyView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindSubPersonalModifyViewController : UIViewController
 
+@property (nonatomic, strong) SEEBlindSubPersonalModifyView *modifyView;
+
+@property (nonatomic, copy) NSString *phoneStr;
 @end
 
 NS_ASSUME_NONNULL_END

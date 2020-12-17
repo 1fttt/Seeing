@@ -135,4 +135,22 @@ static Manager *manager = nil;
     
 }
 
+//登录时修改密码
+- (void)getID:(NSString *)idStr andOldPassword:(NSString *)oldStr angNewPassword:(NSString *)passwordStr getbackUpdateBlock:(UpdatePasswordBlock)succeedBlock error:(ErrorBlock)errorBlock {
+    
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    [AFmanager.requestSerializer setValue:@" application/x-www-form-urlencoded"  forHTTPHeaderField:@"Content-Type"];
+    NSString *url = @"http://47.100.138.22:8082/user/updatePwd";
+    NSDictionary *paremeters = @{@"id":idStr, @"password":oldStr, @"newPassword":passwordStr};
+    
+    [AFmanager POST:url parameters:paremeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        SEEResetPasswordModel *updateModel = [[SEEResetPasswordModel alloc] initWithDictionary:responseObject error:nil];
+        succeedBlock(updateModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        errorBlock(error);
+    }];
+}
+
 @end

@@ -22,6 +22,7 @@ typedef void (^VerifyBlock)(SEEForgetModel *forgetModel);
 typedef void (^VerifyBackBlock)(SEEVerifyModel *verifyModel);
 
 typedef void (^ResetPasswordBlock)(SEEResetPasswordModel *resetModel);
+typedef void (^UpdatePasswordBlock)(SEEResetPasswordModel *updateModel);
 
 typedef void (^ErrorBlock)(NSError *error);
 
@@ -44,6 +45,9 @@ typedef void (^ErrorBlock)(NSError *error);
 
 //重置密码
 - (void)getPhoneNumber:(NSString *)numberStr andNewPassword:(NSString *)password getBackresetModel:(ResetPasswordBlock)succeedBlock error:(ErrorBlock)errorBlock;
+
+//登录时修改密码
+- (void)getID:(NSString *)idStr andOldPassword:(NSString *)oldStr angNewPassword:(NSString *)passwordStr getbackUpdateBlock:(UpdatePasswordBlock)succeedBlock error:(ErrorBlock)errorBlock;
 
 @end
 
