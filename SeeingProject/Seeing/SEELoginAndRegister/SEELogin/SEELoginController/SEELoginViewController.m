@@ -46,24 +46,31 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(registerSuccess:) name:@"nameAndPass" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resetPassword:) name:@"resetPassword" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(setQuit) name:@"isQuit" object:nil];
+    
+    
 
 }
     
 - (void)viewDidAppear:(BOOL)animated {
     
     NSUserDefaults *userDafaults = [NSUserDefaults standardUserDefaults];
-    if ([userDafaults objectForKey:@"userAccount"]) {
+    if ([userDafaults objectForKey:@"userAccount"] && !_isQuit) {
         NSLog(@"%@", [userDafaults objectForKey:@"userAccount"]);
         _avoidLogin = YES;
     }
     
-    if (_avoidLogin == YES && !_isRegister) {
-        
+    if (!_isRegister && !_isReset) {
         _loginView.userNameTextField.text = [userDafaults objectForKey:@"userAccount"];
+        NSLog(@"%@", [userDafaults objectForKey:@"userAccount"]);
         _loginView.userPassTextField.text = [userDafaults objectForKey:@"userPass"];
-        //[self pressLogin];
-        _isRegister = NO;
+        if (_avoidLogin == YES) {
+            [self pressLogin];
+            _avoidLogin = NO;
+        }
     }
+    
+
 }
 
 
@@ -223,6 +230,7 @@
 
 - (void)resetPassword:(NSNotification *)noti {
     _loginView.userPassTextField.text = [noti.userInfo valueForKey:@"password"];
+    _isReset = YES;
 }
 
 - (void)showAlertStr:(NSString *)alertStr actionStr:(NSString *)actionStr {
@@ -289,4 +297,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)setQuit {
+    _isQuit = YES;
+}
 @end

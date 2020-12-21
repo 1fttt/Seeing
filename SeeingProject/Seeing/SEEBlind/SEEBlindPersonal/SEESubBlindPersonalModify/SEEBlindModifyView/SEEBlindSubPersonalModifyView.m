@@ -16,27 +16,30 @@
 @implementation SEEBlindSubPersonalModifyView
 
 - (void)initView {
-    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self addSubview:_backButton];
-    [_backButton setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
+//    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self addSubview:_backButton];
+//    [_backButton setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
+//
+    _backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"fanhui"] style:UIBarButtonItemStylePlain target:self action:@selector(pressBack)];
     
-    [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).offset(15);
-        make.top.equalTo(self.mas_top).offset(60);
-        make.width.mas_equalTo(backButtonsize);
-        make.height.mas_equalTo(backButtonsize);
-    }];
-    
+//    [_backButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(self.mas_left).offset(15);
+//        make.top.equalTo(self.mas_top).offset(60);
+//        make.width.mas_equalTo(backButtonsize);
+//        make.height.mas_equalTo(backButtonsize);
+//    }];
+//
     _backLabel = [[UILabel alloc] init];
     [self addSubview:_backLabel];
     _backLabel.text = @"设置密码";
     _backLabel.font = [UIFont boldSystemFontOfSize:20];
-    [_backLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(_backButton.mas_right).offset(10);
-        make.top.equalTo(_backButton.mas_top);
-        make.height.mas_equalTo(_backButton.mas_height);
-        make.width.mas_equalTo(130);
-    }];
+//    [_backLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.equalTo(_backButton.mas_right).offset(10);
+//        make.top.equalTo(_backButton.mas_top);
+//        make.height.mas_equalTo(_backButton.mas_height);
+//        make.width.mas_equalTo(130);
+//    }];
+    
     
     _oldPasswordLabel = [[UILabel alloc] init];
     [self addSubview:_oldPasswordLabel];
@@ -157,5 +160,7 @@
         make.height.mas_equalTo(50);
     }];
 }
+
+
 
 @end

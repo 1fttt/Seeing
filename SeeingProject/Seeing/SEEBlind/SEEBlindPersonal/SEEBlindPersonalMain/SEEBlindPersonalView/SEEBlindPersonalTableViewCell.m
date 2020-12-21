@@ -34,6 +34,9 @@
         _nameLabel = [[UILabel alloc] init];
         [self.contentView addSubview:_nameLabel];
         
+    } else if([self.reuseIdentifier isEqualToString:@"quit"]) {
+        _quitlabel = [[UILabel alloc] init];
+        [self.contentView addSubview:_quitlabel];
     }
     
     return self;
@@ -67,6 +70,14 @@
     _nameLabel.textColor = [UIColor blackColor];
     _nameLabel.textAlignment = NSTextAlignmentCenter;
     
+    _quitlabel.textAlignment = NSTextAlignmentCenter;
+    _quitlabel.font = [UIFont systemFontOfSize:18];
+    [_quitlabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.contentView.mas_centerX);
+        make.centerY.equalTo(self.contentView.mas_centerY);
+        make.width.mas_equalTo(60);
+        make.height.mas_equalTo(40);
+    }];
     
 }
 

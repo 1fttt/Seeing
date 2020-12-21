@@ -26,6 +26,9 @@
     
     [_modifyView initView];
     
+    //self.navigationItem.backBarButtonItem = _modifyView.backButton;
+    //self.navigationItem.leftBarButtonItem = _modifyView.backLabel;
+    
     [_modifyView.sureButton addTarget:self action:@selector(pressSure) forControlEvents:UIControlEventTouchUpInside];
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];

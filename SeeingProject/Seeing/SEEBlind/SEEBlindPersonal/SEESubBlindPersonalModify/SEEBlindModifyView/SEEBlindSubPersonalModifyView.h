@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindSubPersonalModifyView : UIView
 
-@property (nonatomic, strong) UIButton *backButton;
+@property (nonatomic, strong) UIBarButtonItem *backButton;
 @property (nonatomic, strong) UILabel *backLabel;
 @property (nonatomic, strong) UILabel *oldPasswordLabel;
 @property (nonatomic, strong) UILabel *passwordLabel;
