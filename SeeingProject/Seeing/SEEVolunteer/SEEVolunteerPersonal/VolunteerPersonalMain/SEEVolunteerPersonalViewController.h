@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEEVolunteerPersonalView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEVolunteerPersonalViewController : UIViewController
+
+@property (nonatomic, strong) SEEVolunteerPersonalView *personalView;
+
+@property (nonatomic, strong) UIAlertController *alert;
+
+@property (nonatomic, assign) BOOL isQuit;
 
 @end
 

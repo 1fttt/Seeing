@@ -1,17 +1,15 @@
 //
-//  SEEBlindPersonalView.m
+//  SEEVolunteerPersonalView.m
 //  Seeing
 //
-//  Created by 房彤 on 2020/11/30.
+//  Created by 房彤 on 2020/12/21.
 //  Copyright © 2020 房彤. All rights reserved.
 //
 
-#import "SEEBlindPersonalView.h"
+#import "SEEVolunteerPersonalView.h"
 #import "SEEBlindPersonalTableViewCell.h"
-#import "AppDelegate.h"
 
-
-@implementation SEEBlindPersonalView
+@implementation SEEVolunteerPersonalView
 
 - (void)initView {
     
@@ -39,7 +37,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
-        return 4;
+        return 3;
     } else {
         return 1;
     }
@@ -69,7 +67,7 @@
         } else {
             
             SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-            NSArray *array = [NSArray arrayWithObjects:@"详细资料", @"修改密码", @"紧急联系人", nil];
+            NSArray *array = [NSArray arrayWithObjects:@"详细资料", @"修改密码", nil];
             cell.subTitlelabel.text = array[indexPath.row - 1];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -97,6 +95,5 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"pushAlert" object:nil];
     }
 }
-
 
 @end

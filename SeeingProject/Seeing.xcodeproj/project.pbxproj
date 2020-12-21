@@ -53,6 +53,7 @@
 		6C70918E258B602B00EB5C94 /* SEEResetPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C70918D258B602B00EB5C94 /* SEEResetPasswordView.m */; };
 		6C709190258B7B2000EB5C94 /* fengexian-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C70918F258B7B2000EB5C94 /* fengexian-2.png */; };
 		6C709194258B92F900EB5C94 /* SEEBlindSubPersonalModifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C709193258B92F900EB5C94 /* SEEBlindSubPersonalModifyView.m */; };
+		6C808A9F2590E1310060C94A /* SEEVolunteerPersonalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C808A9E2590E1310060C94A /* SEEVolunteerPersonalView.m */; };
 		6C998DE6258A41FE00526ECC /* SEEForgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DE5258A41FE00526ECC /* SEEForgetView.m */; };
 		6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DEB258A426300526ECC /* SEEForgetViewController.m */; };
 		6C998DEE258A52F200526ECC /* fengexian.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C998DED258A52F200526ECC /* fengexian.png */; };
@@ -160,6 +161,8 @@
 		6C70918F258B7B2000EB5C94 /* fengexian-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fengexian-2.png"; sourceTree = "<group>"; };
 		6C709192258B92F900EB5C94 /* SEEBlindSubPersonalModifyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindSubPersonalModifyView.h; sourceTree = "<group>"; };
 		6C709193258B92F900EB5C94 /* SEEBlindSubPersonalModifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindSubPersonalModifyView.m; sourceTree = "<group>"; };
+		6C808A9D2590E1310060C94A /* SEEVolunteerPersonalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerPersonalView.h; sourceTree = "<group>"; };
+		6C808A9E2590E1310060C94A /* SEEVolunteerPersonalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEVolunteerPersonalView.m; sourceTree = "<group>"; };
 		6C998DE4258A41FE00526ECC /* SEEForgetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetView.h; sourceTree = "<group>"; };
 		6C998DE5258A41FE00526ECC /* SEEForgetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEForgetView.m; sourceTree = "<group>"; };
 		6C998DEA258A426300526ECC /* SEEForgetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetViewController.h; sourceTree = "<group>"; };
@@ -582,6 +585,25 @@
 			path = SEEBlindModifyView;
 			sourceTree = "<group>";
 		};
+		6C808A9B2590E0C70060C94A /* VolunteerPersonalMain */ = {
+			isa = PBXGroup;
+			children = (
+				6C808A9C2590E1050060C94A /* VolunteerPersonalView */,
+				6CBFD1DA257B8C840076A562 /* SEEVolunteerPersonalViewController.h */,
+				6CBFD1DB257B8C840076A562 /* SEEVolunteerPersonalViewController.m */,
+			);
+			path = VolunteerPersonalMain;
+			sourceTree = "<group>";
+		};
+		6C808A9C2590E1050060C94A /* VolunteerPersonalView */ = {
+			isa = PBXGroup;
+			children = (
+				6C808A9D2590E1310060C94A /* SEEVolunteerPersonalView.h */,
+				6C808A9E2590E1310060C94A /* SEEVolunteerPersonalView.m */,
+			);
+			path = VolunteerPersonalView;
+			sourceTree = "<group>";
+		};
 		6C8DBF97256E977600625C9D /* SEEBlind */ = {
 			isa = PBXGroup;
 			children = (
@@ -625,8 +647,7 @@
 		6CBFD1D3257B8C2B0076A562 /* SEEVolunteerPersonal */ = {
 			isa = PBXGroup;
 			children = (
-				6CBFD1DA257B8C840076A562 /* SEEVolunteerPersonalViewController.h */,
-				6CBFD1DB257B8C840076A562 /* SEEVolunteerPersonalViewController.m */,
+				6C808A9B2590E0C70060C94A /* VolunteerPersonalMain */,
 			);
 			path = SEEVolunteerPersonal;
 			sourceTree = "<group>";
@@ -805,6 +826,7 @@
 				6CBFD1D6257B8C5B0076A562 /* SEEVolunteerMainViewController.m in Sources */,
 				6C4C6FD625750F2800BC3C2C /* SEESubBlindPersonCentreTableViewCell.m in Sources */,
 				6C4C6FD0257509D200BC3C2C /* SEEBlindSubPersonalModifyViewController.m in Sources */,
+				6C808A9F2590E1310060C94A /* SEEVolunteerPersonalView.m in Sources */,
 				6C4C6FD3257509F500BC3C2C /* SEEBlindPersonalContactViewController.m in Sources */,
 				6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */,
 				6C4C6FB72574E4A300BC3C2C /* SEELoginModel.m in Sources */,

@@ -1,8 +1,8 @@
 //
-//  SEEBlindPersonalView.h
+//  SEEVolunteerPersonalView.h
 //  Seeing
 //
-//  Created by 房彤 on 2020/11/30.
+//  Created by 房彤 on 2020/12/21.
 //  Copyright © 2020 房彤. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SEEBlindPersonalView : UIView <UITableViewDelegate, UITableViewDataSource, UIApplicationDelegate>
+@interface SEEVolunteerPersonalView : UIView <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) int cellNumber;
 
 - (void)initView;
+
 
 @end
 
