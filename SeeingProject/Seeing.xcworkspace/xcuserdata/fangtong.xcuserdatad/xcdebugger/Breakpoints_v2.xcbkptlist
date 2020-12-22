@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E35FC484-DC89-40B9-89F1-14590EAFAE7C"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Seeing/SEEChoose/SEEChooseView/SEEChooseView.m"
@@ -35,143 +35,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5B90EC4E-8C43-4DDD-B52F-7BFC141514DA"
-            shouldBeEnabled = "No"
+            uuid = "E66B88F4-EC4F-4DEC-A152-D68238420BA7"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-registerTypeStr:andName:andNumber:andPass:getBackModel:error:"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-numberOfSectionsInTableView:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FAF34CD9-CE0E-4AC7-8026-7AF3B6B97938"
-            shouldBeEnabled = "No"
+            uuid = "11E409DC-6844-43CB-8C03-503ABFB75A45"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-registerTypeStr:andName:andNumber:andPass:getBackModel:error:"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-initView"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "89E7E433-A7EB-402E-A2F0-4E26F93B0DCC"
-            shouldBeEnabled = "No"
+            uuid = "3B6F8083-AA28-4B57-B958-A30DD095739E"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEERegister/SEERegisterController/SEERegisterViewController.m"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-pressSure"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BF5008AE-7060-46C3-98B6-70134BEAB3EF"
-            shouldBeEnabled = "No"
+            uuid = "1431A3C3-CE64-49AB-A1BE-E8767F6AD703"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEERegister/SEERegisterController/SEERegisterViewController.m"
+            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalView/SEEBlindPersonalView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-pressSure"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1986C8F6-437F-4176-8003-D0C66260E1AD"
-            shouldBeEnabled = "No"
+            uuid = "5BB9366A-ED66-402F-9AE7-8455ED2E6CDB"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEERegister/SEERegisterController/SEERegisterViewController.m"
+            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalController/SEEBlindPersonalViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-pressSure"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "23EB782F-9CC6-4BE5-A42C-05EEB43DB6B5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEERegister/SEERegisterController/SEERegisterViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-pressSure"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8B337F37-32A7-49A8-A129-A1AEFF92B818"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEEChoose/SEEChooseController/SEEChooseViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "-pressVolunteer"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD03146D-83AB-4F73-9407-C3903D469821"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEELoginViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "-loginSuccess"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CD36B0E6-5199-4924-9ECA-32B14E50B05B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEEForgetViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -179,351 +115,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "65639F2A-A3F0-4613-A6C0-0B720D70DDBD"
+            uuid = "7E040372-0244-45DC-B1BF-FAE502E3F7F4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
+            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalController/SEEBlindPersonalViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-getVerifyPhoneNumber:andCode:getBackVerifyModel:error:"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-cellPush"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A16F9866-7560-4DBC-B406-DF0DEA1D964D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEEForgetViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "-pressNext"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4A54F23A-D6F0-4C77-B650-2934174108EE"
+            uuid = "CC5D4514-7A1A-47E3-BEB1-DCA30C5875E8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
+            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalController/SEEBlindPersonalViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-getVerifyPhoneNumber:andCode:getBackVerifyModel:error:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4A54F23A-D6F0-4C77-B650-2934174108EE - 9ca4ed1455c3d402"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[Manager getVerifyPhoneNumber:andCode:getBackVerifyModel:error:]"
-                  moduleName = "Seeing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/Manager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "445">
-               </Location>
-               <Location
-                  uuid = "4A54F23A-D6F0-4C77-B650-2934174108EE - 965473e9aee7dcad"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[Manager getVerifyPhoneNumber:andCode:getBackVerifyModel:error:]_block_invoke"
-                  moduleName = "Seeing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/Manager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C4B63D86-084B-45B5-BB45-045F71F73C52"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "-getVerifyPhoneNumber:andCode:getBackVerifyModel:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "507DD528-7355-44D6-9D91-9F16F5FC4897"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "-getVerifyPhoneNumber:andCode:getBackVerifyModel:error:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "507DD528-7355-44D6-9D91-9F16F5FC4897 - 9ca4ed1455c3d402"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[Manager getVerifyPhoneNumber:andCode:getBackVerifyModel:error:]"
-                  moduleName = "Seeing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/Manager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "602">
-               </Location>
-               <Location
-                  uuid = "507DD528-7355-44D6-9D91-9F16F5FC4897 - 965473e9aee7dcad"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[Manager getVerifyPhoneNumber:andCode:getBackVerifyModel:error:]_block_invoke"
-                  moduleName = "Seeing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/Manager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "148">
-               </Location>
-               <Location
-                  uuid = "507DD528-7355-44D6-9D91-9F16F5FC4897 - 79fb0a16d6f4dac0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__65-[Manager getVerifyPhoneNumber:andCode:getBackVerifyModel:error:]_block_invoke_2"
-                  moduleName = "Seeing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/Manager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "113"
-                  endingLineNumber = "113"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E9A916AF-7465-4E00-B7DA-E739A2166C31"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "-getVerifyPhoneNumber:andCode:getBackVerifyModel:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E01B0E4D-DCD5-4AED-9FDE-985AC8B22158"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
-            landmarkName = "-getVerifyPhoneNumber:andCode:getBackVerifyModel:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7E9794A5-7503-49D8-9A15-EF3B01DAAC82"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEELoginViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
-            landmarkName = "-resetPassword:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FEA48094-602D-4170-94B6-88CD88F0D2DA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-getID:andOldPassword:angNewPassword:getbackUpdateBlock:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5E015948-EC26-490F-8358-80E139096F8B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "-getID:andOldPassword:angNewPassword:getbackUpdateBlock:error:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5E015948-EC26-490F-8358-80E139096F8B - 3e0b67aabddad64a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[Manager getID:andOldPassword:angNewPassword:getbackUpdateBlock:error:]"
-                  moduleName = "Seeing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/Manager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "508">
-               </Location>
-               <Location
-                  uuid = "5E015948-EC26-490F-8358-80E139096F8B - 37be50828f7e65f7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__72-[Manager getID:andOldPassword:angNewPassword:getbackUpdateBlock:error:]_block_invoke"
-                  moduleName = "Seeing"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/Manager.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "146"
-                  endingLineNumber = "146"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "43BEA70C-9640-44EA-927C-D529D613D919"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "-getID:andOldPassword:angNewPassword:getbackUpdateBlock:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DCC0949E-A048-434A-B07A-95F49B76EAD3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/Manager.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "-getID:andOldPassword:angNewPassword:getbackUpdateBlock:error:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4FDB79E1-961A-4368-BEC4-B77CF9E23B90"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEELoginViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "301"
-            endingLineNumber = "301"
-            landmarkName = "-setQuit"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8D8553C0-DD38-427D-A41B-326986C4CF69"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEELoginViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
-            landmarkName = "-setQuit"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "384E79B8-EDE7-4918-BEAD-48097C600258"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEELoginAndRegister/SEELogin/SEELoginController/SEELoginViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "-viewDidAppear:"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-cellPush"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

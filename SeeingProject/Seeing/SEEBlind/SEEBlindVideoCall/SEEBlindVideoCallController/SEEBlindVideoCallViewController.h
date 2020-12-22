@@ -13,8 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindVideoCallViewController : UIViewController
 
-
-
 @property (nonatomic, strong) SEEBlindVideoCallView *callView;
 
 @end

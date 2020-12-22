@@ -10,13 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SEEBlindPersonalView : UIView <UITableViewDelegate, UITableViewDataSource, UIApplicationDelegate>
+@interface SEEBlindPersonalView : UIView <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) UIButton *quitButton;
 
 @property (nonatomic, assign) int cellNumber;
+
+@property (nonatomic, strong) UILabel *titleLabel;
 
 - (void)initView;
 

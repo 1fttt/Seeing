@@ -9,15 +9,22 @@
 #import "SEEBlindPersonalView.h"
 #import "SEEBlindPersonalTableViewCell.h"
 #import "AppDelegate.h"
+#import "Masonry.h"
 
 
 @implementation SEEBlindPersonalView
 
 - (void)initView {
     
+    self.backgroundColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:250/255.0 alpha:1];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height) style:UITableViewStyleGrouped];
+    [self addView];
+    
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 80, self.frame.size.width, self.frame.size.height) style:UITableViewStyleGrouped];
     [self addSubview:_tableView];
+
+    _tableView.scrollEnabled = NO;
+
     _tableView.delegate = self;
     _tableView.dataSource = self;
     
@@ -64,7 +71,7 @@
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             
             cell.nameLabel.text = [userDefaults objectForKey:@"name"];
-            
+            cell.backgroundColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:250/255.0 alpha:1];
             
         } else {
             
@@ -96,6 +103,22 @@
          
         [[NSNotificationCenter defaultCenter] postNotificationName:@"pushAlert" object:nil];
     }
+}
+
+
+- (void)addView {
+    _titleLabel = [[UILabel alloc] init];
+    [self addSubview:_titleLabel];
+    _titleLabel.text = @"个人中心";
+    _titleLabel.textColor = [UIColor whiteColor];
+    _titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    _titleLabel.textAlignment = NSTextAlignmentCenter;
+    [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_top).offset(50);
+        make.centerX.equalTo(self.mas_centerX);
+        make.width.mas_equalTo(85);
+        make.height.mas_equalTo(30);
+    }];
 }
 
 

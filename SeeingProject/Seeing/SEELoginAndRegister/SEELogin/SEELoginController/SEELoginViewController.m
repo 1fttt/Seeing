@@ -157,6 +157,10 @@
     videoCallNav.tabBarItem.title = @"视频通话";
     videoCallNav.tabBarItem.image = [UIImage imageNamed:@"shipintonghua"];
     videoCallNav.tabBarItem.selectedImage = [UIImage imageNamed:@"shipintonghua-2"];
+//    videoCallView.tabBarItem.title = @"视频通话";
+//    videoCallView.tabBarItem.image = [UIImage imageNamed:@"shipintonghua"];
+//    videoCallView.tabBarItem.selectedImage = [UIImage imageNamed:@"shipintonghua-2"];
+    
     
     //常用信息
     SEEBlindGeneralInfoViewController *generalInfoView = [[SEEBlindGeneralInfoViewController alloc] init];
@@ -164,6 +168,10 @@
     generalInfoNav.tabBarItem.title = @"常用信息";
     generalInfoNav.tabBarItem.image = [UIImage imageNamed:@"changyongxinxi"];
     generalInfoNav.tabBarItem.selectedImage = [UIImage imageNamed:@"changyongxinxi-2"];
+//    generalInfoView.tabBarItem.title = @"常用信息";
+//    generalInfoView.tabBarItem.image = [UIImage imageNamed:@"changyongxinxi"];
+//    generalInfoView.tabBarItem.selectedImage = [UIImage imageNamed:@"changyongxinxi-2"];
+    
     
     //我的
     SEEBlindPersonalViewController *personalView = [[SEEBlindPersonalViewController alloc] init];
@@ -171,12 +179,17 @@
     personalNav.tabBarItem.title = @"个人中心";
     personalNav.tabBarItem.image = [UIImage imageNamed:@"wode-3"];
     personalNav.tabBarItem.selectedImage = [UIImage imageNamed:@"wode-2"];
+//    personalView.tabBarItem.title = @"个人中心";
+//    personalView.tabBarItem.image = [UIImage imageNamed:@"wode-3"];
+//    personalView.tabBarItem.selectedImage = [UIImage imageNamed:@"wode-2"];
     
     NSArray *array = [NSArray arrayWithObjects:videoCallNav, generalInfoNav, personalNav, nil];
     
+    //NSArray *array = [NSArray arrayWithObjects:videoCallView, generalInfoView, personalView, nil];
     
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     tabbarController.viewControllers = array;
+
     
     //设置选中状态的颜色
     tabbarController.tabBar.tintColor = [UIColor colorWithRed:0/255 green:143.0/255 blue:211.0/255 alpha:1];

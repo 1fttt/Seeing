@@ -26,12 +26,13 @@
     
     [_callView initView];
     
-    self.navigationItem.rightBarButtonItem = _callView.scanButton;
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
-    
+
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController.navigationBar setHidden:YES];
+}
 
 
 @end

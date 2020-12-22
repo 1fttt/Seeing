@@ -48,7 +48,7 @@
     _oldPasswordLabel.textColor = [UIColor blackColor];
     [_oldPasswordLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.mas_left).offset(30);
-        make.top.equalTo(_backLabel.mas_bottom).offset(80);
+        make.top.equalTo(self.mas_top).offset(145);
         make.width.mas_equalTo(80);
         make.height.mas_equalTo(35);
     }];

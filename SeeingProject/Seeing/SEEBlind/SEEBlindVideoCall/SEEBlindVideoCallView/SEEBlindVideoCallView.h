@@ -12,9 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindVideoCallView : UIView
 
-@property (nonatomic, strong) UIBarButtonItem *scanButton;
+@property (nonatomic, strong) UIButton *scanButton;
 @property (nonatomic, strong) UIButton *videoCallButton;
 @property (nonatomic, strong) UIView *personView;
+@property (nonatomic, strong) UILabel *titleLabel;
 
 - (void)initView;
 

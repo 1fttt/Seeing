@@ -11,6 +11,7 @@
 #import "SEESubBlindPersonalCentreViewController.h"
 #import "SEEBlindSubPersonalModifyViewController.h"
 #import "SEEBlindPersonalContactViewController.h"
+#import "Masonry.h"
 
 @interface SEEBlindPersonalViewController ()
 
@@ -22,6 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+//    [self addView];
     
     _personalView = [[SEEBlindPersonalView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:_personalView];
@@ -35,7 +38,9 @@
     
 }
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController.navigationBar setHidden:YES];
+}
 
 
 //执行点击cell push
@@ -83,5 +88,6 @@
     
     [self presentViewController:_alert animated:YES completion:nil];
 }
+
 
 @end

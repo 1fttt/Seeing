@@ -29,6 +29,8 @@
 
 }
 
+
+
 - (void)pressSure {
     if (![_resetView.passwordTextfield.text isEqualToString:_resetView.repeatTextfield.text]) {
         [self showAlert:@"密码两次输入不同"];

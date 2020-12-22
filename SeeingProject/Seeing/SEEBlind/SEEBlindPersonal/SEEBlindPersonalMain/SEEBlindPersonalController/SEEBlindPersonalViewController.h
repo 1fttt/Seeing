@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIAlertController *alert;
 
+@property (nonatomic, strong) UILabel *titleLabel;
+
 @property (nonatomic, assign) BOOL isQuit;
 
 

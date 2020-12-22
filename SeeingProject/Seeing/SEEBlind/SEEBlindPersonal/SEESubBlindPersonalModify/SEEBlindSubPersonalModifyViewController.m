@@ -36,6 +36,11 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController.navigationBar setHidden:NO];
+}
+
+
 - (void)pressSure {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"%@", _modifyView.repeatTextfield.text);

@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEEBlindGeneralInfoView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindGeneralInfoViewController : UIViewController
+
+@property (nonatomic, strong) SEEBlindGeneralInfoView *infoView;
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
 
 @end
 
