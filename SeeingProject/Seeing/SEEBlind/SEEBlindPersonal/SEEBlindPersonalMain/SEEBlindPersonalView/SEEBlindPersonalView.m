@@ -67,9 +67,12 @@
             
             SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"0row" forIndexPath:indexPath];
             [cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
-
+            [cell.headButton addTarget:self action:@selector(presshead) forControlEvents:UIControlEventTouchUpInside];
+            
+            
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             
+
             cell.nameLabel.text = [userDefaults objectForKey:@"name"];
             cell.backgroundColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:250/255.0 alpha:1];
             
@@ -120,6 +123,13 @@
         make.height.mas_equalTo(30);
     }];
 }
+
+- (void)pressHead {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+    }
+}
+
 
 
 @end
