@@ -8,6 +8,8 @@
 
 #import "SEEBlindVideoCallViewController.h"
 
+
+
 @interface SEEBlindVideoCallViewController ()
 
 @end
@@ -32,6 +34,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController.navigationBar setHidden:YES];
+    
 }
 
 

@@ -15,6 +15,7 @@
 		6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C839B256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m */; };
 		6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */; };
 		6C1C83A5256FF988001BB151 /* SEEBlindVideoCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */; };
+		6C3B2B1025931101004E80CB /* SpeechManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3B2B0F25931101004E80CB /* SpeechManager.m */; };
 		6C43D18C256A47390039D232 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D18B256A47390039D232 /* AppDelegate.m */; };
 		6C43D18F256A47390039D232 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43D18E256A47390039D232 /* SceneDelegate.m */; };
 		6C43D195256A47390039D232 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C43D193256A47390039D232 /* Main.storyboard */; };
@@ -109,6 +110,8 @@
 		6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindPersonalViewController.m; sourceTree = "<group>"; };
 		6C1C83A3256FF988001BB151 /* SEEBlindVideoCallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindVideoCallView.h; sourceTree = "<group>"; };
 		6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SEEBlindVideoCallView.m; sourceTree = "<group>"; };
+		6C3B2B0E25931101004E80CB /* SpeechManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechManager.h; sourceTree = "<group>"; };
+		6C3B2B0F25931101004E80CB /* SpeechManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechManager.m; sourceTree = "<group>"; };
 		6C43D187256A47390039D232 /* Seeing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seeing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C43D18A256A47390039D232 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C43D18B256A47390039D232 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -429,6 +432,8 @@
 				6C43D18E256A47390039D232 /* SceneDelegate.m */,
 				6C6390D22573C33D008A5BEE /* Manager.h */,
 				6C6390D32573C33D008A5BEE /* Manager.m */,
+				6C3B2B0E25931101004E80CB /* SpeechManager.h */,
+				6C3B2B0F25931101004E80CB /* SpeechManager.m */,
 				6C1C8396256FED2B001BB151 /* SEELoginAndRegister */,
 				6C8DBF97256E977600625C9D /* SEEBlind */,
 				6C8DBF98256E99EC00625C9D /* SEEVolunteer */,
@@ -903,6 +908,7 @@
 				6C70918B258B601300EB5C94 /* SEEResetPasswordViewController.m in Sources */,
 				6C43D1C9256A499B0039D232 /* SEEChooseView.m in Sources */,
 				6C43D19D256A473D0039D232 /* main.m in Sources */,
+				6C3B2B1025931101004E80CB /* SpeechManager.m in Sources */,
 				6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */,
 				6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */,
 				6CCAEDB02592092100C237D8 /* SEEBlindGeneralInfoTableViewCell.m in Sources */,
@@ -1084,6 +1090,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Seeing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1101,6 +1108,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Seeing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

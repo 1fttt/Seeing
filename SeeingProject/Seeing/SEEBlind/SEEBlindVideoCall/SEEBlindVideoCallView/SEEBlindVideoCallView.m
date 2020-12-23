@@ -8,6 +8,9 @@
 
 #import "SEEBlindVideoCallView.h"
 #import "Masonry.h"
+#import "SpeechManager.h"
+
+
 #define videoCallButtonWidth 130
 #define videoCallButtonHeight 100
 #define personViewWidth 300
@@ -111,7 +114,8 @@
 
 //点击视频通话
 - (void)pressCall {
-    
+    SpeechManager *manager = [SpeechManager shareSpeech];
+    [manager speech:@"视频通话"];
 }
 
 
