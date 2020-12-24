@@ -14,7 +14,7 @@
 #import "Masonry.h"
 #import "SpeechManager.h"
 
-@interface SEEBlindPersonalViewController ()
+@interface SEEBlindPersonalViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -37,6 +37,9 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cellPush:) name:@"push" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertPush) name:@"pushAlert" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pickHeadImage) name:@"pressHead" object:nil];
+    
     
 }
 
@@ -110,9 +113,90 @@
     [_alert addAction:action2];
     [_alert addAction:action3];
     
-    
+
     [self presentViewController:_alert animated:YES completion:nil];
 }
+
+- (void)pickHeadImage {
+    
+    SpeechManager *manager = [SpeechManager shareSpeech];
+    [manager speech:@"点击头像，进行更换"];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更换头像" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *cannelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    static NSUInteger sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.delegate = self;
+    imagePickerController.allowsEditing = YES;
+    
+    
+    //判断是否支持相机
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertAction *camera = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            [manager speech:@"已选择相机"];
+            sourceType = UIImagePickerControllerSourceTypeCamera;
+            [self presentViewController:imagePickerController animated:YES completion:nil];
+        }];
+        
+        [alert addAction:camera];
+    }
+    
+    UIAlertAction *libraryAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        [manager speech:@"已选择相册"];
+        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }];
+    
+    [alert addAction:libraryAction];
+    [alert addAction:cannelAction];
+    
+    imagePickerController.sourceType = sourceType;
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+//    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+//    imagePickerController.delegate = self;
+//    imagePickerController.allowsEditing = YES;
+//    imagePickerController.sourceType = sourceType;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pickAlert" object:self];
+    
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
+    
+    UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
+    
+    [_personalView.headButton setImage:image forState:UIControlStateNormal];
+    
+    SpeechManager *manager = [SpeechManager shareSpeech];
+    [manager speech:@"更换成功"];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+//
+////圆形的图片
+//-(UIImage*) circleImage:(UIImage*) image withParam:(CGFloat) inset {
+//    UIGraphicsBeginImageContext(image.size);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    CGContextSetLineWidth(context,0); //边框线
+//    CGContextSetStrokeColorWithColor(context, [UIColor redColor].CGColor);
+//    CGRect rect = CGRectMake(inset, inset, image.size.width - inset * 2.0f, image.size.height - inset * 2.0f);
+//    CGContextAddEllipseInRect(context, rect);
+//    CGContextClip(context);
+//
+//    [image drawInRect:rect];
+//    CGContextAddEllipseInRect(context, rect);
+//    CGContextStrokePath(context);
+//    UIImage *newimg = UIGraphicsGetImageFromCurrentImageContext();
+//    UIGraphicsEndImageContext();
+//    return newimg;
+//}
 
 
 @end

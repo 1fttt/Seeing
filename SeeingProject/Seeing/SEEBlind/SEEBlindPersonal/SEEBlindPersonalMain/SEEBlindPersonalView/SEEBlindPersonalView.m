@@ -9,7 +9,7 @@
 #import "SEEBlindPersonalView.h"
 #import "SEEBlindPersonalTableViewCell.h"
 #import "Masonry.h"
-
+#define headButtonSize 110
 
 @implementation SEEBlindPersonalView
 
@@ -67,9 +67,34 @@
         if (indexPath.row == 0) {
             
             SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"0row" forIndexPath:indexPath];
-            [cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
-            [cell.headButton addTarget:self action:@selector(pressHead) forControlEvents:UIControlEventTouchUpInside];
+            _headButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [cell.contentView addSubview:_headButton];
             
+            _headButton.layer.cornerRadius = headButtonSize / 2;
+            _headButton.layer.masksToBounds = YES;
+            
+ ////////////////////////获取headImage
+            
+            [_headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
+            
+            
+            
+            [_headButton addTarget:self action:@selector(pressHead) forControlEvents:UIControlEventTouchUpInside];
+            
+            [_headButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(cell.contentView.mas_centerX);
+                make.centerY.equalTo(cell.contentView.mas_centerY);
+                make.width.mas_equalTo(headButtonSize);
+                make.height.mas_equalTo(headButtonSize);
+            }];
+            
+        
+            _headButton.tag = 111;
+            
+            //[cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
+            //[cell.headButton addTarget:self action:@selector(pressHead) forControlEvents:UIControlEventTouchUpInside];
+            
+            //.headButton.tag = 111;
             
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             
@@ -135,11 +160,9 @@
 }
 
 - (void)pressHead {
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-        
-    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pressHead" object:self];
+
 }
-
-
 
 @end

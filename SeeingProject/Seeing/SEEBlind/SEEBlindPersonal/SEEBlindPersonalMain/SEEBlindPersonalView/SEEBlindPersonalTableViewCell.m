@@ -26,11 +26,11 @@
         
     } else if ([self.reuseIdentifier isEqualToString:@"0row"]) {
         
-        _headButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [self.contentView addSubview:_headButton];
-        _headButton.layer.cornerRadius = headButtonSize / 2;
-        _headButton.layer.masksToBounds = YES;
-        
+        //_headButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        //[self.contentView addSubview:_headButton];
+//        _headButton.layer.cornerRadius = headButtonSize / 2;
+//        _headButton.layer.masksToBounds = YES;
+//
         _nameLabel = [[UILabel alloc] init];
         [self.contentView addSubview:_nameLabel];
         
@@ -51,16 +51,16 @@
         make.width.equalTo(@100);
     }];
     
-    [_headButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.contentView.mas_centerX);
-        make.centerY.equalTo(self.contentView.mas_centerY);
-        make.width.mas_equalTo(headButtonSize);
-        make.height.mas_equalTo(headButtonSize);
-    }];
+//    [_headButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.equalTo(self.contentView.mas_centerX);
+//        make.centerY.equalTo(self.contentView.mas_centerY);
+//        make.width.mas_equalTo(headButtonSize);
+//        make.height.mas_equalTo(headButtonSize);
+//    }];
     
     
     [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_headButton.mas_bottom).offset(15);
+        make.top.equalTo(self.contentView.mas_centerY).offset(70);
         make.centerX.equalTo(self.contentView.mas_centerX);
         make.width.mas_equalTo(nameLabelWidth);
         make.height.mas_equalTo(nameLabelHeight);

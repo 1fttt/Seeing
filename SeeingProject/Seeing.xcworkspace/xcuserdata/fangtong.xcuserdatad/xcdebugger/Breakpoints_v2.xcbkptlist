@@ -106,8 +106,8 @@
             filePath = "Seeing/SEEBlind/SEEBlindVideoCall/SEEBlindVideoCallView/SEEBlindVideoCallView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "-pressCall"
             landmarkType = "7">
          </BreakpointContent>
@@ -131,16 +131,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E3240BC5-0999-463C-801E-711D5A5822AD"
+            uuid = "B98FF888-F65C-4EDC-8355-CB962968B298"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalView/SEEBlindPersonalView.m"
+            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalController/SEEBlindPersonalViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-pressHead"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-pickHeadImage"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFF685D2-EE56-4A73-BBAB-CE139E9EDCF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalController/SEEBlindPersonalViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-pickHeadImage"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94701C23-F978-489C-9476-4BCD0A832B7A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEEBlind/SEEBlindPersonal/SEEBlindPersonalMain/SEEBlindPersonalController/SEEBlindPersonalViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
+            landmarkName = "-pickHeadImage"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

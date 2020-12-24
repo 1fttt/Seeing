@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIButton *headButton;
 
+@property (nonatomic, strong) 
+
 @property (nonatomic, strong) UIView *leftView;
 @property (nonatomic, strong) UIView *lineView;
 

@@ -57,7 +57,7 @@
         if (indexPath.row == 0) {
             
             SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"0row" forIndexPath:indexPath];
-            [cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
+            //[cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
 
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             

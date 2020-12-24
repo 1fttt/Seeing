@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *subTitlelabel;
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *quitlabel;
-@property (nonatomic, strong) UIButton *headButton;
+//@property (nonatomic, strong) UIButton *headButton;
 
 @end
 

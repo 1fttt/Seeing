@@ -112,7 +112,7 @@
 		6C1C839A256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindGeneralInfoViewController.h; sourceTree = "<group>"; };
 		6C1C839B256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindGeneralInfoViewController.m; sourceTree = "<group>"; };
 		6C1C839D256FEDE6001BB151 /* SEEBlindPersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindPersonalViewController.h; sourceTree = "<group>"; };
-		6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindPersonalViewController.m; sourceTree = "<group>"; };
+		6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindPersonalViewController.m; sourceTree = "<group>"; wrapsLines = 1; };
 		6C1C83A3256FF988001BB151 /* SEEBlindVideoCallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindVideoCallView.h; sourceTree = "<group>"; };
 		6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SEEBlindVideoCallView.m; sourceTree = "<group>"; };
 		6C3B2B0E25931101004E80CB /* SpeechManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechManager.h; sourceTree = "<group>"; };
@@ -1107,13 +1107,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MDSPUX8AT;
 				INFOPLIST_FILE = Seeing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = fangtong.Seeing;
+				PRODUCT_BUNDLE_IDENTIFIER = tyugjg.fhfghf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1125,6 +1126,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7MDSPUX8AT;
 				INFOPLIST_FILE = Seeing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (

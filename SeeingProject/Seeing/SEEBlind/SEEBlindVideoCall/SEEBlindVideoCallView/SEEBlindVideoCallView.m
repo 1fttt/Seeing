@@ -102,8 +102,6 @@
     
     
     
-
-    
 }
 
 
@@ -116,6 +114,7 @@
 
 //点击视频通话
 - (void)pressCall {
+    
     SpeechManager *manager = [SpeechManager shareSpeech];
     [manager speech:@"拨打视频通话"];
     
