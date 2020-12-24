@@ -7,7 +7,7 @@
 //
 
 #import "SEEBlindVideoCallViewController.h"
-
+#import "SpeechManager.h"
 
 
 @interface SEEBlindVideoCallViewController ()
@@ -34,7 +34,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController.navigationBar setHidden:YES];
-    
+    SpeechManager *manager = [SpeechManager shareSpeech];
+    [manager speech:@"视频通话页面"];
 }
 
 

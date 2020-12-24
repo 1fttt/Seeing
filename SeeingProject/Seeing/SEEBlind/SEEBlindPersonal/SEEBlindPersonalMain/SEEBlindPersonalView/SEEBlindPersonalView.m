@@ -8,7 +8,6 @@
 
 #import "SEEBlindPersonalView.h"
 #import "SEEBlindPersonalTableViewCell.h"
-#import "AppDelegate.h"
 #import "Masonry.h"
 
 
@@ -37,6 +36,8 @@
     _tableView.sectionFooterHeight= 10;
     
     _tableView.tableHeaderView= [[UIView alloc]initWithFrame:CGRectMake(0.0f,0.0f,_tableView.bounds.size.width,0.01f)];
+    
+    
 }
 
 
@@ -67,7 +68,7 @@
             
             SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"0row" forIndexPath:indexPath];
             [cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
-            [cell.headButton addTarget:self action:@selector(presshead) forControlEvents:UIControlEventTouchUpInside];
+            [cell.headButton addTarget:self action:@selector(pressHead) forControlEvents:UIControlEventTouchUpInside];
             
             
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -76,13 +77,19 @@
             cell.nameLabel.text = [userDefaults objectForKey:@"name"];
             cell.backgroundColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:250/255.0 alpha:1];
             
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            return cell;
+            
         } else {
             
             SEEBlindPersonalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-            NSArray *array = [NSArray arrayWithObjects:@"详细资料", @"修改密码", @"紧急联系人", nil];
-            cell.subTitlelabel.text = array[indexPath.row - 1];
+           _subTitleArray = [NSArray arrayWithObjects:@"详细资料", @"修改密码", @"紧急联系人", nil];
+            cell.subTitlelabel.text = _subTitleArray[indexPath.row - 1];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            
             return cell;
             
         }
@@ -91,6 +98,8 @@
         cell.quitlabel.text = @"退出";
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
+        
+        return cell;
     }
     return [[UITableViewCell alloc] init];
     
@@ -98,12 +107,13 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
+    if (indexPath.section == 0 && indexPath.row != 0) {
         _cellNumber = (int)indexPath.row;
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"push" object:nil];
-    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"push" object:self userInfo:@{@"text":_subTitleArray[indexPath.row - 1]}];
+    } else if (indexPath.section == 1) {
          
+
         [[NSNotificationCenter defaultCenter] postNotificationName:@"pushAlert" object:nil];
     }
 }

@@ -52,7 +52,7 @@
     _scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:_scanButton];
     [_scanButton setImage:[UIImage imageNamed:@"saoyisao-3"] forState:UIControlStateNormal];
-    [_scanButton addTarget:self action:@selector(pressCall) forControlEvents:UIControlEventTouchUpInside];
+    [_scanButton addTarget:self action:@selector(pressScan) forControlEvents:UIControlEventTouchUpInside];
     
     [_scanButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(_titleLabel.mas_centerY);
@@ -110,32 +110,33 @@
 
 //点击扫一扫
 - (void)pressScan {
-    
+    SpeechManager *manager = [SpeechManager shareSpeech];
+    [manager speech:@"扫一扫识别"];
 }
 
 //点击视频通话
 - (void)pressCall {
-//    SpeechManager *manager = [SpeechManager shareSpeech];
-//    [manager speech:@"视频通话"];
+    SpeechManager *manager = [SpeechManager shareSpeech];
+    [manager speech:@"拨打视频通话"];
     
     //语音播报
 
-    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"床前明月光，疑是地上霜。举头望明月，低头思故乡。"];
-
-    //设置播报语速
-
-    utterance.rate =0.5;
-
-    //中式发音
-
-    AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"zh-CN"];
-    utterance.voice = voice;
-
-    NSLog(@"%@",[AVSpeechSynthesisVoice speechVoices]);
-
-    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc]init];
-
-    [synth speakUtterance:utterance];
+//    AVSpeechUtterance *utterance = [AVSpeechUtterance speechUtteranceWithString:@"床前明月光，疑是地上霜。举头望明月，低头思故乡。"];
+//
+//    //设置播报语速
+//
+//    utterance.rate =0.5;
+//
+//    //中式发音
+//
+//    AVSpeechSynthesisVoice *voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"zh-CN"];
+//    utterance.voice = voice;
+//
+//    NSLog(@"%@",[AVSpeechSynthesisVoice speechVoices]);
+//
+//    AVSpeechSynthesizer *synth = [[AVSpeechSynthesizer alloc]init];
+//
+//    [synth speakUtterance:utterance];
 
     
 }

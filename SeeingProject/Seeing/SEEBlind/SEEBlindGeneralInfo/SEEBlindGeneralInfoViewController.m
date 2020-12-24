@@ -8,6 +8,8 @@
 
 #import "SEEBlindGeneralInfoViewController.h"
 #import "Masonry.h"
+#import "SpeechManager.h"
+
 @interface SEEBlindGeneralInfoViewController ()
 
 @end
@@ -29,6 +31,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController.navigationBar setHidden:YES];
+    SpeechManager *manager = [SpeechManager shareSpeech];
+    [manager speech:@"常用信息页面"];
 }
 
 - (void)addView {

@@ -33,12 +33,14 @@ static SpeechManager *manager = nil;
     utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:@"zh-CN"];
     utterance.volume = 1.0f;  //音量 0 - 1
     //语速
-    utterance.rate = 2.0f;
+    utterance.rate = 0.5f;
     //语调
-    utterance.pitchMultiplier = 3.0f;
+    utterance.pitchMultiplier = 0.8f;
     
     [speech speakUtterance:utterance];
 }
+
+
 
 
 @end

@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
+@property (nonatomic, copy) NSArray *subTitleArray;
+
 - (void)initView;
 
 @end

@@ -58,13 +58,15 @@
         [manager getID:[userDefaults objectForKey:@"id"] andOldPassword:_modifyView.oldPasswordTextfield.text  angNewPassword:_modifyView.passwordTextfield.text  getbackUpdateBlock:^(SEEResetPasswordModel * _Nonnull updateModel) {
             if ([updateModel.status isEqualToString:@"0"]) {
                 [self showAlert:@"修改成功"];
-                //[userDefaults setObject:_modifyView.repeatTextfield.text forKey:@"userPass"];
+                [userDefaults setObject:_modifyView.repeatTextfield.text forKey:@"userPass"];
             } else {
                 [self showAlert:@"修改失败"];
             }
         } error:^(NSError * _Nonnull error) {
             [self showAlert:@"修改失败"];
         }];
+        
+        
         
         
     }

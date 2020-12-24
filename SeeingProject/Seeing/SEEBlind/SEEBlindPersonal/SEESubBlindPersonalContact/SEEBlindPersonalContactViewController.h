@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEEBlindPersonalContactView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindPersonalContactViewController : UIViewController
+
+@property (nonatomic, strong) SEEBlindPersonalContactView *contactView;
 
 @end
 
