@@ -77,12 +77,11 @@
 - (void)pressLogin {
     
     
-    
     if (_loginView.userNameTextField.text.length > 0 && _loginView.userPassTextField.text.length > 0) {
         Manager *manager = [Manager shareManager];
         [manager loginPhoneNumber:_loginView.userNameTextField.text andPasswordStr:_loginView.userPassTextField.text getBackModel:^(SEELoginModel * _Nonnull loginBackModel) {
             
-            if ([loginBackModel.msg isEqualToString:@"登录成功"]) {
+            if (loginBackModel.status == 0) {
                 
                 //存储账号密码
                 NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -137,6 +136,8 @@
     NSLog(@"%@", [userDefaults objectForKey:@"id"]);
     NSLog(@"%@", [userDefaults objectForKey:@"phone"]);
     NSLog(@"%@", [userDefaults objectForKey:@"type"]);
+    
+  
     
     if ([[userDefaults objectForKey:@"type"] isEqualToString:@"1"]) {
         [self blindLogin];
@@ -286,7 +287,6 @@
             
             [self failSendVerify];
         }];
-        
         
         
     }];

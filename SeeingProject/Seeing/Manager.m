@@ -11,7 +11,8 @@
 #import "SEERegisterModel.h"
 #import "SEELoginModel.h"
 #import "SEEForgetModel.h"
-
+#import "SEEBlindPersonalCentreModel.h"
+#import "SEEBlindContactModel.h"
 
 @implementation Manager
 
@@ -152,5 +153,72 @@ static Manager *manager = nil;
         errorBlock(error);
     }];
 }
+
+
+
+//获取紧急联系人
+- (void)getContactBlock:(ContactBlock)succeedBlock error:(ErrorBlock)errorBlock andBlindID:(NSString *)idStr {
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    [AFmanager.requestSerializer setValue:@" application/x-www-form-urlencoded"  forHTTPHeaderField:@"Content-Type"];
+    NSString *url = @"http://47.100.138.22:8082/contact/lists";
+    NSDictionary *paremeters = @{@"blind":idStr};
+    
+    [AFmanager POST:url parameters:paremeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"紧急联系人请求成功");
+        
+        SEEBlindContactModel *contactModel = [[SEEBlindContactModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"%@", contactModel.msg);
+        
+        succeedBlock(contactModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"紧急联系人请求失败");
+    }];
+}
+
+- (void)addContactBlock:(ContactBackBlock)succeedBlock error:(ErrorBlock)errorBlock andBlindID:(NSString *)idStr andName:(NSString *)nameStr andRelation:(NSString *)relationStr andPhone:(NSString *)phoneStr {
+    
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    [AFmanager.requestSerializer setValue:@" application/x-www-form-urlencoded"  forHTTPHeaderField:@"Content-Type"];
+    NSString *url = @"http://47.100.138.22:8082/contact/add";
+    NSDictionary *paremeters = @{@"user":idStr, @"name":nameStr, @"phone":phoneStr, @"relation":relationStr};
+    
+    [AFmanager POST:url parameters:paremeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"紧急联系人添加成功");
+        
+        SEEForgetModel *contactBackModel = [[SEEForgetModel alloc] initWithDictionary:responseObject error:nil];
+        
+        succeedBlock(contactBackModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"紧急联系人请求失败");
+    }];
+}
+
+
+//完善修改信息
+- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andAddress:(NSString *)addressStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr {
+    
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    [AFmanager.requestSerializer setValue:@" application/x-www-form-urlencoded"  forHTTPHeaderField:@"Content-Type"];
+    NSString *url = @"http://47.100.138.22:8082/user/updateInf";
+    NSDictionary *paremeters = @{@"id":idStr, @"msg":msgStr, @"gender":genderStr, @"address":addressStr, @"email":emailStr, @"phone":phoneStr};
+    
+    [AFmanager POST:url parameters:paremeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"修改信息请求成功");
+        
+        SEEBlindPersonalCentreModel *upDateInfModel = [[SEEBlindPersonalCentreModel alloc] initWithDictionary:responseObject error:nil];
+        
+        succeedBlock(upDateInfModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"紧急联系人请求失败");
+    }];
+    
+}
+
 
 @end

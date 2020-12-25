@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEESubBlindPersonalCentreView : UIView <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
+
 
 - (void)initView;
 

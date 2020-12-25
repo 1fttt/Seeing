@@ -12,6 +12,8 @@
 @class SEEForgetModel;
 @class SEEVerifyModel;
 @class SEEResetPasswordModel;
+@class SEEBlindPersonalCentreModel;
+@class SEEBlindContactModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,7 +26,14 @@ typedef void (^VerifyBackBlock)(SEEVerifyModel *verifyModel);
 typedef void (^ResetPasswordBlock)(SEEResetPasswordModel *resetModel);
 typedef void (^UpdatePasswordBlock)(SEEResetPasswordModel *updateModel);
 
+typedef void (^ContactBlock)(SEEBlindContactModel *contactModel);
+typedef void (^ContactBackBlock)(SEEForgetModel *contactBackModel);
+
+typedef void (^UpdateInfBlock)(SEEBlindPersonalCentreModel *updateInfModel);
+
+
 typedef void (^ErrorBlock)(NSError *error);
+
 
 
 @interface Manager : NSObject
@@ -48,6 +57,17 @@ typedef void (^ErrorBlock)(NSError *error);
 
 //登录时修改密码
 - (void)getID:(NSString *)idStr andOldPassword:(NSString *)oldStr angNewPassword:(NSString *)passwordStr getbackUpdateBlock:(UpdatePasswordBlock)succeedBlock error:(ErrorBlock)errorBlock;
+
+
+//获取紧急联系人
+- (void)getContactBlock:(ContactBlock)succeedBlock error:(ErrorBlock)errorBlock andBlindID:(NSString *)idStr;
+
+//添加紧急联系人
+- (void)addContactBlock:(ContactBackBlock)succeedBlock error:(ErrorBlock)errorBlock andBlindID:(NSString *)idStr andName:(NSString *)nameStr andRelation:(NSString *)relationStr andPhone:(NSString *)phoneStr;
+
+
+//修改完善信息
+- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr;
 
 @end
 

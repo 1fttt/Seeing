@@ -14,10 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIButton *headButton;
 
-@property (nonatomic, strong) 
+@property (nonatomic, strong) UILabel *nameLabel;
+@property (nonatomic, strong) UILabel *msgLabel;
 
-@property (nonatomic, strong) UIView *leftView;
-@property (nonatomic, strong) UIView *lineView;
+@property (nonatomic, strong) UITextField *nameTextField;
+@property (nonatomic, strong) UITextField *msgTextField;
+
+
+//@property (nonatomic, strong) UIView *leftView;
+//@property (nonatomic, strong) UIView *lineView;
 
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, strong) UITextField *textField;

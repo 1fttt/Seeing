@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4600D59967E1F039BA154FD4 /* libPods-Seeing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF29CD3422220A2C4697B47 /* libPods-Seeing.a */; };
 		6C1BD07025948ABB00CB05AD /* UILabel+Touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1BD06F25948ABB00CB05AD /* UILabel+Touch.m */; };
+		6C1BD0732594FA3F00CB05AD /* SEEBlindPersonalCentreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1BD0722594FA3F00CB05AD /* SEEBlindPersonalCentreModel.m */; };
 		6C1C8388256FC62A001BB151 /* SEELoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C8387256FC62A001BB151 /* SEELoginView.m */; };
 		6C1C838C256FE45B001BB151 /* SEERegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C838B256FE45B001BB151 /* SEERegisterViewController.m */; };
 		6C1C8392256FE683001BB151 /* SEERegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C8391256FE683001BB151 /* SEERegisterView.m */; };
@@ -16,6 +17,7 @@
 		6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C839B256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m */; };
 		6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */; };
 		6C1C83A5256FF988001BB151 /* SEEBlindVideoCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */; };
+		6C2AAD79259620CD009A3B74 /* SEEBlindContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2AAD78259620CD009A3B74 /* SEEBlindContactModel.m */; };
 		6C3B2B1025931101004E80CB /* SpeechManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3B2B0F25931101004E80CB /* SpeechManager.m */; };
 		6C3B2B1325939152004E80CB /* SEEBlindPersonalContactView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3B2B1225939152004E80CB /* SEEBlindPersonalContactView.m */; };
 		6C3B2B162593B420004E80CB /* SEEBlindPersonalContactTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3B2B152593B420004E80CB /* SEEBlindPersonalContactTableViewCell.m */; };
@@ -51,6 +53,9 @@
 		6C56A9132577DB4C0072AA1A /* shipintonghua.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C56A90B2577DB4C0072AA1A /* shipintonghua.png */; };
 		6C56A9142577DB4C0072AA1A /* shipintonghua-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C56A90C2577DB4C0072AA1A /* shipintonghua-2.png */; };
 		6C56A9152577DB4C0072AA1A /* wode-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C56A90D2577DB4C0072AA1A /* wode-2.png */; };
+		6C5716562595A2FC0048163B /* tianjia.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5716552595A2FB0048163B /* tianjia.png */; };
+		6C57165E2595AB670048163B /* SEEBlindContactAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C57165D2595AB670048163B /* SEEBlindContactAddView.m */; };
+		6C5716612595AB9B0048163B /* SEEBlindContactAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C5716602595AB9B0048163B /* SEEBlindContactAddViewController.m */; };
 		6C5FBF022591E5810064DC9F /* zhishituputubiao-.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C5FBF012591E5810064DC9F /* zhishituputubiao-.png */; };
 		6C6390D42573C33D008A5BEE /* Manager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D32573C33D008A5BEE /* Manager.m */; };
 		6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6390D62573D702008A5BEE /* SEERegisterModel.m */; };
@@ -101,6 +106,8 @@
 		3EF29CD3422220A2C4697B47 /* libPods-Seeing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Seeing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C1BD06E25948ABB00CB05AD /* UILabel+Touch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Touch.h"; sourceTree = "<group>"; };
 		6C1BD06F25948ABB00CB05AD /* UILabel+Touch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Touch.m"; sourceTree = "<group>"; };
+		6C1BD0712594FA3F00CB05AD /* SEEBlindPersonalCentreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindPersonalCentreModel.h; sourceTree = "<group>"; };
+		6C1BD0722594FA3F00CB05AD /* SEEBlindPersonalCentreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindPersonalCentreModel.m; sourceTree = "<group>"; };
 		6C1C8386256FC62A001BB151 /* SEELoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEELoginView.h; sourceTree = "<group>"; };
 		6C1C8387256FC62A001BB151 /* SEELoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEELoginView.m; sourceTree = "<group>"; };
 		6C1C838A256FE45B001BB151 /* SEERegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEERegisterViewController.h; sourceTree = "<group>"; };
@@ -115,6 +122,8 @@
 		6C1C839E256FEDE6001BB151 /* SEEBlindPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindPersonalViewController.m; sourceTree = "<group>"; wrapsLines = 1; };
 		6C1C83A3256FF988001BB151 /* SEEBlindVideoCallView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindVideoCallView.h; sourceTree = "<group>"; };
 		6C1C83A4256FF988001BB151 /* SEEBlindVideoCallView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SEEBlindVideoCallView.m; sourceTree = "<group>"; };
+		6C2AAD77259620CD009A3B74 /* SEEBlindContactModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindContactModel.h; sourceTree = "<group>"; };
+		6C2AAD78259620CD009A3B74 /* SEEBlindContactModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindContactModel.m; sourceTree = "<group>"; };
 		6C3B2B0E25931101004E80CB /* SpeechManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeechManager.h; sourceTree = "<group>"; };
 		6C3B2B0F25931101004E80CB /* SpeechManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeechManager.m; sourceTree = "<group>"; };
 		6C3B2B1125939152004E80CB /* SEEBlindPersonalContactView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindPersonalContactView.h; sourceTree = "<group>"; };
@@ -173,6 +182,11 @@
 		6C56A90B2577DB4C0072AA1A /* shipintonghua.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shipintonghua.png; sourceTree = "<group>"; };
 		6C56A90C2577DB4C0072AA1A /* shipintonghua-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shipintonghua-2.png"; sourceTree = "<group>"; };
 		6C56A90D2577DB4C0072AA1A /* wode-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wode-2.png"; sourceTree = "<group>"; };
+		6C5716552595A2FB0048163B /* tianjia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tianjia.png; sourceTree = "<group>"; };
+		6C57165C2595AB670048163B /* SEEBlindContactAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindContactAddView.h; sourceTree = "<group>"; };
+		6C57165D2595AB670048163B /* SEEBlindContactAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindContactAddView.m; sourceTree = "<group>"; };
+		6C57165F2595AB9B0048163B /* SEEBlindContactAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindContactAddViewController.h; sourceTree = "<group>"; };
+		6C5716602595AB9B0048163B /* SEEBlindContactAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindContactAddViewController.m; sourceTree = "<group>"; };
 		6C5FBF012591E5810064DC9F /* zhishituputubiao-.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zhishituputubiao-.png"; sourceTree = "<group>"; };
 		6C6390D22573C33D008A5BEE /* Manager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Manager.h; sourceTree = "<group>"; };
 		6C6390D32573C33D008A5BEE /* Manager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Manager.m; sourceTree = "<group>"; };
@@ -409,6 +423,15 @@
 			path = SEEBlindVideoCallModel;
 			sourceTree = "<group>";
 		};
+		6C2AAD76259620AA009A3B74 /* ContactModel */ = {
+			isa = PBXGroup;
+			children = (
+				6C2AAD77259620CD009A3B74 /* SEEBlindContactModel.h */,
+				6C2AAD78259620CD009A3B74 /* SEEBlindContactModel.m */,
+			);
+			path = ContactModel;
+			sourceTree = "<group>";
+		};
 		6C43D17E256A47390039D232 = {
 			isa = PBXGroup;
 			children = (
@@ -562,12 +585,9 @@
 		6C4C6FC42575071A00BC3C2C /* SEESubBlindPersonalContact */ = {
 			isa = PBXGroup;
 			children = (
-				6C4C6FD1257509F500BC3C2C /* SEEBlindPersonalContactViewController.h */,
-				6C4C6FD2257509F500BC3C2C /* SEEBlindPersonalContactViewController.m */,
-				6C3B2B1125939152004E80CB /* SEEBlindPersonalContactView.h */,
-				6C3B2B1225939152004E80CB /* SEEBlindPersonalContactView.m */,
-				6C3B2B142593B420004E80CB /* SEEBlindPersonalContactTableViewCell.h */,
-				6C3B2B152593B420004E80CB /* SEEBlindPersonalContactTableViewCell.m */,
+				6C2AAD76259620AA009A3B74 /* ContactModel */,
+				6C5716582595AAD00048163B /* ContactView */,
+				6C5716572595AAB80048163B /* ContactController */,
 			);
 			path = SEESubBlindPersonalContact;
 			sourceTree = "<group>";
@@ -595,6 +615,8 @@
 		6C4C6FCA2575091E00BC3C2C /* SEEBlindSubPersonalCentreModel */ = {
 			isa = PBXGroup;
 			children = (
+				6C1BD0712594FA3F00CB05AD /* SEEBlindPersonalCentreModel.h */,
+				6C1BD0722594FA3F00CB05AD /* SEEBlindPersonalCentreModel.m */,
 			);
 			path = SEEBlindSubPersonalCentreModel;
 			sourceTree = "<group>";
@@ -626,8 +648,33 @@
 				6CCAEDB525920DB100C237D8 /* zixun.png */,
 				6CCAEDB725920FBF00C237D8 /* zixun-2.png */,
 				6CCAEDB925920FC500C237D8 /* zixun-3.png */,
+				6C5716552595A2FB0048163B /* tianjia.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		6C5716572595AAB80048163B /* ContactController */ = {
+			isa = PBXGroup;
+			children = (
+				6C4C6FD1257509F500BC3C2C /* SEEBlindPersonalContactViewController.h */,
+				6C4C6FD2257509F500BC3C2C /* SEEBlindPersonalContactViewController.m */,
+				6C57165F2595AB9B0048163B /* SEEBlindContactAddViewController.h */,
+				6C5716602595AB9B0048163B /* SEEBlindContactAddViewController.m */,
+			);
+			path = ContactController;
+			sourceTree = "<group>";
+		};
+		6C5716582595AAD00048163B /* ContactView */ = {
+			isa = PBXGroup;
+			children = (
+				6C3B2B1125939152004E80CB /* SEEBlindPersonalContactView.h */,
+				6C3B2B1225939152004E80CB /* SEEBlindPersonalContactView.m */,
+				6C3B2B142593B420004E80CB /* SEEBlindPersonalContactTableViewCell.h */,
+				6C3B2B152593B420004E80CB /* SEEBlindPersonalContactTableViewCell.m */,
+				6C57165C2595AB670048163B /* SEEBlindContactAddView.h */,
+				6C57165D2595AB670048163B /* SEEBlindContactAddView.m */,
+			);
+			path = ContactView;
 			sourceTree = "<group>";
 		};
 		6C709191258B92B600EB5C94 /* SEEBlindModifyView */ = {
@@ -823,6 +870,7 @@
 			files = (
 				6C5641262578D8D4006428DD /* tj.jpg in Resources */,
 				6C56A90E2577DB4C0072AA1A /* wode-3.png in Resources */,
+				6C5716562595A2FC0048163B /* tianjia.png in Resources */,
 				6C709190258B7B2000EB5C94 /* fengexian-2.png in Resources */,
 				6CCAEDA62591F53100C237D8 /* tonghua.png in Resources */,
 				6C56A9042577BA650072AA1A /* fanhui.png in Resources */,
@@ -900,7 +948,9 @@
 				6CBFD1D6257B8C5B0076A562 /* SEEVolunteerMainViewController.m in Sources */,
 				6C4C6FD625750F2800BC3C2C /* SEESubBlindPersonCentreTableViewCell.m in Sources */,
 				6C4C6FD0257509D200BC3C2C /* SEEBlindSubPersonalModifyViewController.m in Sources */,
+				6C5716612595AB9B0048163B /* SEEBlindContactAddViewController.m in Sources */,
 				6C808A9F2590E1310060C94A /* SEEVolunteerPersonalView.m in Sources */,
+				6C1BD0732594FA3F00CB05AD /* SEEBlindPersonalCentreModel.m in Sources */,
 				6C4C6FD3257509F500BC3C2C /* SEEBlindPersonalContactViewController.m in Sources */,
 				6C1C839C256FEDD0001BB151 /* SEEBlindGeneralInfoViewController.m in Sources */,
 				6C3B2B162593B420004E80CB /* SEEBlindPersonalContactTableViewCell.m in Sources */,
@@ -927,6 +977,7 @@
 				6C43D19D256A473D0039D232 /* main.m in Sources */,
 				6C3B2B1025931101004E80CB /* SpeechManager.m in Sources */,
 				6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */,
+				6C2AAD79259620CD009A3B74 /* SEEBlindContactModel.m in Sources */,
 				6C1BD07025948ABB00CB05AD /* UILabel+Touch.m in Sources */,
 				6C1C839F256FEDE6001BB151 /* SEEBlindPersonalViewController.m in Sources */,
 				6CCAEDB02592092100C237D8 /* SEEBlindGeneralInfoTableViewCell.m in Sources */,
@@ -936,6 +987,7 @@
 				6C1C83A5256FF988001BB151 /* SEEBlindVideoCallView.m in Sources */,
 				6C6390D42573C33D008A5BEE /* Manager.m in Sources */,
 				6C4C6FC02574EFCF00BC3C2C /* SEEBlindPersonalTableViewCell.m in Sources */,
+				6C57165E2595AB670048163B /* SEEBlindContactAddView.m in Sources */,
 				6C70918E258B602B00EB5C94 /* SEEResetPasswordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
