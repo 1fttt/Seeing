@@ -16,6 +16,8 @@
 @implementation SEEBlindSubPersonalModifyView
 
 - (void)initView {
+    
+    self.backgroundColor = [UIColor whiteColor];
 //    _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
 //    [self addSubview:_backButton];
 //    [_backButton setImage:[UIImage imageNamed:@"fanhui"] forState:UIControlStateNormal];
@@ -31,7 +33,7 @@
 //
     _backLabel = [[UILabel alloc] init];
     [self addSubview:_backLabel];
-    _backLabel.text = @"设置密码";
+    _backLabel.text = @"设置密码:";
     _backLabel.font = [UIFont boldSystemFontOfSize:20];
 //    [_backLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 //        make.left.equalTo(_backButton.mas_right).offset(10);
@@ -43,7 +45,7 @@
     
     _oldPasswordLabel = [[UILabel alloc] init];
     [self addSubview:_oldPasswordLabel];
-    _oldPasswordLabel.text = @"旧密码";
+    _oldPasswordLabel.text = @"旧密码:";
     _oldPasswordLabel.font = [UIFont systemFontOfSize:19];
     _oldPasswordLabel.textColor = [UIColor blackColor];
     [_oldPasswordLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -55,7 +57,7 @@
     
     _passwordLabel = [[UILabel alloc] init];
     [self addSubview:_passwordLabel];
-    _passwordLabel.text = @"新密码";
+    _passwordLabel.text = @"新密码:";
     _passwordLabel.font = [UIFont systemFontOfSize:19];
     _passwordLabel.textColor = [UIColor blackColor];
     [_passwordLabel mas_makeConstraints:^(MASConstraintMaker *make) {

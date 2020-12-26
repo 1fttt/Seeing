@@ -83,6 +83,10 @@
             
             if (loginBackModel.status == 0) {
                 
+                NSString *path = NSHomeDirectory();
+                NSLog(@"path = %@", path);
+                
+                
                 //存储账号密码
                 NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
                 [userDefaults setObject:self->_loginView.userNameTextField.text forKey:@"userAccount"];

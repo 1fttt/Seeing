@@ -13,6 +13,7 @@
 #import "SEEForgetModel.h"
 #import "SEEBlindPersonalCentreModel.h"
 #import "SEEBlindContactModel.h"
+#import "SEEBlindWeatherModel.h"
 
 @implementation Manager
 
@@ -199,7 +200,7 @@ static Manager *manager = nil;
 
 
 //完善修改信息
-- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andAddress:(NSString *)addressStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr {
+- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andName:(NSString *)name andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr andAddress:(NSString *)addressStr {
     
     AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
     [AFmanager.requestSerializer setValue:@" application/x-www-form-urlencoded"  forHTTPHeaderField:@"Content-Type"];
@@ -215,9 +216,27 @@ static Manager *manager = nil;
         succeedBlock(upDateInfModel);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"紧急联系人请求失败");
+        NSLog(@"修改信息请求失败");
     }];
     
+}
+
+
+
+
+- (void)getWeatherBlock:(WeatherBlock)succeedBlock andCityStr:(NSString *)cityStr {
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    //NSString *url = [NSString stringWithFormat:@"https://tianqiapi.com/api?version=v6&appid=42835475&appsecret=n013OP8H&city=%@", cityStr];
+    NSString *url = @"https://tianqiapi.com/api?";
+    NSDictionary *dic = @{@"version":@"v6", @"appid":@"42835475", @"appsecret":@"n013OP8H", @"city":cityStr};
+    [AFmanager GET:url parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"天气请求发送成功");
+        SEEBlindWeatherModel *weatherModel = [[SEEBlindWeatherModel alloc] initWithDictionary:responseObject error:nil];
+        succeedBlock(weatherModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"天气请求发送失败");
+    }];
 }
 
 

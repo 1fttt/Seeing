@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) UIButton *sureButton;
+
+@property (nonatomic, strong) NSMutableArray *textFieldArray;
+
 
 - (void)initView;
 

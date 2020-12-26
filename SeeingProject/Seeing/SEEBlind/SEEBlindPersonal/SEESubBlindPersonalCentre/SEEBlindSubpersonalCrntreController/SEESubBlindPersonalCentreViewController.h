@@ -15,6 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) SEESubBlindPersonalCentreView *centreView;
 
+@property (nonatomic, strong) UIBarButtonItem *rightItem;
+
+@property (nonatomic, assign) BOOL isEdit;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

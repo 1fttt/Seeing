@@ -14,6 +14,7 @@
 @class SEEResetPasswordModel;
 @class SEEBlindPersonalCentreModel;
 @class SEEBlindContactModel;
+@class SEEBlindWeatherModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -31,6 +32,9 @@ typedef void (^ContactBackBlock)(SEEForgetModel *contactBackModel);
 
 typedef void (^UpdateInfBlock)(SEEBlindPersonalCentreModel *updateInfModel);
 
+
+//天气block
+typedef void (^WeatherBlock)(SEEBlindWeatherModel *weatherModel);
 
 typedef void (^ErrorBlock)(NSError *error);
 
@@ -67,7 +71,13 @@ typedef void (^ErrorBlock)(NSError *error);
 
 
 //修改完善信息
-- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr;
+- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andName:(NSString *)name andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr andAddress:(NSString *)addressStr;
+
+
+
+
+
+- (void)getWeatherBlock:(WeatherBlock)succeedBlock andCityStr:(NSString *)cityStr;
 
 @end
 

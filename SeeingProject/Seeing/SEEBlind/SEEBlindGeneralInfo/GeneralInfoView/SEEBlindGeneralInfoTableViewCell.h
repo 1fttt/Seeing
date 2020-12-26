@@ -14,6 +14,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIImageView *titleImageView;
+
+@property (nonatomic, strong) UILabel *timeLabel;
+@property (nonatomic, strong) UILabel *dateLabel;
+@property (nonatomic, strong) UILabel *weekLabel;
+
+
+@property (nonatomic, strong) UIImageView *locationImageView;
+@property (nonatomic, strong) UIImageView *weatherImageView;
+
+@property (nonatomic, strong) UILabel *cityLabel;
+@property (nonatomic, strong) UILabel *tempLabel;
+@property (nonatomic, strong) UILabel *tempMaxMinLabel;
+@property (nonatomic, strong) UILabel *weaLabel;
+ 
 @end
 
 NS_ASSUME_NONNULL_END
