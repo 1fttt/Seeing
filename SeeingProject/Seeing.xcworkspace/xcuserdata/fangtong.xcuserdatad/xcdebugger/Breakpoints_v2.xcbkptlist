@@ -83,22 +83,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EED00A1D-92B2-4AA2-813C-8B5B04C3CE81"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Seeing/SEEBlind/SEEBlindVideoCall/SEEBlindVideoCallView/SEEBlindVideoCallView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "-pressCall"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A6FF2D5A-A1A8-46A1-97E7-D51996624483"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -806,8 +790,8 @@
             filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -822,8 +806,8 @@
             filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -874,6 +858,38 @@
             endingLineNumber = "42"
             landmarkName = "-initView"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0074EE26-3135-4A6E-87F4-1BE7175443F0 - c26ca34425996a5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35-[SEEBlindGeneralInfoView initView]_block_invoke"
+                  moduleName = "Seeing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "0074EE26-3135-4A6E-87F4-1BE7175443F0 - d14e91fada5332b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35-[SEEBlindGeneralInfoView initView]_block_invoke_2"
+                  moduleName = "Seeing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fangtong/Desktop/Seeing/SeeingProject/Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -953,6 +969,86 @@
             startingLineNumber = "238"
             endingLineNumber = "238"
             landmarkName = "-getWeatherBlock:andCityStr:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A92E1573-8AE3-4BD1-9E12-2BC6171A83E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52E4DB32-7A09-40EC-938A-24E8726882F6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5AFC93E6-1DF4-4873-8D81-0C76D6FFF178"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAE84ACB-A4AA-41ED-A8D6-0E988427FED8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61D9892D-C030-41DC-B054-5230570DD36E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Seeing/SEEBlind/SEEBlindGeneralInfo/GeneralInfoView/SEEBlindGeneralInfoView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

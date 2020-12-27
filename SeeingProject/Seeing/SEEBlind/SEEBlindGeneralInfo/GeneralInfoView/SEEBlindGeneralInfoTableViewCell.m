@@ -60,6 +60,11 @@
         [self.contentView addSubview:_weatherImageView];
         
         
+    } else if([self.reuseIdentifier isEqualToString:@"musicCell"]) {
+        _scrollView = [[UIScrollView alloc] init];
+        [self.contentView addSubview:_scrollView];
+        
+
     }
     
     
@@ -98,7 +103,7 @@
     _dateLabel.textAlignment = NSTextAlignmentCenter;
     
     
-    _dateLabel.font = [UIFont systemFontOfSize:24];
+    _dateLabel.font = [UIFont systemFontOfSize:20];
     [_dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_timeLabel.mas_bottom).offset(5);
         make.left.equalTo(_timeLabel);
@@ -106,11 +111,11 @@
         make.height.mas_equalTo(40);
     }];
     
-    _weekLabel.font = [UIFont boldSystemFontOfSize:45];
+    _weekLabel.font = [UIFont systemFontOfSize:40];
     [_weekLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(self.contentView.mas_centerY);
         make.right.equalTo(self.contentView.mas_right).offset(-25);
-        make.width.mas_equalTo(120);
+        make.width.mas_equalTo(130);
         make.height.mas_equalTo(70);
     }];
     
@@ -126,23 +131,25 @@
     }];
     
     [_locationImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_tempLabel.mas_bottom).offset(5);
+        make.top.equalTo(_tempLabel.mas_bottom).offset(13);
         make.left.equalTo(_tempLabel.mas_left);
-        make.width.mas_equalTo(30);
-        make.height.mas_equalTo(30);
+        make.width.mas_equalTo(18);
+        make.height.mas_equalTo(18);
     }];
     
-    
+    _cityLabel.textColor = [UIColor colorWithWhite:0.6 alpha:1];
+    _cityLabel.font = [UIFont systemFontOfSize:16];
     [_cityLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_tempLabel.mas_bottom).offset(5);
-        make.left.equalTo(_locationImageView.mas_right).offset(5);
+        make.top.equalTo(_tempLabel.mas_bottom).offset(7);
+        make.left.equalTo(_locationImageView.mas_right).offset(2);
         make.width.mas_equalTo(40);
         make.height.mas_equalTo(30);
     }];
     
-    _tempMaxMinLabel.textAlignment = NSTextAlignmentRight;
+    _tempMaxMinLabel.textAlignment = NSTextAlignmentCenter;
+    _tempMaxMinLabel.font = [UIFont systemFontOfSize:20];
     [_tempMaxMinLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_tempLabel.mas_bottom).offset(5);
+        make.top.equalTo(_tempLabel.mas_bottom).offset(6.5);
         make.right.equalTo(_tempLabel.mas_right);
         make.width.mas_equalTo(70);
         make.height.mas_equalTo(30);
@@ -150,21 +157,30 @@
     
     
     [_weatherImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.contentView.mas_centerY);
-        make.right.equalTo(self.contentView.mas_right).offset(-25);
-        make.width.mas_equalTo(50);
-        make.height.mas_equalTo(50);
+        make.centerY.equalTo(self.contentView.mas_centerY).offset(-20);
+        make.right.equalTo(self.contentView.mas_right).offset(-52);
+        make.width.mas_equalTo(75);
+        make.height.mas_equalTo(75);
     }];
     
-    _weaLabel.font = [UIFont boldSystemFontOfSize:45];
+    _weaLabel.font = [UIFont systemFontOfSize:24];
+    _weaLabel.textAlignment = NSTextAlignmentCenter;
     [_weaLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self.contentView.mas_centerY);
-        make.right.equalTo(_weatherImageView.mas_left).offset(-10);
-        make.width.mas_equalTo(50);
+        make.centerY.equalTo(_weatherImageView.mas_centerY).offset(50);
+        //make.right.equalTo(_weatherImageView.mas_left).offset(-3);
+        make.centerX.equalTo(_weatherImageView.mas_centerX);
+        make.width.mas_equalTo(100);
         make.height.mas_equalTo(50);
     }];
     
 
+    [_scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.contentView.mas_top);
+        make.left.equalTo(self.contentView.mas_left);
+        make.size.equalTo(self.contentView);
+    }];
+    
+    
 }
 
 

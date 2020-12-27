@@ -15,7 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) UIScrollView *scr;
+
 @property (nonatomic, strong) NSMutableArray *timeCellArray;
+@property (nonatomic, strong) NSMutableArray *weatherArray;
+@property (nonatomic, copy) NSString *weatherStr;
+
+
 
 @property (nonatomic, strong) SEEBlindWeatherModel *weatherModel;
 

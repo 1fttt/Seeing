@@ -38,10 +38,10 @@
     Manager *manager = [Manager shareManager];
     [manager getWeatherBlock:^(SEEBlindWeatherModel * _Nonnull weatherModel) {
         
-        _weatherModel = weatherModel;
+        self->_weatherModel = weatherModel;
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [_tableView reloadData];
+            [self->_tableView reloadData];
         });
         
     } andCityStr:@"西安"];
@@ -69,7 +69,7 @@
     } else if (indexPath.section == 0 && indexPath.row != 0) {
         return 125;
     } else if (indexPath.section == 1) {
-        return 170;
+        return 180;
     } else {
         return 70;
     }
@@ -90,13 +90,15 @@
         
         [cell.titleLabel touch];
         
+        
         return cell;
         
     } else if (indexPath.section == 0 && indexPath.row == 1) {
         //时间
         
         _timeCellArray = [[NSMutableArray alloc] init];
-    
+        _weatherArray = [[NSMutableArray alloc] init];
+        
         SEEBlindGeneralInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"timeCell" forIndexPath:indexPath];
 
         NSDate *currentDate = [NSDate date];//获取当前时间，日期
@@ -120,22 +122,63 @@
         [_timeCellArray addObject:cell.dateLabel.text];
         [_timeCellArray addObject:cell.weekLabel.text];
         
+        cell.layer.masksToBounds = YES;
+        cell.layer.borderWidth = 0.24;
+        cell.layer.borderColor = [UIColor colorWithWhite:0.6 alpha:1].CGColor;
+
+        
         return cell;
             
     } else if (indexPath.section == 0 && indexPath.row == 2) {
         
         SEEBlindGeneralInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weatherCell" forIndexPath:indexPath];
+        
         cell.tempLabel.text = [NSString stringWithFormat:@"%@℃", _weatherModel.tem];
         cell.cityLabel.text = @"西安";
         
         [cell.locationImageView setImage:[UIImage imageNamed:@"dingwei"]];
         
-        cell.tempMaxMinLabel.text = [NSString stringWithFormat:@"%@/%@", _weatherModel.tem1, _weatherModel.tem2];
+        cell.tempMaxMinLabel.text = [NSString stringWithFormat:@"%@°/%@°", _weatherModel.tem1, _weatherModel.tem2];
         
         cell.weaLabel.text = _weatherModel.wea;
         
         [cell.weatherImageView setImage:[UIImage imageNamed:_weatherModel.wea_img]];
         
+        _weatherStr = [NSString stringWithFormat:@"位于%@，当前温度为%@, %@, 最高温度%@℃， 最低温度%@℃", cell.cityLabel.text, cell.tempLabel.text, cell.weaLabel.text, _weatherModel.tem1, _weatherModel.tem2];
+        
+        
+        
+        cell.layer.masksToBounds = YES;
+        cell.layer.borderWidth = 0.21;
+        cell.layer.borderColor = [UIColor colorWithWhite:0.7 alpha:1].CGColor;
+        
+        return cell;
+    } else if (indexPath.section == 1 && indexPath.row == 1) {
+        SEEBlindGeneralInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"musicCell"];
+        if (cell == nil) {
+            cell = [[SEEBlindGeneralInfoTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"musicCell"];
+            
+            //cell.scrollView = [[UIScrollView alloc] initWithFrame:cell.contentView.frame];
+            
+            [cell.contentView addSubview:_scr];
+            
+            for (int i = 1; i < 6; i++) {
+                UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+                [cell.scrollView addSubview:button];
+                button.frame = CGRectMake(20 + (i - 1) * 130, 15, 110, 148);
+                [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%d.jpg", i]] forState:UIControlStateNormal];
+                
+            }
+            cell.scrollView.contentSize = CGSizeMake(5 * 135 , 120);
+            cell.scrollView.layer.masksToBounds = YES;
+            cell.scrollView.layer.borderWidth = 0.21;
+            cell.scrollView.layer.borderColor = [UIColor colorWithWhite:0.7 alpha:1].CGColor;
+            
+            
+        }
+//        cell.layer.masksToBounds = YES;
+//        cell.layer.borderWidth = 0.21;
+//        cell.layer.borderColor = [UIColor colorWithWhite:0.7 alpha:1].CGColor;
         return cell;
     }
     
@@ -150,7 +193,7 @@
 
 - (NSString*)weekdayStringFromDate:(NSDate*)inputDate {
 
-    NSArray *weekday = [NSArray arrayWithObjects: [NSNull null], @"周日", @"周一", @"周二", @"周三", @"周四", @"周五", @"周六", nil];
+    NSArray *weekday = [NSArray arrayWithObjects: [NSNull null], @"星期天", @"星期一", @"星期二", @"星期三", @"星期四", @"星期五", @"星期六", nil];
 
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 
@@ -167,12 +210,16 @@
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SpeechManager *manager = [SpeechManager shareSpeech];
     if (indexPath.section == 0 && indexPath.row == 1) {
-        SpeechManager *manager = [SpeechManager shareSpeech];
+       
         NSMutableString *string = [[NSMutableString alloc] init];
         [string appendFormat:@"%@, %@, %@", _timeCellArray[0], _timeCellArray[1], _timeCellArray[2]];
         [manager speech:string];
         
+    } else if (indexPath.section == 0 && indexPath.row == 2) {
+        [manager speech:_weatherStr];
     }
 }
 

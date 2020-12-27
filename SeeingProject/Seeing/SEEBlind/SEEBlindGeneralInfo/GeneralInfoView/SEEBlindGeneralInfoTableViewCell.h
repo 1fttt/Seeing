@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UILabel *tempMaxMinLabel;
 @property (nonatomic, strong) UILabel *weaLabel;
  
+
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end
 
 NS_ASSUME_NONNULL_END

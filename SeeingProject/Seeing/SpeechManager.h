@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)shareSpeech;
 
+//+ (instancetype)shareManager;
+
+
+
 - (void)speech:(NSString *)str;
 
 

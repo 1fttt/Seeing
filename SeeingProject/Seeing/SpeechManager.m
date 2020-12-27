@@ -13,6 +13,8 @@
 
 static SpeechManager *manager = nil;
 
+//static AVSpeechSynthesizer *speech;
+
 + (instancetype)shareSpeech {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -23,6 +25,16 @@ static SpeechManager *manager = nil;
     return manager;
 }
 
+//+ (instancetype)shareManager {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//        if (speech == nil) {
+//            speech = [[AVSpeechSynthesizer alloc]init];
+//
+//        }
+//    });
+//    return manager;
+//}
 
 - (void)speech:(NSString *)str {
     
