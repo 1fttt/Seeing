@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SEEBlindWeatherModel.h"
 
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindGeneralInfoView : UIView <UITableViewDelegate, UITableViewDataSource>
@@ -21,9 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSMutableArray *weatherArray;
 @property (nonatomic, copy) NSString *weatherStr;
 
-
+@property (nonatomic, assign) int currentStory;
 
 @property (nonatomic, strong) SEEBlindWeatherModel *weatherModel;
+@property (nonatomic, strong) SEEBlindStoryModel *storyModel;
 
 - (void)initView;
 

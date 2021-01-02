@@ -15,6 +15,8 @@
 @class SEEBlindPersonalCentreModel;
 @class SEEBlindContactModel;
 @class SEEBlindWeatherModel;
+@class SEEBlindImageModel;
+@class SEEBlindStoryModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -32,9 +34,16 @@ typedef void (^ContactBackBlock)(SEEForgetModel *contactBackModel);
 
 typedef void (^UpdateInfBlock)(SEEBlindPersonalCentreModel *updateInfModel);
 
-
 //天气block
 typedef void (^WeatherBlock)(SEEBlindWeatherModel *weatherModel);
+
+//头像上传
+typedef void (^ImageBlock)(SEEBlindImageModel *imageModel);
+
+typedef void (^StoryBlock)(SEEBlindStoryModel *storyModel);
+
+
+
 
 typedef void (^ErrorBlock)(NSError *error);
 
@@ -76,8 +85,15 @@ typedef void (^ErrorBlock)(NSError *error);
 
 
 
-
+//获取天气
 - (void)getWeatherBlock:(WeatherBlock)succeedBlock andCityStr:(NSString *)cityStr;
+
+//上传头像 获取头像url
+- (void)getImageBlock:(ImageBlock)succeedBlock andID:(NSString *)idStr andImageData:(NSData *)imageData;
+
+
+- (void)getStoryBlock:(StoryBlock)succeedBlock;
+
 
 @end
 

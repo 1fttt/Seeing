@@ -14,6 +14,7 @@
 #import "SEEBlindPersonalCentreModel.h"
 #import "SEEBlindContactModel.h"
 #import "SEEBlindWeatherModel.h"
+#import "SEEBlindImageModel.h"
 
 @implementation Manager
 
@@ -71,7 +72,7 @@ static Manager *manager = nil;
         succeedBlock(model);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        NSLog(@"请求失败");
+        NSLog(@"请求失败%@", error);
         errorBlock(error);
     }];
     
@@ -200,12 +201,12 @@ static Manager *manager = nil;
 
 
 //完善修改信息
-- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andName:(NSString *)name andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr andAddress:(NSString *)addressStr {
+- (void)updateInfBlock:(UpdateInfBlock)succeedBlock andName:(NSString *)nameStr andIdStr:(NSString *)idStr andMsg:(NSString *)msgStr andGender:(NSString *)genderStr andEmail:(NSString *)emailStr andPhone:(NSString *)phoneStr andAddress:(NSString *)addressStr {
     
     AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
     [AFmanager.requestSerializer setValue:@" application/x-www-form-urlencoded"  forHTTPHeaderField:@"Content-Type"];
     NSString *url = @"http://47.100.138.22:8082/user/updateInf";
-    NSDictionary *paremeters = @{@"id":idStr, @"msg":msgStr, @"gender":genderStr, @"address":addressStr, @"email":emailStr, @"phone":phoneStr};
+    NSDictionary *paremeters = @{@"name":nameStr, @"id":idStr, @"msg":msgStr, @"gender":genderStr, @"address":addressStr, @"email":emailStr, @"phone":phoneStr};
     
     [AFmanager POST:url parameters:paremeters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -237,6 +238,67 @@ static Manager *manager = nil;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"天气请求发送失败");
     }];
+}
+
+- (void)getImageBlock:(ImageBlock)succeedBlock andID:(NSString *)idStr andImageData:(NSData *)imageData {
+    
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    
+
+    
+    NSString *url = @"http://47.100.138.22:8082/user/image";
+    
+
+    AFmanager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    
+
+    AFmanager.responseSerializer = [AFJSONResponseSerializer serializer];
+
+    [AFmanager POST:url parameters:@{@"id":idStr} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        
+        //NSString *imageBase64 = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+        //NSLog(@"%@", imageBase64);
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        NSString *fileName = [NSString stringWithFormat:@"%@.png", str];
+        NSLog(@"filename:%@", fileName);
+        
+        //[NSString stringWithFormat:@"%@.png", idStr]
+        
+        [formData appendPartWithFileData:imageData name:@"image_file" fileName:fileName mimeType:@"image/png"];
+        
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"请求发送成功");
+        
+        SEEBlindImageModel *imageModel = [[SEEBlindImageModel alloc] initWithDictionary:responseObject error:nil];
+        succeedBlock(imageModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+        
+    }];
+    
+}
+
+
+
+- (void)getStoryBlock:(StoryBlock)succeedBlock {
+    
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    
+    NSString *urlStr = [NSString stringWithFormat:@"https://news-at.zhihu.com/api/4/news/latest"];
+    [AFmanager GET:urlStr parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        SEEBlindStoryModel *storyModel = [[SEEBlindStoryModel alloc] initWithDictionary:responseObject error:nil];
+        succeedBlock(storyModel);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
+    
 }
 
 

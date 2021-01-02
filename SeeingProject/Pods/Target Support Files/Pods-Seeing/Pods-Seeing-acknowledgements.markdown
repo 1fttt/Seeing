@@ -24,6 +24,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+## BaiduMapKit
+
+Copyright (c) 2015 BaiduLBS
+
 ## JSONModel
 
 Copyright (c) 2012-2016 Marin Todorov and JSONModel contributors

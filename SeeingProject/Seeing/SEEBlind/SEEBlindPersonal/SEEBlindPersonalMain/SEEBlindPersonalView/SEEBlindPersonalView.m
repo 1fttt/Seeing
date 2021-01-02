@@ -73,8 +73,7 @@
             _headButton.layer.cornerRadius = headButtonSize / 2;
             _headButton.layer.masksToBounds = YES;
             
- ////////////////////////获取headImage
-            
+ 
             [_headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
             
             
@@ -91,11 +90,7 @@
         
             _headButton.tag = 111;
             
-            //[cell.headButton setImage:[UIImage imageNamed:@"tj.jpg"] forState:UIControlStateNormal];
-            //[cell.headButton addTarget:self action:@selector(pressHead) forControlEvents:UIControlEventTouchUpInside];
-            
-            //.headButton.tag = 111;
-            
+
             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             
 

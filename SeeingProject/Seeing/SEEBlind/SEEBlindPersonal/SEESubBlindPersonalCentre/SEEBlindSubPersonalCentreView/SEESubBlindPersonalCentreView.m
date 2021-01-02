@@ -86,6 +86,9 @@
         cell.nameTextField.tag = 0;
         cell.msgTextField.tag = 1;
         
+        cell.nameTextField.textColor = [UIColor colorWithWhite:0.3 alpha:1];
+        cell.msgTextField.textColor = [UIColor colorWithWhite:0.3 alpha:1];
+        
         [_textFieldArray addObject:cell.nameTextField];
         [_textFieldArray addObject:cell.msgTextField];
         
@@ -108,7 +111,7 @@
         NSLog(@"%@\n %@\n%@\n%@", gender, [userDefaults objectForKey:@"phone"], [userDefaults objectForKey:@"email"], [userDefaults objectForKey:@"address"]);
         
         
-        NSArray *textArray = [NSArray arrayWithObjects:gender, [userDefaults objectForKey:@"phone"], [userDefaults objectForKey:@"email"], [userDefaults objectForKey:@"address"], nil];
+        NSArray *textArray = [NSArray arrayWithObjects:gender, [userDefaults objectForKey:@"phone"], [userDefaults objectForKey:@"address"], [userDefaults objectForKey:@"email"], nil];
         
         
         NSLog(@"%@", textArray);

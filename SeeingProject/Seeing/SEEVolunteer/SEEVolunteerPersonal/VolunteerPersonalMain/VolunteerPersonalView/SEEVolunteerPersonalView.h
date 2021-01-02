@@ -14,7 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UITableView *tableView;
 
+@property (nonatomic, strong) UIButton *headButton;
 @property (nonatomic, strong) UIButton *quitButton;
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, copy) NSArray *subTitleArray;
+
 
 @property (nonatomic, assign) int cellNumber;
 

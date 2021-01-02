@@ -13,6 +13,8 @@
 #import "SEEBlindPersonalContactViewController.h"
 #import "Masonry.h"
 #import "SpeechManager.h"
+#import "Manager.h"
+#import "SEEBlindImageModel.h"
 
 @interface SEEBlindPersonalViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -39,6 +41,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertPush) name:@"pushAlert" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pickHeadImage) name:@"pressHead" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pressReload) name:@"finishEdit" object:nil];
     
     
 }
@@ -84,7 +88,13 @@
     _alert = [UIAlertController alertControllerWithTitle:@"是否退出" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"退出登录" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        [manager speech:@"已退出登录"];
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSString *type = [userDefaults objectForKey:@"type"];
+        
+        if ([type isEqualToString:@"0"]) {
+            [manager speech:@"已退出登录"];
+        }
+        
         
         NSLog(@"退出");
         
@@ -173,10 +183,24 @@
     
     UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
     
+    //UIImage转换为NSData，第二个参数为压缩倍数
+    NSData *imageData = UIImageJPEGRepresentation(image,0.6f);
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *idStr = [NSString stringWithString:[userDefaults objectForKey:@"id"]];
+    
+    
+    
+    Manager *manager = [Manager shareManager];
+    [manager getImageBlock:^(SEEBlindImageModel * _Nonnull imageModel) {
+        NSLog(@"%@\n%@", [imageModel.data uri], [imageModel.data url]);
+    } andID:idStr andImageData:imageData];
+    
+    
     [_personalView.headButton setImage:image forState:UIControlStateNormal];
     
-    SpeechManager *manager = [SpeechManager shareSpeech];
-    [manager speech:@"更换成功"];
+    SpeechManager *speechManager = [SpeechManager shareSpeech];
+    [speechManager speech:@"更换成功"];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 //
@@ -197,6 +221,13 @@
 //    UIGraphicsEndImageContext();
 //    return newimg;
 //}
+
+
+- (void)pressReload {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_personalView.tableView reloadData];
+    });
+}
 
 
 @end

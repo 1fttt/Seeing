@@ -210,24 +210,24 @@
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainView];
     
     mainNav.tabBarItem.title = @"接听视频";
-    mainNav.tabBarItem.image = [UIImage imageNamed:@""];
-    mainNav.tabBarItem.selectedImage = [UIImage imageNamed:@""];
+    mainNav.tabBarItem.image = [UIImage imageNamed:@"jieting0"];
+    mainNav.tabBarItem.selectedImage = [UIImage imageNamed:@"jieting"];
     
     //盲道上传
     SEEVolunteerUploadViewController *upLoadView = [[SEEVolunteerUploadViewController alloc] init];
     UINavigationController *upLoadNav = [[UINavigationController alloc] initWithRootViewController:upLoadView];
     
     upLoadNav.tabBarItem.title = @"盲道上传";
-    upLoadNav.tabBarItem.image = [UIImage imageNamed:@""];
-    upLoadNav.tabBarItem.selectedImage = [UIImage imageNamed:@""];
+    upLoadNav.tabBarItem.image = [UIImage imageNamed:@"ditu0"];
+    upLoadNav.tabBarItem.selectedImage = [UIImage imageNamed:@"ditu"];
     
     //个人中心
     SEEVolunteerPersonalViewController *personView= [[SEEVolunteerPersonalViewController alloc] init];
     UINavigationController *personNav = [[UINavigationController alloc] initWithRootViewController:personView];
     
     personNav.tabBarItem.title = @"个人中心";
-    personNav.tabBarItem.image = [UIImage imageNamed:@""];
-    personNav.tabBarItem.selectedImage = [UIImage imageNamed:@""];
+    personNav.tabBarItem.image = [UIImage imageNamed:@"wode-3"];
+    personNav.tabBarItem.selectedImage = [UIImage imageNamed:@"wode-2"];
     
     NSArray *array = [NSArray arrayWithObjects:mainNav, upLoadNav, personNav, nil];
     

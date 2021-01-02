@@ -7,6 +7,7 @@
 //
 
 #import "SEEBlindGeneralInfoViewController.h"
+#import "SEEBlindStoryViewController.h"
 #import "Masonry.h"
 #import "SpeechManager.h"
 
@@ -27,10 +28,14 @@
     [self.view addSubview:_infoView];
     [_infoView initView];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pressStoryCell) name:@"storyCellPush" object:nil];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.navigationController.navigationBar setHidden:YES];
+    self.tabBarController.tabBar.hidden = NO;
     SpeechManager *manager = [SpeechManager shareSpeech];
     [manager speech:@"常用信息页面"];
 }
@@ -48,6 +53,14 @@
         make.width.mas_equalTo(85);
         make.height.mas_equalTo(30);
     }];
+}
+
+- (void)pressStoryCell {
+    SEEBlindStoryViewController *storyView = [[SEEBlindStoryViewController alloc] init];
+    
+    Stories *story = _infoView.storyModel.stories[_infoView.currentStory];
+    storyView.urlStr = [NSString stringWithString:story.url];
+    [self.navigationController pushViewController:storyView animated:YES];
 }
 
 @end

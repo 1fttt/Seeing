@@ -10,6 +10,8 @@
 #import "SEESubBlindPersonalCentreViewController.h"
 #import "SEEBlindSubPersonalModifyViewController.h"
 #import "SEEBlindPersonalContactViewController.h"
+#import "Manager.h"
+#import "SEEBlindImageModel.h"
 
 @interface SEEVolunteerPersonalViewController ()
 
@@ -27,14 +29,21 @@
     [self.view addSubview:_personalView];
     [_personalView initView];
     
-    self.navigationItem.title = @"个人中心";
+    //self.navigationItem.title = @"个人中心";
     
     //点击cell 接收通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cellPush) name:@"push" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertPush) name:@"pushAlert" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pickHeadImage) name:@"pressHeadV" object:nil];
+    
 }
 
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationController.navigationBar.hidden = YES;
+}
 
 
 
@@ -80,4 +89,78 @@
     
     [self presentViewController:_alert animated:YES completion:nil];
 }
+
+
+- (void)pickHeadImage {
+    
+
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更换头像" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *cannelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    
+    static NSUInteger sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    imagePickerController.delegate = self;
+    imagePickerController.allowsEditing = YES;
+    
+    
+    //判断是否支持相机
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        UIAlertAction *camera = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            
+            sourceType = UIImagePickerControllerSourceTypeCamera;
+            [self presentViewController:imagePickerController animated:YES completion:nil];
+        }];
+        
+        [alert addAction:camera];
+    }
+    
+    UIAlertAction *libraryAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }];
+    
+    [alert addAction:libraryAction];
+    [alert addAction:cannelAction];
+    
+    imagePickerController.sourceType = sourceType;
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+//    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+//    imagePickerController.delegate = self;
+//    imagePickerController.allowsEditing = YES;
+//    imagePickerController.sourceType = sourceType;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"pickAlert" object:self];
+    
+    
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info {
+    
+    UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
+    
+    //UIImage转换为NSData，第二个参数为压缩倍数
+    NSData *imageData = UIImageJPEGRepresentation(image,0.6f);
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *idStr = [NSString stringWithString:[userDefaults objectForKey:@"id"]];
+    
+    
+    
+    Manager *manager = [Manager shareManager];
+    [manager getImageBlock:^(SEEBlindImageModel * _Nonnull imageModel) {
+        NSLog(@"%@\n%@", [imageModel.data uri], [imageModel.data url]);
+    } andID:idStr andImageData:imageData];
+    
+    
+    [_personalView.headButton setImage:image forState:UIControlStateNormal];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

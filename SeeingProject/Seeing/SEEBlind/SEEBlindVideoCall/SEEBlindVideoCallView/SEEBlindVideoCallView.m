@@ -88,13 +88,13 @@
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tj.jpg"]];
     [_personView addSubview:imageView];
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(_personView.mas_centerY).offset(-40);
+        make.top.equalTo(_personView.mas_top).offset(150);
         make.centerX.equalTo(_personView.mas_centerX);
-        make.width.mas_equalTo(90);
-        make.height.mas_equalTo(90);
+        make.width.mas_equalTo(110);
+        make.height.mas_equalTo(110);
     }];
     imageView.layer.masksToBounds = YES;
-    imageView.layer.cornerRadius = 45;
+    imageView.layer.cornerRadius = 55;
     
     
     UILabel *nameLabel = [[UILabel alloc] init];

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+// 引入base相关所有的头文件
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
 
 @interface AppDelegate ()
 
@@ -17,7 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //sfsdfds
+    
+    // 要使用百度地图，请先启动BaiduMapManager
+    BMKMapManager *mapManager = [[BMKMapManager alloc] init];
+    // 如果要关注网络及授权验证事件，请设定generalDelegate参数
+    BOOL ret = [mapManager start:@"aywOGdRnGgF9chzHeX7ixpALttLEjerK"  generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"启动引擎失败");
+    }
+    
+    if ([BMKMapManager setCoordinateTypeUsedInBaiduMapSDK: BMK_COORDTYPE_COMMON]) {
+        NSLog(@"经纬度类型设置成功");
+    } else {
+        NSLog(@"经纬度类型设置失败");
+    }
+    
     
     // wrewre
     return YES;

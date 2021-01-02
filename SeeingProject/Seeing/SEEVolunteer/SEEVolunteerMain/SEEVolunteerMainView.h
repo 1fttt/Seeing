@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UIBarButtonItem *recordItem;
 
+@property (nonatomic, strong) UIButton *recordButton;
+@property (nonatomic, strong) UIView *personView;
+@property (nonatomic, strong) UILabel *titleLabel;
+
+
 - (void)initView;
 
 @end

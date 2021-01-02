@@ -13,6 +13,7 @@
 @implementation SEEBlindGeneralInfoTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if ([self.reuseIdentifier isEqualToString:@"titleCell"]) {
@@ -22,12 +23,6 @@
         
         _titleLabel = [[UILabel alloc] init];
         [self.contentView addSubview:_titleLabel];
-        
-    } else if ([self.reuseIdentifier isEqualToString:@"section0"]) {
-        
-    } else if ([self.reuseIdentifier isEqualToString:@"section1"]) {
-        
-    } else if ([self.reuseIdentifier isEqualToString:@"section2"]) {
         
     } else if ([self.reuseIdentifier isEqualToString:@"timeCell"]) {
         _timeLabel = [[UILabel alloc] init];
@@ -60,11 +55,20 @@
         [self.contentView addSubview:_weatherImageView];
         
         
-    } else if([self.reuseIdentifier isEqualToString:@"musicCell"]) {
+    } else if ([self.reuseIdentifier isEqualToString:@"musicCell"]) {
         _scrollView = [[UIScrollView alloc] init];
         [self.contentView addSubview:_scrollView];
         
 
+    } else if ([self.reuseIdentifier isEqualToString:@"storyCell"]) {
+        _storyTitleLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:_storyTitleLabel];
+        
+        _hintLabel = [[UILabel alloc] init];
+        [self.contentView addSubview:_hintLabel];
+        
+        _imageview = [[UIImageView alloc] init];
+        [self.contentView addSubview:_imageview];
     }
     
     
@@ -180,6 +184,18 @@
         make.size.equalTo(self.contentView);
     }];
     
+    
+    _storyTitleLabel.frame = CGRectMake(20, 20, 280, 50);
+    _hintLabel.frame = CGRectMake(20, 80, 200, 20);
+    _imageview.frame = CGRectMake(318, 19, 80, 80);
+    
+    //_titleLabel.font = [UIFont systemFontOfSize:17];
+    _titleLabel.font = [UIFont boldSystemFontOfSize:18];
+
+    //_titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    _storyTitleLabel.numberOfLines = 2;
+    _hintLabel.font = [UIFont systemFontOfSize:14];
+    _hintLabel.textColor = [UIColor colorWithWhite:0.56 alpha:1];
     
 }
 

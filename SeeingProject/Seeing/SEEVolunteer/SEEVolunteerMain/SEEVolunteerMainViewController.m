@@ -17,15 +17,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = [UIColor whiteColor];
-    _mainView = [[SEEVolunteerMainView alloc] init];
+    _mainView = [[SEEVolunteerMainView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:_mainView];
     
     [_mainView initView];
     
-    self.navigationItem.rightBarButtonItem = _mainView.recordItem;
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController.navigationBar setHidden:YES];
+
 }
 
 /*

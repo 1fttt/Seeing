@@ -27,13 +27,9 @@
     _tableView.dataSource = self;
     
     [_tableView registerClass:[SEEBlindGeneralInfoTableViewCell class] forCellReuseIdentifier:@"titleCell"];
-    [_tableView registerClass:[SEEBlindGeneralInfoTableViewCell class] forCellReuseIdentifier:@"section0"];
-    [_tableView registerClass:[SEEBlindGeneralInfoTableViewCell class] forCellReuseIdentifier:@"section1"];
-    [_tableView registerClass:[SEEBlindGeneralInfoTableViewCell class] forCellReuseIdentifier:@"section2"];
-    
     [_tableView registerClass:[SEEBlindGeneralInfoTableViewCell class] forCellReuseIdentifier:@"timeCell"];
     [_tableView registerClass:[SEEBlindGeneralInfoTableViewCell class] forCellReuseIdentifier:@"weatherCell"];
-    
+    [_tableView registerClass:[SEEBlindGeneralInfoTableViewCell class] forCellReuseIdentifier:@"storyCell"];
     
     Manager *manager = [Manager shareManager];
     [manager getWeatherBlock:^(SEEBlindWeatherModel * _Nonnull weatherModel) {
@@ -45,6 +41,17 @@
         });
         
     } andCityStr:@"西安"];
+    
+    
+    _storyModel = [[SEEBlindStoryModel alloc] init];
+    [manager getStoryBlock:^(SEEBlindStoryModel * _Nonnull storyModel) {
+        self->_storyModel = storyModel;
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self->_tableView reloadData];
+        });
+    }];
+    
     
 }
 
@@ -59,7 +66,7 @@
     } else if (section == 1) {
         return 2;
     } else {
-        return 3;
+        return _storyModel.stories.count;
     }
 }
 
@@ -71,7 +78,7 @@
     } else if (indexPath.section == 1) {
         return 180;
     } else {
-        return 70;
+        return 115;
     }
 }
 
@@ -180,6 +187,19 @@
 //        cell.layer.borderWidth = 0.21;
 //        cell.layer.borderColor = [UIColor colorWithWhite:0.7 alpha:1].CGColor;
         return cell;
+    } else if (indexPath.section == 2 && indexPath.row != 0) {
+        SEEBlindGeneralInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"storyCell" forIndexPath:indexPath];
+        cell.storyTitleLabel.text = [_storyModel.stories[indexPath.row - 1] title];
+        cell.hintLabel.text = [_storyModel.stories[indexPath.row - 1] hint];
+
+        Stories *storiesModel = _storyModel.stories[indexPath.row - 1];
+        NSString *urlString = [NSString stringWithFormat:@"%@", storiesModel.images[0]];
+
+        NSData *data= [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
+                       
+        cell.imageview.image = [UIImage imageWithData:data];
+
+        return cell;
     }
     
     
@@ -220,6 +240,12 @@
         
     } else if (indexPath.section == 0 && indexPath.row == 2) {
         [manager speech:_weatherStr];
+        
+    } else if (indexPath.section == 2 && indexPath.row != 0) {
+        
+        _currentStory = (int)indexPath.row;
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"storyCellPush" object:self];
+        
     }
 }
 

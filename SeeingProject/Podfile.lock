@@ -14,25 +14,43 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - BaiduMapKit (6.0.0):
+    - BaiduMapKit/Base (= 6.0.0)
+    - BaiduMapKit/Cloud (= 6.0.0)
+    - BaiduMapKit/Map (= 6.0.0)
+    - BaiduMapKit/Search (= 6.0.0)
+    - BaiduMapKit/Utils (= 6.0.0)
+  - BaiduMapKit/Base (6.0.0)
+  - BaiduMapKit/Cloud (6.0.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Map (6.0.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Search (6.0.0):
+    - BaiduMapKit/Base
+  - BaiduMapKit/Utils (6.0.0):
+    - BaiduMapKit/Base
   - JSONModel (1.8.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - BaiduMapKit (= 6.0.0)
   - JSONModel
   - Masonry
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - BaiduMapKit
     - JSONModel
     - Masonry
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaiduMapKit: e21e4c72533f263aa3c73e3b0ea13b37e7038f62
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: de87a4f49b9b63a6e3c17bc2b72dd87f880f6254
+PODFILE CHECKSUM: 844073ad728ef2eb7c18a69ec1b9902e6a24746d
 
 COCOAPODS: 1.9.3
