@@ -131,11 +131,11 @@
     if (indexPath.section == 0 && indexPath.row != 0) {
         _cellNumber = (int)indexPath.row;
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"push" object:self userInfo:@{@"text":_subTitleArray[indexPath.row - 1]}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"Vpush" object:self userInfo:@{@"text":_subTitleArray[indexPath.row - 1]}];
     } else if (indexPath.section == 1) {
          
 
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"pushAlert" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"VpushAlert" object:nil];
     }
 }
 

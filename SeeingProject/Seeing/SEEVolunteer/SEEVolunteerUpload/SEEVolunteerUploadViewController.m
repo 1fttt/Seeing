@@ -24,7 +24,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     //self.view.backgroundColor = [UIColor colorWithRed:0/255.0 green:122/255.0 blue:250/255.0 alpha:1];
-    _uploadView = [[SEEVolunteerUploadView alloc]  initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, self.view.frame.size.height - 90)];
+    _uploadView = [[SEEVolunteerUploadView alloc]  initWithFrame:CGRectMake(0, 83, self.view.frame.size.width, self.view.frame.size.height - 93)];
     [self.view addSubview:_uploadView];
     _uploadView.layer.cornerRadius = 25;
     [_uploadView initView];
@@ -73,6 +73,16 @@
         make.top.equalTo(self.view.mas_top).offset(50);
         make.centerX.equalTo(self.view.mas_centerX);
         make.width.mas_equalTo(85);
+        make.height.mas_equalTo(30);
+    }];
+    
+    _uploadButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.view addSubview:_uploadButton];
+    [_uploadButton setImage:[UIImage imageNamed:@"shangchuan-3"] forState:UIControlStateNormal];
+    [_uploadButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_titleLabel.mas_top);
+        make.centerX.equalTo(self.view.mas_right).offset(-30);
+        make.width.mas_equalTo(30);
         make.height.mas_equalTo(30);
     }];
 }

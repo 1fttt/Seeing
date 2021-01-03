@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -76,6 +76,8 @@
 		6C998DEC258A426300526ECC /* SEEForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DEB258A426300526ECC /* SEEForgetViewController.m */; };
 		6C998DEE258A52F200526ECC /* fengexian.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C998DED258A52F200526ECC /* fengexian.png */; };
 		6C998DF1258A63B500526ECC /* SEEForgetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C998DF0258A63B500526ECC /* SEEForgetModel.m */; };
+		6CBA7FF225A06C9F00F21DBF /* SEEBlindScanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBA7FF125A06C9F00F21DBF /* SEEBlindScanModel.m */; };
+		6CBA7FF425A0918100F21DBF /* shangchuan-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CBA7FF325A0918100F21DBF /* shangchuan-3.png */; };
 		6CBFD1D6257B8C5B0076A562 /* SEEVolunteerMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */; };
 		6CBFD1D9257B8C710076A562 /* SEEVolunteerUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1D8257B8C710076A562 /* SEEVolunteerUploadViewController.m */; };
 		6CBFD1DC257B8C840076A562 /* SEEVolunteerPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CBFD1DB257B8C840076A562 /* SEEVolunteerPersonalViewController.m */; };
@@ -243,6 +245,9 @@
 		6C998DED258A52F200526ECC /* fengexian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fengexian.png; sourceTree = "<group>"; };
 		6C998DEF258A63B500526ECC /* SEEForgetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEForgetModel.h; sourceTree = "<group>"; };
 		6C998DF0258A63B500526ECC /* SEEForgetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEForgetModel.m; sourceTree = "<group>"; };
+		6CBA7FF025A06C9F00F21DBF /* SEEBlindScanModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEBlindScanModel.h; sourceTree = "<group>"; };
+		6CBA7FF125A06C9F00F21DBF /* SEEBlindScanModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEBlindScanModel.m; sourceTree = "<group>"; };
+		6CBA7FF325A0918100F21DBF /* shangchuan-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shangchuan-3.png"; sourceTree = "<group>"; };
 		6CBFD1D4257B8C5B0076A562 /* SEEVolunteerMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerMainViewController.h; sourceTree = "<group>"; };
 		6CBFD1D5257B8C5B0076A562 /* SEEVolunteerMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEEVolunteerMainViewController.m; sourceTree = "<group>"; };
 		6CBFD1D7257B8C710076A562 /* SEEVolunteerUploadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEEVolunteerUploadViewController.h; sourceTree = "<group>"; };
@@ -475,6 +480,8 @@
 		6C1C83A2256FF951001BB151 /* SEEBlindVideoCallModel */ = {
 			isa = PBXGroup;
 			children = (
+				6CBA7FF025A06C9F00F21DBF /* SEEBlindScanModel.h */,
+				6CBA7FF125A06C9F00F21DBF /* SEEBlindScanModel.m */,
 			);
 			path = SEEBlindVideoCallModel;
 			sourceTree = "<group>";
@@ -707,6 +714,7 @@
 				6CCAEDB525920DB100C237D8 /* zixun.png */,
 				6CCAEDB725920FBF00C237D8 /* zixun-2.png */,
 				6CCAEDB925920FC500C237D8 /* zixun-3.png */,
+				6CBA7FF325A0918100F21DBF /* shangchuan-3.png */,
 				6C5716552595A2FB0048163B /* tianjia.png */,
 				6CFEB0B02597414100E050AA /* dingwei.png */,
 				6CFEB0B62597526F00E050AA /* bingbao.png */,
@@ -973,6 +981,7 @@
 				6C56A9142577DB4C0072AA1A /* shipintonghua-2.png in Resources */,
 				6C56A90F2577DB4C0072AA1A /* wode.png in Resources */,
 				6C5641282578DC6C006428DD /* bj.jpg in Resources */,
+				6CBA7FF425A0918100F21DBF /* shangchuan-3.png in Resources */,
 				6CFEB0BE2597527900E050AA /* shachen.png in Resources */,
 				6C43D19A256A473D0039D232 /* LaunchScreen.storyboard in Resources */,
 				6CCAEDBC2592102C00C237D8 /* ziyuan.png in Resources */,
@@ -1077,6 +1086,7 @@
 				6C4C6FB72574E4A300BC3C2C /* SEELoginModel.m in Sources */,
 				6C6390D72573D702008A5BEE /* SEERegisterModel.m in Sources */,
 				6CBFD1DC257B8C840076A562 /* SEEVolunteerPersonalViewController.m in Sources */,
+				6CBA7FF225A06C9F00F21DBF /* SEEBlindScanModel.m in Sources */,
 				6C4C6FBD2574ED6700BC3C2C /* SEEBlindPersonalView.m in Sources */,
 				6CCAEDAD259200CD00C237D8 /* SEEBlindGeneralInfoView.m in Sources */,
 				6C53A243256FBABB00E7E78D /* SEELoginViewController.m in Sources */,

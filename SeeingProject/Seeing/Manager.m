@@ -302,4 +302,42 @@ static Manager *manager = nil;
 }
 
 
+- (void)getScanBlock:(ScanBlock)succeedBlock andImageData:(NSData *)imageData {
+    AFHTTPSessionManager *AFmanager = [AFHTTPSessionManager manager];
+    
+    NSString *url = @"http://tupapi.xfyun.cn/v1/currency";
+//    NSString *string = @"a.jpg";
+//
+//    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+//    NSString *stringBase64 = [data base64EncodedStringWithOptions:NSUTF8StringEncoding]; // base64格式的字符串
+    
+    NSString *imageBase64 = [imageData base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
+    NSTimeInterval time = [[NSDate date] timeIntervalSince1970];
+    //long long int date = (long long int)time;
+    
+    
+    NSString *dateStr = [NSString stringWithFormat:@"%f", time];
+    
+    NSString *md5 = [NSString stringWithFormat:@"5feb210e%f%@", time, imageBase64];
+    
+    NSDictionary *parameters = @{@"X-Appid":@"5feb210e", @"X-CurTime":dateStr, @"X-Param":imageBase64, @"X-CheckSum":md5};
+    
+    [AFmanager POST:url parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"0000000%@", error);
+    }];
+    
+//    [AFmanager POST:url parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+//        [formData appendPartWithFileData:imageData name:@"image_file" fileName:@"a.png" mimeType:@"image/png"];
+//    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"0000000%@", error);
+//    }];
+    
+}
+
+
 @end

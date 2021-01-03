@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView *personView;
 @property (nonatomic, strong) UILabel *titleLabel;
 
+@property (nonatomic, strong) UILabel *idLabel;
+@property (nonatomic, strong) UILabel *helpedLabel;
+@property (nonatomic, strong) UILabel *nameLabel;
+
 - (void)initView;
 
 @end

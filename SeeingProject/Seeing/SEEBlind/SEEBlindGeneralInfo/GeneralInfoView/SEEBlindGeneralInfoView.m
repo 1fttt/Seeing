@@ -129,6 +129,8 @@
         [_timeCellArray addObject:cell.dateLabel.text];
         [_timeCellArray addObject:cell.weekLabel.text];
         
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         cell.layer.masksToBounds = YES;
         cell.layer.borderWidth = 0.24;
         cell.layer.borderColor = [UIColor colorWithWhite:0.6 alpha:1].CGColor;
@@ -152,12 +154,13 @@
         [cell.weatherImageView setImage:[UIImage imageNamed:_weatherModel.wea_img]];
         
         _weatherStr = [NSString stringWithFormat:@"位于%@，当前温度为%@, %@, 最高温度%@℃， 最低温度%@℃", cell.cityLabel.text, cell.tempLabel.text, cell.weaLabel.text, _weatherModel.tem1, _weatherModel.tem2];
-        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         
         cell.layer.masksToBounds = YES;
         cell.layer.borderWidth = 0.21;
         cell.layer.borderColor = [UIColor colorWithWhite:0.7 alpha:1].CGColor;
+        
         
         return cell;
     } else if (indexPath.section == 1 && indexPath.row == 1) {
@@ -180,6 +183,7 @@
             cell.scrollView.layer.masksToBounds = YES;
             cell.scrollView.layer.borderWidth = 0.21;
             cell.scrollView.layer.borderColor = [UIColor colorWithWhite:0.7 alpha:1].CGColor;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             
             
         }
@@ -198,7 +202,7 @@
         NSData *data= [NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]];
                        
         cell.imageview.image = [UIImage imageWithData:data];
-
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     

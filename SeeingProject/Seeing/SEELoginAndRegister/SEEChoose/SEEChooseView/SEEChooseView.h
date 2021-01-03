@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) UILabel *chooseLabel;
 @property (nonatomic, strong) UIButton *backButton;
-@property UIButton *blindButton;
-@property UIButton *volunteerButton;
+@property (nonatomic, strong) UIButton *blindButton;
+@property (nonatomic, strong) UIButton *volunteerButton;
 
 - (void)viewInit;
 

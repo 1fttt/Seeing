@@ -184,7 +184,7 @@
     UIImage *image = [info objectForKey: UIImagePickerControllerOriginalImage];
     
     //UIImage转换为NSData，第二个参数为压缩倍数
-    NSData *imageData = UIImageJPEGRepresentation(image,0.6f);
+    NSData *imageData = UIImageJPEGRepresentation(image,0.2f);
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *idStr = [NSString stringWithString:[userDefaults objectForKey:@"id"]];
@@ -201,6 +201,11 @@
     
     SpeechManager *speechManager = [SpeechManager shareSpeech];
     [speechManager speech:@"更换成功"];
+    
+//    [manager getScanBlock:^(SEEBlindScanModel * _Nonnull scanModel) {
+//
+//    } andImageData:imageData];
+//
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 //

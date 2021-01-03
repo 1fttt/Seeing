@@ -32,8 +32,8 @@
     //self.navigationItem.title = @"个人中心";
     
     //点击cell 接收通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cellPush) name:@"push" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertPush) name:@"pushAlert" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cellPush) name:@"Vpush" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(alertPush) name:@"VpushAlert" object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pickHeadImage) name:@"pressHeadV" object:nil];
     

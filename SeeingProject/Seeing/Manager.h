@@ -17,6 +17,7 @@
 @class SEEBlindWeatherModel;
 @class SEEBlindImageModel;
 @class SEEBlindStoryModel;
+@class SEEBlindScanModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -42,7 +43,8 @@ typedef void (^ImageBlock)(SEEBlindImageModel *imageModel);
 
 typedef void (^StoryBlock)(SEEBlindStoryModel *storyModel);
 
-
+//物品识别block
+typedef void (^ScanBlock)(SEEBlindScanModel *scanModel);
 
 
 typedef void (^ErrorBlock)(NSError *error);
@@ -94,6 +96,9 @@ typedef void (^ErrorBlock)(NSError *error);
 
 - (void)getStoryBlock:(StoryBlock)succeedBlock;
 
+
+//物品识别
+- (void)getScanBlock:(ScanBlock)succeedBlock andImageData:(NSData *)imageData;
 
 @end
 

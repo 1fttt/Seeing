@@ -83,6 +83,9 @@
 
 - (void)initPersonView {
     
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    
     //先要获取image
     //....
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tj.jpg"]];
@@ -97,10 +100,45 @@
     imageView.layer.cornerRadius = 55;
     
     
-    UILabel *nameLabel = [[UILabel alloc] init];
-    [_personView addSubview:nameLabel];
+    _nameLabel = [[UILabel alloc] init];
+    [_personView addSubview:_nameLabel];
+    _nameLabel.font = [UIFont systemFontOfSize:23];
+    _nameLabel.textColor = [UIColor colorWithWhite:1 alpha:1];
+    _nameLabel.textAlignment = NSTextAlignmentCenter;
+    _nameLabel.text = [NSString stringWithFormat:@"%@", [userDefaults objectForKey:@"name"]];
+    [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(imageView.mas_bottom).offset(20);
+        make.centerX.equalTo(_personView.mas_centerX);
+        make.width.mas_equalTo(110);
+        make.height.mas_equalTo(30);
+    }];
     
+    _idLabel = [[UILabel alloc] init];
+    [_personView addSubview:_idLabel];
+    _idLabel.font = [UIFont systemFontOfSize:20];
+    _idLabel.textColor = [UIColor colorWithWhite:1 alpha:1];
+    _idLabel.textAlignment = NSTextAlignmentCenter;
+    _idLabel.text = [NSString stringWithFormat:@"视障 id: %@", [userDefaults objectForKey:@"id"]];
+    [_idLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_nameLabel.mas_bottom).offset(60);
+        make.centerX.equalTo(_personView.mas_centerX).offset(-93);
+        make.width.mas_equalTo(110);
+        make.height.mas_equalTo(30);
+    }];
     
+    _helpedLabel = [[UILabel alloc] init];
+    [_personView addSubview:_helpedLabel];
+    _helpedLabel.font = [UIFont systemFontOfSize:20];
+    _helpedLabel.textColor = [UIColor colorWithWhite:1 alpha:1];
+    _helpedLabel.textAlignment = NSTextAlignmentCenter;
+    _helpedLabel.text = [NSString stringWithFormat:@"被帮助: 0次"];
+    //_helpedLabel.text = [NSString stringWithFormat:@"被帮助:%@", [userDefaults objectForKey:@"id"]];
+    [_helpedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_idLabel.mas_top);
+        make.centerX.equalTo(_personView.mas_centerX).offset(95);
+        make.width.mas_equalTo(110);
+        make.height.mas_equalTo(30);
+    }];
     
 }
 

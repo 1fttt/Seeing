@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SEEVolunteerUploadViewController : UIViewController
 
 @property (nonatomic, strong) SEEVolunteerUploadView *uploadView;
+
 @property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UIButton *uploadButton;
 
 @end
 
