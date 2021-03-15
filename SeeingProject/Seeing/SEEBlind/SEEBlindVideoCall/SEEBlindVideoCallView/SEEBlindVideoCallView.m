@@ -52,7 +52,7 @@
     _scanButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self addSubview:_scanButton];
     [_scanButton setImage:[UIImage imageNamed:@"saoyisao-3"] forState:UIControlStateNormal];
-    [_scanButton addTarget:self action:@selector(pressScan) forControlEvents:UIControlEventTouchUpInside];
+    //[_scanButton addTarget:self action:@selector(pressScan) forControlEvents:UIControlEventTouchUpInside];
     
     [_scanButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(_titleLabel.mas_centerY);
@@ -68,7 +68,7 @@
     _videoCallButton.layer.masksToBounds = YES;
     _videoCallButton.layer.cornerRadius = videoCallButtonWidth / 2;
     
-    [_videoCallButton addTarget:self action:@selector(pressCall) forControlEvents:UIControlEventTouchUpInside];
+    //[_videoCallButton addTarget:self action:@selector(pressCall) forControlEvents:UIControlEventTouchUpInside];
     
     [_videoCallButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.mas_centerX);
@@ -150,6 +150,7 @@
     
     //SpeechManager *manager = [SpeechManager shareManager];
     [manager speech:@"扫一扫识别"];
+    
     
     
     

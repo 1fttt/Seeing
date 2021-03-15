@@ -16,7 +16,26 @@
 
 @end
 
+@implementation SEEBlindScanBDModel
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
+@end
+
+
 @implementation SEEBlindScanDataModel
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+
+@end
+
+
+
+@implementation SEEBlindScanBDResultModel
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
     return YES;

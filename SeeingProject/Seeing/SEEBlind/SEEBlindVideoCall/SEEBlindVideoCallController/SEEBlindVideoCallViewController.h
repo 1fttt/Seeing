@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SEEBlindVideoCallView.h"
 
+@class SEEBlindScanBDModel;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SEEBlindVideoCallViewController : UIViewController
 
 @property (nonatomic, strong) SEEBlindVideoCallView *callView;
+@property (nonatomic, copy) NSString *keyword;
 
 @end
 

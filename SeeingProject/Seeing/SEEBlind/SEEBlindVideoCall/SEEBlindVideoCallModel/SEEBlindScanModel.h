@@ -13,6 +13,16 @@
 @end
 
 
+
+@protocol SEEBlindScanTokenModel
+
+@end
+
+@protocol SEEBlindScanBDResultModel <NSObject>
+
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
 
@@ -20,6 +30,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *label;
 
+@end
+
+
+
+@interface SEEBlindScanBDModel : JSONModel
+
+@property (nonatomic, strong) NSArray<SEEBlindScanBDResultModel>* result;
+
+@end
+
+@interface SEEBlindScanBDResultModel : JSONModel
+
+@property (nonatomic, copy) NSString *keyword;
 
 @end
 
@@ -31,5 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *desc;
 
 @end
+
+
 
 NS_ASSUME_NONNULL_END
