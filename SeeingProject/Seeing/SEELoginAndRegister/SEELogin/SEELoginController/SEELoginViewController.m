@@ -76,47 +76,48 @@
 
 - (void)pressLogin {
     
+    [self loginSuccess];
     
-    if (_loginView.userNameTextField.text.length > 0 && _loginView.userPassTextField.text.length > 0) {
-        Manager *manager = [Manager shareManager];
-        [manager loginPhoneNumber:_loginView.userNameTextField.text andPasswordStr:_loginView.userPassTextField.text getBackModel:^(SEELoginModel * _Nonnull loginBackModel) {
-            
-            if (loginBackModel.status == 0) {
-                
-                NSString *path = NSHomeDirectory();
-                NSLog(@"path = %@", path);
-                
-                
-                //存储账号密码
-                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-                [userDefaults setObject:self->_loginView.userNameTextField.text forKey:@"userAccount"];
-                [userDefaults setObject:self->_loginView.userPassTextField.text forKey:@"userPass"];
-                
-                [userDefaults setObject:[loginBackModel.data valueForKey:@"ID"] forKey:@"id"];
-                [userDefaults setObject:[loginBackModel.data valueForKey:@"name"] forKey:@"name"];
-                [userDefaults setObject:[loginBackModel.data phone] forKey:@"phone"];
-                [userDefaults setObject:[loginBackModel.data type] forKey:@"type"];
-                [userDefaults setObject:[loginBackModel.data email] forKey:@"email"];
-                [userDefaults setObject:[loginBackModel.data picture] forKey:@"picture"];
-                [userDefaults setObject:[loginBackModel.data gender] forKey:@"gender"];
-                [userDefaults setObject:[loginBackModel.data msg] forKey:@"msg"];
-                [userDefaults setObject:[loginBackModel.data address] forKey:@"address"];
-                [userDefaults setObject:[loginBackModel.data number] forKey:@"number"];
-                
-            
-                [self loginSuccess];
-            } else {
-                [self showAlertStr:loginBackModel.msg actionStr:@"确定"];
-            }
-
-        } error:^(NSError * _Nonnull error) {
-            [self showAlertStr:@"登录失败" actionStr:@"确定"];
-        }];
-        
-    } else {
-        [self showAlertStr:@"输入不完整" actionStr:@"确定"];
-    
-    }
+//    if (_loginView.userNameTextField.text.length > 0 && _loginView.userPassTextField.text.length > 0) {
+//        Manager *manager = [Manager shareManager];
+//        [manager loginPhoneNumber:_loginView.userNameTextField.text andPasswordStr:_loginView.userPassTextField.text getBackModel:^(SEELoginModel * _Nonnull loginBackModel) {
+//
+//            if (loginBackModel.status == 0) {
+//
+//                NSString *path = NSHomeDirectory();
+//                NSLog(@"path = %@", path);
+//
+//
+//                //存储账号密码
+//                NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+//                [userDefaults setObject:self->_loginView.userNameTextField.text forKey:@"userAccount"];
+//                [userDefaults setObject:self->_loginView.userPassTextField.text forKey:@"userPass"];
+//
+//                [userDefaults setObject:[loginBackModel.data valueForKey:@"ID"] forKey:@"id"];
+//                [userDefaults setObject:[loginBackModel.data valueForKey:@"name"] forKey:@"name"];
+//                [userDefaults setObject:[loginBackModel.data phone] forKey:@"phone"];
+//                [userDefaults setObject:[loginBackModel.data type] forKey:@"type"];
+//                [userDefaults setObject:[loginBackModel.data email] forKey:@"email"];
+//                [userDefaults setObject:[loginBackModel.data picture] forKey:@"picture"];
+//                [userDefaults setObject:[loginBackModel.data gender] forKey:@"gender"];
+//                [userDefaults setObject:[loginBackModel.data msg] forKey:@"msg"];
+//                [userDefaults setObject:[loginBackModel.data address] forKey:@"address"];
+//                [userDefaults setObject:[loginBackModel.data number] forKey:@"number"];
+//
+//
+//                [self loginSuccess];
+//            } else {
+//                [self showAlertStr:loginBackModel.msg actionStr:@"确定"];
+//            }
+//
+//        } error:^(NSError * _Nonnull error) {
+//            [self showAlertStr:@"登录失败" actionStr:@"确定"];
+//        }];
+//
+//    } else {
+//        [self showAlertStr:@"输入不完整" actionStr:@"确定"];
+//
+//    }
     
 }
 
@@ -141,13 +142,13 @@
     NSLog(@"%@", [userDefaults objectForKey:@"phone"]);
     NSLog(@"%@", [userDefaults objectForKey:@"type"]);
     
-  
+    [self blindLogin];
     
-    if ([[userDefaults objectForKey:@"type"] isEqualToString:@"1"]) {
-        [self blindLogin];
-    } else if ([[userDefaults objectForKey:@"type"] isEqualToString:@"0"]) {
-        [self volunteerLogin];
-    }
+//    if ([[userDefaults objectForKey:@"type"] isEqualToString:@"1"]) {
+//        [self blindLogin];
+//    } else if ([[userDefaults objectForKey:@"type"] isEqualToString:@"0"]) {
+//        [self volunteerLogin];
+//    }
     
     
     
